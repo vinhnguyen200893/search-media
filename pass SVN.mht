@@ -1,0 +1,1371 @@
+Content-Type: multipart/related; start=<op.mhtml.1235808111668.49fc32615d42d68c@192.168.1.4>; boundary=----------5Ovzn9r0DJ2I1XCZa1jylp
+Content-Location: http://code.google.com/hosting/settings
+Subject: =?utf-8?Q?Google=20Code?=
+MIME-Version: 1.0
+
+------------5Ovzn9r0DJ2I1XCZa1jylp
+Content-Disposition: inline; filename=settings.htm
+Content-Type: text/html; charset=UTF-8; name=settings.htm
+Content-Id: <op.mhtml.1235808111668.49fc32615d42d68c@192.168.1.4>
+Content-Location: http://code.google.com/hosting/settings
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <script type="text/javascript">
+ 
+ 
+ 
+ var codesite_token = "8938481dd02fcb382e2ed8f2f16df263";
+ 
+ 
+ userProfileUrl = '/u/thanhnga86/';
+ 
+ </script>
+ <title>
+ 
+ Google Code</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ 
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/1092304409093033834/css/d_20081117.css">
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/1092304409093033834/css/d_ie.css" >
+<![endif]-->
+</head>
+<body class="">
+ <div id="gaia">
+ 
+ <span>
+ 
+ <b>thanhnga86@gmail.com</b>
+ 
+ | <a href="/p/support/wiki/WhatsNew" style="color:#a03">What's new?</a>
+ | <a href="/u/thanhnga86/">Profile</a>
+ 
+ | <a href="/u/thanhnga86/" id="projects-dropdown" onclick="return false;">My projects</a>
+ 
+ | <a href="/hosting/settings">Settings</a>
+ | <a href="/p/support/">Help</a>
+ | <a href="http://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fhosting%2Fsettings">Sign out</a>
+ 
+ </span>
+
+ </div>
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+ <table style="padding:0px; margin: 20px 0px 0px 0px; width:100%" cellpadding="0" cellspacing="0">
+ <tr>
+ <td style="width:153px; text-align:center;">
+ <a href="/">
+ 
+ <img src="http://www.gstatic.com/codesite/ph/images/code_sm.png"
+ width="153" height="55" alt="Google">
+ 
+ </a>
+ </td>
+ <td style="padding-left: 0.8em">
+ 
+ </td>
+ <td style="white-space:nowrap; text-align:right">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="">
+ <input type="submit" name="projectsearch" value="Search Projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+
+
+
+<div id="maincol">
+<!-- IE -->
+
+
+
+<div class="t2">
+<table id="mt" cellspacing="0" cellpadding="0" width="100%" border="0">
+ <tr>
+ <th class="int1">
+ <div class="box inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a href="/u/thanhnga86/">My&nbsp;Profile</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ <th class="int3">
+ <div class="box inactive">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a href="/u/thanhnga86/updates/projects">Updates</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ 
+ 
+ <th class="int2">
+ <div class="box active">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <a href="/hosting/settings">Settings</a>
+ </div>
+ </div>
+ </th><td>&nbsp;&nbsp;</td>
+ 
+ <td width="100%">&nbsp;</td>
+ </tr>
+</table>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ <td>
+ 
+ </td>
+ <td height="4" align="right" class="bevel-right" valign="top">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ </td>
+ </tr>
+</table>
+</div>
+
+<div style="max-width:50em">
+<h3>GoogleCode.com Password</h3>
+<div style="margin:0 0 2em 2em">
+ <form action="settings.do" method="POST"
+ onsubmit="return confirm('Are you sure?')">
+ <input type="hidden" name="token" value="8938481dd02fcb382e2ed8f2f16df263" >
+ <input type="hidden" name="regenerate" value="Yes" >
+ <p>Your googlecode.com password:
+ <big><big><tt><b>hz5Hr9fB5mb8</b></tt></big></big>
+ </p>
+ 
+ <input id="submit" type="submit" name="btnregen" value="Regenerate" >
+ 
+ <p>This password is used by project owners and members when checking
+ out or committing source code changes, or when using command-line
+ tools to upload files to the project "Downloads" tab.</p>
+ </form>
+</div>
+<h3>User Preferences</h3>
+<form action="settings.do" method="POST">
+
+<input type="hidden" name="token" value="8938481dd02fcb382e2ed8f2f16df263" />
+<input type="hidden" name="continue_url" value="" />
+
+
+
+<h4>Issue change notification</h4>
+<div style="margin:0 0 2em 2em">
+ <p>
+ Whenever an issue is changed by another user, send
+ me an email:
+ </p>
+ <input type="checkbox" name="notify" id="notify" value="1"
+ 
+ checked="checked" />
+ <label for="notify">If I am in the issue's
+ <b>owner</b> or <b>CC</b> fields.</label><br/>
+ <input type="checkbox" name="notify_starred" id="notify_starred" value="1"
+ 
+ checked="checked" />
+ <label for="notify_starred">
+ If I <b>starred</b> the issue.
+ </label>
+ <br/><br/>
+</div>
+
+<h4>Source code review comments notification</h4>
+<div style="margin:0 0 2em 2em">
+ <p>
+ Whenever comments are added by another user,
+ send me an email:
+ </p>
+ <input type="checkbox" name="notify_starred_review" id="notify_starred_review" value="1"
+ 
+ checked="checked" />
+ <label for="notify_starred_review">
+ If I <b>starred</b> the review.</label>
+ <br/><br/>
+</div>
+
+<h4>Source code browsing</h4>
+<div style="margin:0 0 2em 2em">
+ <p>When I click the Source tab,
+ show me:
+ <select name="pref_source_subtab">
+ <option value="0"
+ selected="selected"
+ >Checkout instructions</option>
+ <option value="1"
+ 
+ >Directory tree</option>
+ <option value="2"
+ 
+ >Recent changes</option>
+ </select>
+ </p>
+</div>
+
+
+
+ <input id="submit" type="submit" name="btn" value="Save Preferences" /> &nbsp;
+
+
+</form>
+</div>
+ 
+ <script type="text/javascript" src="http://www.gstatic.com/codesite/ph/1092304409093033834/js/core_scripts_20081103.js"></script>
+ 
+ </div>
+<div id="footer" dir="ltr">
+ 
+ <div class="text">
+ 
+ &copy;2008 Google -
+ <a href="/">Code Home</a> -
+ <a href="/tos.html">Terms of Service</a> -
+ <a href="http://www.google.com/privacy.html">Privacy Policy</a> -
+ <a href="/more/">Site Directory</a>
+ 
+ </div>
+</div>
+<script type="text/javascript">
+/**
+ * Reports analytics.
+ * It checks for the analytics functionality (window._gat) every 100ms
+ * until the analytics script is fully loaded in order to invoke siteTracker.
+ */
+function _CS_reportAnalytics() {
+ window.setTimeout(function() {
+ if (window._gat) {
+ var siteTracker = _gat._getTracker("UA-18071-1");
+ siteTracker._initData();
+ siteTracker._trackPageview();
+ 
+ } else {
+ _CS_reportAnalytics();
+ }
+ }, 100);
+}
+</script>
+
+ 
+ 
+
+
+ 
+ </body>
+</html>
+
+
+------------5Ovzn9r0DJ2I1XCZa1jylp
+Content-Disposition: inline; filename=dropdown_sprite.gif
+Content-Type: image/gif; name=dropdown_sprite.gif
+Content-Location: http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif
+Content-Transfer-Encoding: Base64
+
+R0lGODlhDgA4APQRAF1dXQAAzDg40Ts92XeZ3Y2NjbW1tZ250aen2paw47G48rnV
+7c/Pz97e3tTd7uv1//Pz8wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAACH5BAEAABEALAAAAAAOADgAAAXDYASMZDmKRaOubDGy8PrG
+8NwIQR4IMrAiugCix8LtWLYGUIj0FXlNGGIYpVWtqlEK6xKZvpGweEwum8/otHrN
+brvf8Lj8fKjb7/XIYfHo+/8LdX+DfoKEg4YPA0EDhQd+CkEKjn+LAY2UkDmTmX4D
+mJ19Cpyhhw+Jpqd7qQ+BeniwYQaztLWzEQYMELu8vQyzvcG8wMLBxBAJBMoECcMG
+vA7LBA7OvcnMvccQ0dPZz9bN3sEO1OLF5ue7s7rpv7i28BEhADs=
+
+------------5Ovzn9r0DJ2I1XCZa1jylp
+Content-Disposition: inline; filename=d_20081117.css
+Content-Type: text/css; charset=UTF-8; name=d_20081117.css
+Content-Location: http://www.gstatic.com/codesite/ph/1092304409093033834/css/d_20081117.css
+Content-Transfer-Encoding: 8bit
+
+@charset "utf-8";
+a:link { color: #0000cc; }
+body { background: #fff; margin: 3px 8px;}
+body, select, input { font-family: arial, sans-serif;}
+body { font-size: 83%;}
+td td, th th, th td, td th { font-size: 100%;}
+pre { font-size: 110%;}
+form { padding:0; margin:0;}
+
+table { border-collapse: separate; }
+
+.tab {
+  margin: 0;
+  padding: 0;
+}
+
+.box-inner {
+  margin: 0;
+  padding: 0 13px 0 13px;
+}
+
+.round1 {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.round2 {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.round4 {
+  border-left: 4px solid #fff;
+  border-right: 4px solid #fff;
+}
+
+.round1,
+.round2,
+.round4 {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+  height: 1px;
+}
+
+.bevel-left,
+.bevel-right {
+  padding: 0;
+}
+
+.bevel-right .round4,
+.bevel-right .round2,
+.bevel-right .round1 {
+  border-left: none;
+}
+
+.bevel-left .round4,
+.bevel-left .round2,
+.bevel-left .round1 {
+  border-right: none;
+}
+
+.bevel-left .box-inner,
+.bevel-right .box-inner {
+  padding: 0;
+}
+
+.active {
+  background: #c3d9ff;
+}
+
+.active a:link {
+  color: #0000cc;
+}
+
+.inactive {
+  background: #e5ecf9;
+}
+
+.labellist { list-style-type:none; padding:0; margin:0; display:inline; }
+.labellist li { margin-left:0.2em; display:inline; }
+
+.pmeta_bubble_bg { background: #e5ecf9; margin-bottom: 0.6em;}
+.pmeta { text-align:left;}
+.pmeta th, .pmeta td { vertical-align:top; }
+.pmeta ul { padding:0; margin:0; }
+.pmeta li { padding: 0 0 2px 0; list-style-type:none; }
+
+#mt { margin-top: 0.5ex; }
+
+.bubble_bg { background: #c3d9ff; margin-bottom: 0.6em; }
+.bubble { padding: 4px; }
+
+#bub { padding: 0 3px 0 3px; }
+
+table#mt th {
+  cursor:pointer;
+  text-align:center;
+  font-weight:bold;
+}
+
+table#mt th a { text-decoration:none; color: black; }
+
+.t5 h4 {
+  background-color: #e5ecf9;
+  margin: 4px 4px 0 4px;
+  border-top: 1px solid #3366cc;
+  padding:2px;
+}
+
+.t5 .section { margin: 0 4px 1.6em 4px; padding:4px; }
+.t5 .section .submit { margin: 8px; }
+
+table.st { background-color: #c3d9ff;}
+table.st span { padding: 0 4px 0 4px; }
+
+#maincol { margin-top:3px; padding:3px;}
+.t5 #maincol { padding:0;}
+
+.isf, .at { padding:4px 3px 3px 4px; background: #c3d9ff; }
+.isf a, .at a, .isf a:visited, .at a:visited { color:#0000cc;}
+
+.st1 .inst1 a,
+.st2 .inst2 a,
+.st3 .inst3 a,
+.st4 .inst4 a,
+.st5 .inst5 a,
+.st6 .inst6 a,
+.st7 .inst7 a,
+.st8 .inst8 a,
+.st9 .inst9 a { color:black; font-weight:bold; text-decoration:none; }
+
+.notice, .error { background:#fad163; font-weight: bold }
+
+.fieldhelp { color:grey;}
+.fielderror { color:red; font-weight:bold; padding:4px;}
+
+.tip { background:#e5ecf9; font-size:92%; margin:5px; width:14em; }
+.tip .box-inner { padding:6px }
+
+/* Google standard */
+.gbh {
+  border-top: 1px solid #C9D7F1;
+  font-size: 1px;
+  height: 0;
+  position: absolute;
+  top: 24px;
+  width: 100%;
+}
+
+#pname { font-size:180%; font-weight:bold;}
+#psum { font-style:italic; margin-top:3px;}
+
+.vt { vertical-align:top;}
+
+div.h4, table.h4 {
+  background-color: #e5ecf9;
+  margin-bottom: 2px;
+  border-top: 1px solid #3366cc;
+  padding:2px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 2px;
+}
+
+.mainhdr {
+  background-color: #e5ecf9;
+  border-top: 1px solid #3366cc;
+  font-weight: bold;
+  font-size: 133%;
+  padding: 2px;
+}
+
+h1 { font-size: x-large; margin-top: 0px; }
+h2 { font-size: large; }
+h3 { font-size: medium; }
+h4 { font-size: small; }
+
+img { border: 0; }
+
+#gaia { text-align: right; }
+
+#header {
+  position: relative;
+  height: 55px;
+  padding-top: 6px;
+  margin-bottom: -9px;
+}
+
+#logo { padding-right: 18px; position: absolute; top: 0; left: 0; }
+
+#logo img { width: 153px; height: 55px; }
+
+#title {
+  margin-left: 171px;
+  border-top: 1px solid #3366cc;
+  background-color: #e5ecf9;
+  font-size: large;
+  font-weight: bold;
+  padding-left: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+  margin-top: 3.5em;
+  margin-bottom: 1em;
+  height: 53px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+#footer .text { padding-top: 20px; }
+
+#wikicontent h3, #wikipreview h3 {
+  background: none;
+  border: 0;
+  padding-left:0;
+  margin: 0;
+}
+
+#wikicontent p, #wikicontent ul, #wikicontent ol, #wikicontent blockquote {
+  max-width: 65em;
+}
+
+#wikicontent ul, #wikicontent ol { padding-left: 40px; }
+
+table.wikitable { border-collapse: collapse; }
+.wikitable th { background: #e5ecf9; }
+.wikitable th, .wikitable td { border: 1px solid #aaa; padding: 5px; }
+
+pre.prettyprint {
+  margin-left: 2em;
+  padding: 0.5em;
+  border-left: 3px solid #ccc;
+}
+
+.prettyprint .str { color: #080; }
+.prettyprint .kwd { color: #008; }
+.prettyprint .com { color: #800; }
+.prettyprint .typ { color: #606; }
+.prettyprint .lit { color: #066; }
+.prettyprint .pun { color: #660; }
+.prettyprint .pln { color: #000; }
+.prettyprint .tag { color: #008; }
+.prettyprint .atn { color: #606; }
+.prettyprint .atv { color: #080; }
+.prettyprint .dec { color: #606; }
+
+@media print {
+  .prettyprint .str { color: #060; }
+  .prettyprint .kwd { color: #006; font-weight: bold; }
+  .prettyprint .com { color: #600; font-style: italic; }
+  .prettyprint .typ { color: #404; font-weight: bold; }
+  .prettyprint .lit { color: #044; }
+  .prettyprint .pun { color: #440; }
+  .prettyprint .pln { color: #000; }
+  .prettyprint .tag { color: #006; font-weight: bold; }
+  .prettyprint .atn { color: #404; }
+  .prettyprint .atv { color: #060; }
+}
+
+.closed_ref { text-decoration: line-through }
+
+.results th, .results td { border-bottom: 1px solid #bbb }
+.twocol th,.twocol td { border-bottom: 1px solid #bbb; padding: 1px 5px 0 5px }
+.results th, .twocol th { border-left: 1px solid #bbb }
+.results th { background: #e5ecf9; text-align: left; padding-right: 1px;}
+.results th a, .results th a:visited {
+  color: #0000cc;
+  padding-right: 12px;
+  margin-right: 12px;
+  background: url(http://www.gstatic.com/codesite/ph/images/downarrow.gif) no-repeat top right;
+}
+.results td { background: #fff; }
+.results td { cursor: pointer }
+.results td { padding: 4px; }
+
+.results td a { color: #000; text-decoration: none; }
+.results td.id a { color: #0000cc; text-decoration: underline;}
+.results td.id { text-align:right;}
+.results td.id a:visited { color: purple; text-decoration: underline; }
+.results td.id a:hover { color: red; text-decoration: underline; }
+table.results tr.hover td a { color: #009;}
+
+.p1 { background-color: #fcc; }
+.notes {
+  background: #ffc;
+  border: 1px solid #999;
+  border-width: 0 1px 1px 0;
+  padding: 2px; width: 818px;
+}
+
+.popup {
+  display: none;
+  background: #eef;
+  border: 2px solid #66a;
+  border-width: 0 2px 2px 1px;
+  position:absolute;
+  padding: 2px;
+}
+.popup a { text-decoration: none; cursor: pointer; }
+.popup td, .popup th {
+  font-size: 90%;
+  font-weight: normal;
+  text-align: left;
+  cursor: pointer;
+}
+.popup td { color: #0000cc; padding: 2px; }
+.popup tr.hover { background: #c3d9ff; }
+.subpopup { border-width: 1px 2px 2px 1px; }
+
+.issueref { text-decoration: none; }
+.issueref_closed { text-decoration: line-through; }
+
+.label { text-decoration: none; color: green !important; }
+.labelediting input { color: #060; }
+.results .label { font-size: 80% }
+.label:hover { text-decoration: underline;}
+
+.rowmajor th { text-align: right;}
+.labelediting input { margin: 0 3px 4px 0; }
+table.twocol {
+  border-right: 1px solid #bbb;
+  border-top: 1px solid #bbb;
+  width: 40em;
+}
+.read td, .read th { background: #eef; }
+.results .selected td { background: #ffc; }
+
+.closed .ifOpened { display: none }
+.closed .opened span.ifOpened { display: inline }
+.opened .ifClosed { display: none }
+.opened .closed span.ifClosed { display: inline }
+
+.collapse .ifExpand { display: none }
+.expand .ifCollapse { display: none }
+
+.historywidget {
+  float: right;
+  border: 1px solid #669;
+  background: white;
+  font-weight: normal;
+  padding: 1px;
+}
+.inplace input { width: 100%; }
+.inplace td { border: 0; }
+.h3 { font-size: 130%; font-weight: bolder; }
+input { padding-left: 1px; padding-right: 1px; }
+textarea { padding-left: 1px; padding-right: 1px; }
+
+#issueheader {
+  margin: 0.5em 0 0em 0;
+  border: 3px solid #c3d9ff;
+  background: #c3d9ff;
+}
+#issueheader td { background: #c3d9ff; }
+
+.pagination { font-size: 100%; float: right; white-space: nowrap; }
+.pagination a { margin-left: 0.3em; margin-right: 0.3em; }
+
+.issuepage { margin-top: 0; }
+.issuepage td { padding: 0.5em; }
+.issuecomment { border-top: 3px solid #c3d9ff;}
+
+.issuedescription pre, .issuecomment pre { overflow: hidden;}
+
+.issuedescription pre b, .issuecomment pre b {
+  font-size: 110%;
+  font-weight: bolder;
+  padding: 3px 0 3px 0;
+}
+
+.gridtile .box-inner {
+  margin: 0;
+  padding: 2px;
+}
+
+.author { margin-bottom: 1em; }
+
+#issuemeta {
+  width: 12em;
+  border-right: 3px solid #c3d9ff;
+  font-size: 95%;
+  vertical-align: top;
+}
+
+#issuemeta table tr.hover a { text-decoration: underline }
+#issuemeta table td, #issuemeta table th {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+
+.updates { margin-top: 1em; background: #c3d9ff; width: 80%; font-size: 90%; }
+
+.fakelink {color: #0000cc; cursor: pointer; white-space: nowrap;}
+.undef { color: #666; }
+
+td.col_ID { text-align: right }
+td.searchoptions { font-size: 80% }
+
+.hide_col_0 .col_0, .hide_col_1 .col_1, .hide_col_2 .col_2, .hide_col_3 .col_3,
+.hide_col_4 .col_4, .hide_col_5 .col_5, .hide_col_6 .col_6,
+.hide_col_7 .col_7, .hide_col_8 .col_8, .hide_col_9 .col_9,
+.hide_col_10 .col_10, .hide_col_11 .col_11, .hide_col_12 .col_12,
+.hide_col_13 .col_13, .hide_col_14 .col_14, .hide_col_15 .col_15,
+.hide_col_16 .col_16, .hide_col_17 .col_17, .hide_col_18 .col_18,
+.hide_col_19 .col_19, .hide_col_20 .col_20 { display: none; }
+
+.hide_col_0 .popup span.col_0, .hide_col_1 .popup span.col_1,
+.hide_col_2 .popup span.col_2, .hide_col_3 .popup span.col_3,
+.hide_col_4 .popup span.col_4, .hide_col_4 .popup span.col_4,
+.hide_col_5 .popup span.col_5, .hide_col_6 .popup span.col_6,
+.hide_col_7 .popup span.col_7, .hide_col_8 .popup span.col_8,
+.hide_col_9 .popup span.col_9, .hide_col_10 .popup span.col_10,
+.hide_col_11 .popup span.col_11, .hide_col_12 .popup span.col_12,
+.hide_col_13 .popup span.col_13, .hide_col_14 .popup span.col_14,
+.hide_col_14 .popup span.col_14, .hide_col_15 .popup span.col_15,
+.hide_col_16 .popup span.col_16, .hide_col_17 .popup span.col_17,
+.hide_col_18 .popup span.col_18, .hide_col_19 .popup span.col_19,
+.hide_col_20 .popup span.col_20 { display: inline; color: #eef; }
+
+.hide_col_0 .popup tr.hover span.col_0,
+.hide_col_1 .popup tr.hover span.col_1,
+.hide_col_2 .popup tr.hover span.col_2,
+.hide_col_3 .popup tr.hover span.col_3,
+.hide_col_4 .popup tr.hover span.col_4,
+.hide_col_5 .popup tr.hover span.col_5,
+.hide_col_6 .popup tr.hover span.col_6,
+.hide_col_7 .popup tr.hover span.col_7,
+.hide_col_8 .popup tr.hover span.col_8,
+.hide_col_9 .popup tr.hover span.col_9,
+.hide_col_10 .popup tr.hover span.col_10,
+.hide_col_11 .popup tr.hover span.col_11,
+.hide_col_12 .popup tr.hover span.col_12,
+.hide_col_13 .popup tr.hover span.col_13,
+.hide_col_14 .popup tr.hover span.col_14,
+.hide_col_15 .popup tr.hover span.col_15,
+.hide_col_16 .popup tr.hover span.col_16,
+.hide_col_17 .popup tr.hover span.col_17,
+.hide_col_18 .popup tr.hover span.col_18,
+.hide_col_19 .popup tr.hover span.col_19,
+.hide_col_20 .popup tr.hover span.col_20 { color: #c3d9ff; }
+
+.results td tt { color: #999; font-style: italic; font-weight: bold; }
+
+.notify {
+  background: #ec6;
+  font-weight: bolder;
+  -moz-border-radius: 6px;
+  padding: 2px 1em 2px 1em;
+  text-align: center;
+}
+
+table.advquery,
+table.issueimport { border: 3px solid #c3d9ff;}
+table.advquery td,
+table.issueimport td { white-space: nowrap; padding: 2px; }
+.focus td { background: #c3d9ff; }
+
+#ac-list {
+  border: 1px solid #666;
+  background: #E0ECFF;
+  color: #00C;
+  padding: 0 0 1px 0;
+  z-index: 10;
+}
+#ac-list { font-size: 95%; }
+#ac-list { padding: 2px; }
+#ac-list tr { margin: 1px; cursor: pointer; padding: 0 10px; }
+#ac-list th { color: #333; text-align: left; }
+#ac-list .selected,
+#ac-list .selected td { background: #c3d9ff; }
+
+#ac-list td, #ac-list th { white-space: nowrap; }
+
+#searchrow td { padding: 0 4px 0 0; }
+
+.eg { color: #666; font-size: 90%; }
+
+#searchtips { padding-left: 2em; }
+#searchtips p { margin-left: 2em; }
+
+h3 {
+  background: #e5ecf9;
+  border-top: 1px solid #3366cc;
+  padding: 0.5ex 0.5em 0.5ex 0.5em;
+  margin-right: 2em;
+}
+
+div td .novel { color: #430;}
+div td .exclconflict { color: #a03;}
+
+#submit { font-weight: bold; }
+
+.issueEntry .inIssueEntry a,
+.issueList .inIssueList span,
+.issueAdvSearch .inIssueAdvSearch a,
+.issueSearchTips .inIssueSearchTips a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.delcom { background: #e8e8e8 }
+
+.numberentry { text-align: right; }
+
+iframe[frameborder="1"] {
+  border: 1px solid #999;
+}
+
+/* For project menu */
+.menuDiv {
+  border:2px solid #C3D9FF;
+  padding: 0;
+  width: 175px;
+  background: #fff;
+  overflow: hidden;
+}
+.menuDiv .menuItem {
+  color: blue;
+  padding: 3px;
+  text-decoration: none;
+  background: #fff;
+}
+.menuDiv .menuItem:hover {
+  background:#E5ECF9;
+  cursor:hand;
+}
+.menuDiv .menuCategory,
+.menuDiv .categoryTitle {
+  margin-top: 4px;
+}
+.menuDiv .menuSeparator {
+  border: 1px dotted #C3D9FF;
+  margin: 0;
+}
+img.menuIcon.off {
+  background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px;
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  vertical-align: bottom;
+}
+img.menuIcon.on {
+  background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px;
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  vertical-align: bottom;
+}
+img.menuIcon.down {
+  background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0;
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  vertical-align:bottom;
+}
+
+------------5Ovzn9r0DJ2I1XCZa1jylp
+Content-Disposition: inline; filename=code_sm.png
+Content-Type: image/png; name=code_sm.png
+Content-Location: http://www.gstatic.com/codesite/ph/images/code_sm.png
+Content-Transfer-Encoding: Base64
+
+iVBORw0KGgoAAAANSUhEUgAAAJkAAAA3CAMAAAAolBgWAAADAFBMVEX////39/fM
+zMzAwMH09PQDMJP8/PwBOK65uLj6+vr9/f0BPsBmZmYAQc3W1taPFQPp6enu7u68
+u7y1tLUCRtfs6+vDwsMEJ3PNKxWura2mo6Oop6fR0dHc3Nvg3+CYmJrIyMjl5OVs
+FgmysbFalP+sqaqgnp+zKxhypv7x8fFgea9Ef/kBSuXZ2dngTDfd3d3FHQWsGAPn
+5+fSqQS4t7ifgAPdsQTPzs5kb4rX19hnmPqMcQXrvgYRUNkpZ+xlz2rGxcVwcHDJ
+Oibh4eGMtP3F2v0QQq/bPCbrWkb6hHLj4+P19fUQScZTivz6lYY6ePo1cvV1g6Ic
+Q5knafeDl8XAmgN+LySvjAN/oeofXeNObrTU09MoWcR8gokXWek+ZLfxbFpOZZj6
+dmMFcgv96HNsWQvs8frKogP/+PeBq/y3kwP3yQf4+v8PU+ePj4/r6+uFhYV6enqU
+gH6YJRUfY/Wmq7cqP20tS47FmpQnUa3+9fOztr3QuLWXvv/90ctTgeQGUvWKkJ7d
+6P2hiIaXorxyZTSkV031+P63r6WrmYsDT/H88uqPQjiYk4pIXImEiJO80v4zZdJl
+jOAaUcmfvvr7o5aLl7HAd26KVk5Fc9beiX3KqaQCVAbQzL572IDT4PqrssHzyieo
+y/4/UHa4okrfp6CIkIeXt/mShlqWZV4UXPetutTDvqrMuW2WgjPY2+L7raKAbGmY
+qM37/fj/9cyzSDnda1v///j+4w2zPi711lD63tslqS3P69Dx9v+4X1L9xr7+80e8
+6b7l7PtuS0fkyFjVem3MvLv/7ZPm9Oeb1J62mzL86uieoq7r1tRkNjGhtuSol1V0
+j8nUtDnGyM/Kztm2gXnetRTv58Znsmrm15tNwFPN1eWjiSC62Lu0z/+0xOgVmRv8
+4CWzrJY1tTxve2ZCv0nUzKrv13jMqR2v5LGN4JFMlVDBtYbrysXd8t/L18sIgA7/
+/birtquDroUzXTT//u9QblHOw8LHsVhxhXLv5tyPeyutkRz3/PfBzeahThG/AAAA
+AXRSTlMAQObYZgAADKBJREFUeF7VmXN0JGsWwLvYtm13bNu2NbZt27ZtP9u2baxt
+3Gok1ZN5k9mzk7dv7x99Un2TW7+6ri+M/4H88/Gf/exA1nvvffyfGBh3cFvzloUL
+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
+YII=
+
+------------5Ovzn9r0DJ2I1XCZa1jylp
+Content-Disposition: inline; filename=core_scripts_20081103.js
+Content-Type: text/javascript; charset=UTF-8; name=core_scripts_20081103.js
+Content-Location: http://www.gstatic.com/codesite/ph/1092304409093033834/js/core_scripts_20081103.js
+Content-Transfer-Encoding: Quoted-Printable
+
+/* Copyright 2009 Google Inc. All Rights Reserved. */ (function(){
+var global=3Dthis;String.prototype.startsWith=3Dfunction(prefix){return =
+this.indexOf(prefix)=3D=3D0};String.prototype.endsWith=3Dfunction(suffix=
+){var l=3Dthis.length-suffix.length;return l>=3D0&&this.lastIndexOf(suff=
+ix,l)=3D=3Dl};String.prototype.trim=3Dfunction(){return this.replace(/^\=
+s+|\s+$/g,"")};String.prototype.subs=3Dfunction(){var ret=3Dthis,i=3D0;f=
+or(;i<arguments.length;i++)ret=3Dret.replace(/\%s/,String(arguments[i]))=
+;return ret};
+if(!Function.prototype.apply)Function.prototype.apply=3Dfunction(oScope,=
+opt_args){var sarg=3D[],rtrn,call;oScope||(oScope=3Dglobal);var args=3Do=
+pt_args||[],i=3D0;for(;i<args.length;i++)sarg[i]=3D"args["+i+"]";call=3D=
+"oScope.__applyTemp__.peek()("+sarg.join(",")+");";if(!oScope.__applyTem=
+p__)oScope.__applyTemp__=3D[];oScope.__applyTemp__.push(this);rtrn=3Deva=
+l(call);oScope.__applyTemp__.pop();return rtrn};
+if(!Array.prototype.push)Array.prototype.push=3Dfunction(){var i=3D0;for=
+(;i<arguments.length;i++)this[this.length]=3Darguments[i];return this.le=
+ngth};if(!Array.prototype.pop)Array.prototype.pop=3Dfunction(){if(!!this=
+.length){var val=3Dthis[this.length-1];this.length--;return val}};Array.=
+prototype.peek=3Dfunction(){return this[this.length-1]};if(!Array.protot=
+ype.shift)Array.prototype.shift=3Dfunction(){if(!(this.length=3D=3D0)){v=
+ar val=3Dthis[0],i=3D0;for(;i<this.length-1;i++)this[i]=3Dthis[i+1];this=
+.length--;return val}};
+if(!Array.prototype.unshift)Array.prototype.unshift=3Dfunction(){var num=
+Args=3Darguments.length,i=3Dthis.length-1;for(;i>=3D0;i--)this[i+numArgs=
+]=3Dthis[i];var j=3D0;for(;j<numArgs;j++)this[j]=3Darguments[j];return t=
+his.length};if(!Array.prototype.forEach)Array.prototype.forEach=3Dfuncti=
+on(callback,opt_scope){var i=3D0;for(;i<this.length;i++)callback.call(op=
+t_scope,this[i],i,this)};
+function bind(fn,self){var boundargs=3Dfn.boundArgs_||[];boundargs=3Dbou=
+ndargs.concat(Array.prototype.slice.call(arguments,2));if(typeof fn.boun=
+dSelf_!=3D"undefined")self=3Dfn.boundSelf_;if(typeof fn.boundFn_!=3D"und=
+efined")fn=3Dfn.boundFn_;var newfn=3Dfunction(){var args=3Dboundargs.con=
+cat(Array.prototype.slice.call(arguments));return fn.apply(self,args)};n=
+ewfn.boundArgs_=3Dboundargs;newfn.boundSelf_=3Dself;newfn.boundFn_=3Dfn;=
+return newfn}
+Function.prototype.bind=3Dfunction(self){return bind.apply(null,[this,se=
+lf].concat(Array.prototype.slice.call(arguments,1)))};Function.prototype=
+.partial=3Dfunction(){return bind.apply(null,[this,null].concat(Array.pr=
+ototype.slice.call(arguments)))};Function.prototype.inherits=3Dfunction(=
+parentCtor){var tempCtor=3Dfunction(){};this.superClass_=3DtempCtor.prot=
+otype=3DparentCtor.prototype;this.prototype=3Dnew tempCtor};
+Function.prototype.mixin=3Dfunction(props){for(var x in props)this.proto=
+type[x]=3Dprops[x];if(typeof props.toString=3D=3D"function"&&props.toStr=
+ing!=3Dthis.prototype.toString)this.prototype.toString=3Dprops.toString}=
+;var DB_mode=3Dfalse;function DumpError(str){try{throw str;}catch(e){Dum=
+pException(e)}}function DumpException(e,opt_msg){var title=3D"Javascript=
+ exception: "+(opt_msg?opt_msg:"")+" "+e;if(BR_IsIE())title+=3D" "+e.nam=
+e+": "+e.message+" ("+e.number+")";var error=3D"";if(typeof e=3D=3D"stri=
+ng")error=3De+"\n";else for(var i in e)try{error+=3Di+": "+e[i]+"\n"}cat=
+ch(ex){}error+=3DDB_GetStackTrace(DumpException.caller);DB_WriteDebugMsg=
+(title+"\n"+error,1)}var function_name_re_=3D/function (\w+)/;
+function DB_GetFunctionName(fn){var m=3Dfunction_name_re_.exec(String(fn=
+));if(m)return m[1];return""}
+function DB_GetStackTrace(fn){try{if(!BR_IsIE()&&!(BR_AgentContains_("sa=
+fari")||BR_AgentContains_("konqueror"))&&BR_AgentContains_("mozilla"))re=
+turn Error().stack;if(!fn)return"";var x=3D"- "+DB_GetFunctionName(fn)+"=
+(",i=3D0;for(;i<fn.arguments.length;i++){if(i>0)x+=3D", ";var arg=3DStri=
+ng(fn.arguments[i]);if(arg.length>40)arg=3Darg.substr(0,40)+"...";x+=3Da=
+rg}x+=3D")\n";x+=3DDB_GetStackTrace(fn.caller);return x}catch(ex){return=
+"[Cannot get stack trace]: "+ex+"\n"}}var DB_starttime,DB_win=3Dnull,DB_=
+winopening=3Dfalse;
+function DB_OpenDebugWindow(){if((DB_win=3D=3Dnull||DB_win.closed)&&!DB_=
+winopening)try{DB_winopening=3Dtrue;DB_win=3Dwindow.open("","debug","wid=
+th=3D700,height=3D500,toolbar=3Dno,resizable=3Dyes,scrollbars=3Dyes,left=
+=3D16,top=3D16,screenx=3D16,screeny=3D16");DB_win.blur();DB_win.document=
+.open();DB_winopening=3Dfalse;var html=3D"<font color=3D#ff0000><b>To tu=
+rn off this debugging window,hit 'D' inside the main caribou window, the=
+n close this window.</b></font><br>";DB_WriteDebugHtml(html)}catch(ex){}=
+}
+function DB_WriteDebugMsg(str,level){if(DB_mode){try{var t=3D(new Date).=
+getTime()-DB_starttime,html=3D"["+t+"] "+HtmlEscape(str).replace(/\n/g,"=
+<br>")+"<br>";if(level=3D=3D1){html=3D"<font color=3D#ff0000><b>Error: "=
++html+"</b></font>";DB_win.focus()}}catch(ex){}DB_WriteDebugHtml(html)}e=
+lse typeof log!=3D"undefined"&&log(HtmlEscape(str))}function DB_WriteDeb=
+ugHtml(html){if(!!DB_mode)try{DB_OpenDebugWindow();DB_win.document.write=
+(html);DB_win.scrollTo(0,1000000)}catch(ex){}};function BR_AgentContains=
+_(str){if(str in BR_AgentContains_cache_)return BR_AgentContains_cache_[=
+str];return BR_AgentContains_cache_[str]=3Dnavigator.userAgent.toLowerCa=
+se().indexOf(str)!=3D-1}var BR_AgentContains_cache_=3D{};function BR_IsI=
+E(){return BR_AgentContains_("msie")&&!window.opera}var amp_re_=3D/&/g,l=
+t_re_=3D/</g,gt_re_=3D/>/g;function HtmlEscape(str){if(!str)return"";ret=
+urn str.replace(amp_re_,"&amp;").replace(lt_re_,"&lt;").replace(gt_re_,"=
+&gt;").replace(quote_re_,"&quot;")}var quote_re_=3D/\"/g;
+function forid_1(id){return document.getElementById(id)}function forid_2=
+(id){return document.all[id]}var forid=3Ddocument.getElementById?forid_1=
+:forid_2;function log(msg){try{if(window.parent!=3Dwindow&&window.parent=
+.log){window.parent.log(window.name+"::"+msg);return}}catch(e){}var logP=
+ane=3Dforid("log");if(logPane){var logText=3D"<p class=3Dlogentry><span =
+class=3Dlogdate>"+new Date+"</span><span class=3Dlogmsg>"+msg+"</span></=
+p>";logPane.innerHTML=3DlogText+logPane.innerHTML}else window.status=3Dm=
+sg};function AS_Assert(){}AS_Assert.raise=3Dfunction(msg){if(typeof Erro=
+r!=3D"undefined")throw new Error(msg||"Assertion Failed");else throw msg=
+;};AS_Assert.fail=3Dfunction(opt_msg){opt_msg=3Dopt_msg||"Assertion fail=
+ed";typeof DumpError=3D=3D"undefined"||DumpError(opt_msg+"\n");AS_Assert=
+.raise(opt_msg)};AS_Assert.isTrue=3Dfunction(expression,opt_msg){if(!exp=
+ression){if(opt_msg=3D=3D=3Dundefined)opt_msg=3D"Assertion failed";AS_As=
+sert.fail(opt_msg)}};
+AS_Assert.equals=3Dfunction(val1,val2,opt_msg){if(val1!=3Dval2){if(opt_m=
+sg=3D=3D=3Dundefined)opt_msg=3D"AS_Assert.equals failed: <"+val1+"> !=3D=
+ <"+val2+">";AS_Assert.fail(opt_msg)}};
+AS_Assert.typeOf=3Dfunction(value,type,opt_msg){if(!(typeof value=3D=3Dt=
+ype)){if(value||value=3D=3D"")try{if(type=3D=3DAS_Assert.TYPE_MAP[typeof=
+ value]||value instanceof type)return}catch(e){}if(opt_msg=3D=3D=3Dundef=
+ined){if(typeof type=3D=3D"function"){var match=3Dtype.toString().match(=
+/^\s*function\s+([^\s\{]+)/);if(match)type=3Dmatch[1]}opt_msg=3D"AS_Asse=
+rt.typeOf failed: <"+value+"> not typeof "+type}AS_Assert.fail(opt_msg)}=
+};AS_Assert.TYPE_MAP=3D{string:String,number:Number,"boolean":Boolean};
+AS_Assert.numArgs=3Dfunction(num,opt_msg){var caller=3DAS_Assert.numArgs=
+.caller;if(caller&&caller.arguments.length!=3Dnum){if(opt_msg=3D=3D=3Dun=
+defined)opt_msg=3Dcaller.name+" expected "+num+" arguments  but received=
+ "+caller.arguments.length;AS_Assert.fail(opt_msg)}};Function.prototype.=
+bind=3Dfunction(thisObj){if(typeof this!=3D"function")throw new Error("B=
+ind must be called as a method of a function object.");var self=3Dthis,s=
+taticArgs=3DArray.prototype.splice.call(arguments,1,arguments.length);re=
+turn function(){var args=3DstaticArgs.concat(),i=3D0;for(;i<arguments.le=
+ngth;i++)args.push(arguments[i]);return self.apply(thisObj,args)}};var l=
+isten,unlisten,unlistenByKey;
+(function(){var listeners=3D{},nextId=3D0;function getHashCode_(obj){if(=
+obj.listen_hc_=3D=3Dnull)obj.listen_hc_=3D++nextId;return obj.listen_hc_=
+}function createKey_(node,event,listener,opt_useCapture){var nodeHc=3Dge=
+tHashCode_(node),listenerHc=3DgetHashCode_(listener);opt_useCapture=3D!!=
+opt_useCapture;var key=3DnodeHc+"_"+event+"_"+listenerHc+"_"+opt_useCapt=
+ure;return key}listen=3Dfunction(node,event,listener,opt_useCapture){var=
+ key=3DcreateKey_(node,event,listener,opt_useCapture);if(key in listener=
+s)return key;var proxy=3D
+handleEvent.bind(null,key);listeners[key]=3D{listener:listener,proxy:pro=
+xy,event:event,node:node,useCapture:opt_useCapture};if(node.addEventList=
+ener)node.addEventListener(event,proxy,opt_useCapture);else if(node.atta=
+chEvent)node.attachEvent("on"+event,proxy);else throw new Error("Node {"=
++node+"} does not support event listeners.");return key};unlisten=3Dfunc=
+tion(node,event,listener,opt_useCapture){var key=3DcreateKey_(node,event=
+,listener,opt_useCapture);return unlistenByKey(key)};unlistenByKey=3Dfun=
+ction(key){if(!(key in
+listeners))return false;var listener=3Dlisteners[key],proxy=3Dlistener.p=
+roxy,event=3Dlistener.event,node=3Dlistener.node,useCapture=3Dlistener.u=
+seCapture;if(node.removeEventListener)node.removeEventListener(event,pro=
+xy,useCapture);else node.detachEvent&&node.detachEvent("on"+event,proxy)=
+;delete listeners[key];return true};function handleEvent(key){var args=3D=
+Array.prototype.splice.call(arguments,1,arguments.length);return listene=
+rs[key].listener.apply(null,args)}})();function Point(x,y,opt_coordinate=
+Frame){this.x=3Dx;this.y=3Dy;this.coordinateFrame=3Dopt_coordinateFrame|=
+|null}Point.prototype.toString=3Dfunction(){return"[P "+this.x+","+this.=
+y+"]"};Point.prototype.clone=3Dfunction(){return new Point(this.x,this.y=
+,this.coordinateFrame)};function Delta(dx,dy){this.dx=3Ddx;this.dy=3Ddy}=
+Delta.prototype.toString=3Dfunction(){return"[D "+this.dx+","+this.dy+"]=
+"};
+function Rect(x,y,w,h,opt_coordinateFrame){this.x=3Dx;this.y=3Dy;this.w=3D=
+w;this.h=3Dh;this.coordinateFrame=3Dopt_coordinateFrame||null}Rect.proto=
+type.contains=3Dfunction(p){return this.x<=3Dp.x&&p.x<this.x+this.w&&thi=
+s.y<=3Dp.y&&p.y<this.y+this.h};
+Rect.prototype.intersects=3Dfunction(r){var p=3Dfunction(x,y){return new=
+ Point(x,y,null)};return this.contains(p(r.x,r.y))||this.contains(p(r.x+=
+r.w,r.y))||this.contains(p(r.x+r.w,r.y+r.h))||this.contains(p(r.x,r.y+r.=
+h))||r.contains(p(this.x,this.y))||r.contains(p(this.x+this.w,this.y))||=
+r.contains(p(this.x+this.w,this.y+this.h))||r.contains(p(this.x,this.y+t=
+his.h))};Rect.prototype.toString=3Dfunction(){return"[R "+this.w+"x"+thi=
+s.h+"+"+this.x+"+"+this.y+"]"};
+Rect.prototype.clone=3Dfunction(){return new Rect(this.x,this.y,this.w,t=
+his.h,this.coordinateFrame)};var XH_ieProgId_;
+function XH_XmlHttpInit_(){var XH_ACTIVE_X_IDENTS=3D["MSXML2.XMLHTTP.6.0=
+","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"];if(typeof X=
+MLHttpRequest=3D=3D"undefined"&&typeof ActiveXObject!=3D"undefined"){var=
+ i=3D0;for(;i<XH_ACTIVE_X_IDENTS.length;i++){var candidate=3DXH_ACTIVE_X=
+_IDENTS[i];try{new ActiveXObject(candidate);XH_ieProgId_=3Dcandidate;bre=
+ak}catch(e){}}if(!XH_ieProgId_)throw Error("Could not create ActiveXObje=
+ct. ActiveX might be disabled, or MSXML might not be installed.");}}XH_X=
+mlHttpInit_();
+function XH_XmlHttpPOST(xmlHttp,url,data,handler){xmlHttp.open("POST",ur=
+l,true);xmlHttp.onreadystatechange=3Dhandler;xmlHttp.setRequestHeader("C=
+ontent-Type","application/x-www-form-urlencoded");xmlHttp.setRequestHead=
+er("Content-Length",data.length);XH_XmlHttpSend(xmlHttp,data)}function X=
+H_XmlHttpSend(xmlHttp,data){try{xmlHttp.send(data)}catch(e){log("XMLHttp=
+Send failed "+e.toString()+"<br>"+e.stack);throw e;}};if("undefined"=3D=3D=
+typeof log)log=3Dfunction(){};function Dom(opt_doc){this.doc=3Dopt_doc||=
+document;this.getElementById_=3Dthis.doc.getElementById?function(id){ret=
+urn this.doc.getElementById(id)}:function(id){return this.doc.all[id]}}D=
+om.prototype.$=3Dfunction(id){return this.getElementById_(id)};Dom.proto=
+type.create=3Dfunction(nodeName){return this.doc.createElement(nodeName)=
+};Dom.prototype.createText=3Dfunction(text){return this.doc.createTextNo=
+de(text)};Dom.remove=3Dfunction(node){AS_Assert.isTrue(node.parentNode);=
+node.parentNode.removeChild(node)};
+Dom.insertAfter=3Dfunction(newNode,refNode){AS_Assert.isTrue(refNode.par=
+entNode);refNode.parentNode.insertBefore(newNode,refNode.nextSibling)};D=
+om.insertBefore=3Dfunction(newNode,refNode){AS_Assert.isTrue(refNode.par=
+entNode);refNode.parentNode.insertBefore(newNode,refNode)};Dom.replace=3D=
+function(newNode,oldNode){AS_Assert.isTrue(oldNode.parentNode);oldNode.p=
+arentNode.replaceChild(newNode,oldNode)};Dom.getInnerText=3Dfunction(nod=
+e){var innerText=3D[];Dom.getInnerTextHelp_(node,innerText);return inner=
+Text.join("")};
+Dom.getInnerTextHelp_=3Dfunction(node,stringBuffer){if(node.innerText)st=
+ringBuffer.push(node.innerText);else if(node.data)stringBuffer.push(node=
+.data);else if(node.hasChildNodes()){var child=3Dnode.firstChild;for(;ch=
+ild;){arguments.callee(child,stringBuffer);child=3Dchild.nextSibling}}};=
+new Dom;if(window.jstiming){window.jstiming.beaconImageReferences_=3D{};=
+window.jstiming.nextImageId_=3D1;window.jstiming.report=3Dfunction(timer=
+,opt_extraParams,opt_reportUri){var extra=3D"";if(window.jstiming.pt){ex=
+tra+=3D"&srt=3D"+window.jstiming.pt;delete window.jstiming.pt}try{extra+=
+=3D"&tran=3D"+window.external.tran}catch(e){}var ticks=3Dtimer.t,start=3D=
+ticks.start;delete ticks.start;var rt=3D[];for(var label in ticks)start&=
+&rt.push(label+"."+(ticks[label]-start));if(opt_extraParams)for(var arg =
+in opt_extraParams)extra+=3D
+"&"+arg+"=3D"+opt_extraParams[arg];var img=3Dnew Image,id=3Dwindow.jstim=
+ing.nextImageId_++;window.jstiming.beaconImageReferences_[id]=3Dimg;img.=
+onload=3Dimg.onerror=3Dfunction(){delete window.jstiming.beaconImageRefe=
+rences_[id]};img.src=3D[opt_reportUri?opt_reportUri:"http://csi.gstatic.=
+com/csi","?v=3D3","&s=3Dcodesite&action=3D",timer.name,extra,"&rt=3D",rt=
+.join(",")].join("")}};var CS_STAR_ON=3D"http://www.gstatic.com/codesite=
+/ph/images/star_on.gif",CS_STAR_OFF=3D"http://www.gstatic.com/codesite/p=
+h/images/star_off.gif",CS_star=3D{};
+function CS_toggleStar(el,args,star_msg_id,star_on_msg,star_off_msg){var=
+ starred=3Del.src.indexOf("star_off.gif")!=3D-1?1:0;el.src=3Dstarred?CS_=
+STAR_ON:CS_STAR_OFF;var star_msg_el=3Ddocument.getElementById(star_msg_i=
+d);if(star_msg_el)star_msg_el.innerHTML=3Dstarred?star_on_msg:star_off_m=
+sg;CS_star=3D{on_msg:star_on_msg,off_msg:star_off_msg,img_el:el,msg_el:s=
+tar_msg_el};args.starred=3Dstarred;CS_setStar(args)}var CS_starXmlHttp=3D=
+undefined;
+function CS_setStar(args){CS_starXmlHttp=3DXH_ieProgId_?new ActiveXObjec=
+t(XH_ieProgId_):new XMLHttpRequest;var setStarURL=3D"/hosting/stars.do",=
+data=3D"";for(var i in args)data+=3Di+"=3D"+encodeURIComponent(args[i])+=
+"&";XH_XmlHttpPOST(CS_starXmlHttp,setStarURL,data,CS_setStarCallback)}fu=
+nction CS_setStarCallback(){CS_starXmlHttp.readyState=3D=3D4&&CS_starXml=
+Http.status=3D=3D200&&CS_gotSetStar(CS_starXmlHttp.responseText)}
+function CS_gotSetStar(responseText){try{var args=3Deval("_d=3D"+respons=
+eText),starred=3Dargs.starred;CS_star.img_el.src=3Dstarred?CS_STAR_ON:CS=
+_STAR_OFF;if(CS_star.msg_el)CS_star.msg_el.innerHTML=3Dstarred?CS_star.o=
+n_msg:CS_star.off_msg}catch(e){return null}};_CS_toggleStar=3DCS_toggleS=
+tar;(function(){function getPageType(url){var URL_FILTER=3D/http:\/\/[^\=
+/]*\/(u|hosting|p)\/([^\/]*)\/?([^\/]*)\/?([^\?\/]*)?/,urlArray=3DURL_FI=
+LTER.exec(url);if(urlArray[1]=3D=3D"hosting"){if(urlArray[2])return"host=
+ing_"+urlArray[2];return"hosting_home"}if(urlArray[1]=3D=3D"u"){if(urlAr=
+ray[3]=3D=3D"updates"){if(urlArray[4])return"user_updates_"+urlArray[4];=
+return"user_updates_user"}return"user_profile"}if(urlArray[1]=3D=3D"p"){=
+if(!urlArray[3]&&!urlArray[4])return"summary";if(urlArray[3]=3D=3D"wiki"=
+)return urlArray[3];if(urlArray[3]&&
+!urlArray[4])return urlArray[3];if(urlArray[3]&&urlArray[4]){var page=3D=
+urlArray[3]=3D=3D"w"?"wiki":urlArray[3];return page+"_"+urlArray[4]}}ret=
+urn"other"}function getActionNames(){var names=3D["codesite","ph"],pageT=
+ype=3D"project_"+getPageType(window.location.href);names.push(pageType);=
+return names.join(",")}function onLoadCsi(){var loadTimer=3Dwindow.jstim=
+ing.load;loadTimer.tick("plt");loadTimer.name=3DgetActionNames();window.=
+setTimeout(function(){window.jstiming.report(loadTimer)},500)}function r=
+eportToCsi(){if(window.attachEvent)window.attachEvent("onload",
+onLoadCsi);else window.addEventListener&&window.addEventListener("load",=
+onLoadCsi,false)}window._CS_reportToCsi=3DreportToCsi})();(function(){fu=
+nction loadAnalytics(){window.setTimeout(function(){var gaJsHost=3D"http=
+s:"=3D=3Ddocument.location.protocol?"https://ssl.":"http://www.",url=3Dg=
+aJsHost+"google-analytics.com/ga.js",script=3Ddocument.createElement("sc=
+ript");script.src=3Durl;script.type=3D"text/javascript";document.getElem=
+entsByTagName("head")[0].appendChild(script);_CS_reportAnalytics()},0)}i=
+f(window.attachEvent)window.attachEvent("onload",loadAnalytics);else win=
+dow.addEventListener&&window.addEventListener("load",loadAnalytics,false=
+)})();(function(){var export_name=3D"Menu";window[export_name]=3Dfunctio=
+n(target,opt_trigger,opt_triggerType){this.iid=3Dwindow[export_name].ins=
+tance.length;window[export_name].instance[this.iid]=3Dthis;this.target=3D=
+typeof target=3D=3D"string"?document.getElementById(target):target;this.=
+trigger=3D(opt_trigger=3Dtypeof opt_trigger=3D=3D"string"?document.getEl=
+ementById(opt_trigger):opt_trigger)||target;this.items=3D[];this.onOpenE=
+vents=3D[];this.triggerType=3Dopt_triggerType||"click";this.menu=3Dthis.=
+createElement("div","menuDiv instance"+
+this.iid);this.icon=3Dthis.createIcon();this.hide();this.addCategory("de=
+fault");this.addEvent(this.trigger,this.triggerType,this.wrap(this.toggl=
+e));this.addEvent(window,"resize",this.wrap(this.adjustSizeAndLocation))=
+;this.addEvent(document,"click",this.wrap(this.hide));this.addEvent(this=
+.menu,"click",this.stopPropagation());this.addEvent(this.trigger,"click"=
+,this.stopPropagation());this.addEvent(this.icon,"click",this.stopPropag=
+ation())};window[export_name].prototype=3D{target:null,trigger:null,trig=
+gerType:null,
+menu:null,icon:null,categories:null,thread:-1,iid:-1,items:null,scrolls:=
+false,onOpenEvents:null,createElement:function(element,opt_className,opt=
+_content){var div=3Ddocument.createElement(element);div.className=3Dopt_=
+className;opt_content&&this.append(opt_content,div);return div},createIc=
+on:function(){var icon=3Dthis.createElement("img","menuIcon off instance=
+"+this.iid);icon.setAttribute("src","http://www.gstatic.com/codesite/ph/=
+images/cleardot.gif");icon.setAttribute("height","14");icon.setAttribute=
+("width",
+"14");icon.style.verticalAlignment=3D"middle";this.target.parentNode.ins=
+ertBefore(icon,this.target.nextSibling);this.addEvent(this.trigger,"mous=
+eover",this.wrap(this.iconOver,icon));this.addEvent(this.trigger,"mouseo=
+ut",this.wrap(this.iconOut,icon));this.addEvent(icon,"mouseover",this.wr=
+ap(this.iconOver,icon));this.addEvent(icon,"mouseout",this.wrap(this.ico=
+nOut,icon));this.addEvent(icon,"mousedown",this.wrap(this.toggle));retur=
+n icon},iconOver:function(){if(this.className)this.className=3Dthis.clas=
+sName.replace(/ off/g,
+" on")},iconOut:function(opt_down){if(this.className){var regex=3Dopt_do=
+wn?/ (on|down)/g:/ on/g;this.className=3Dthis.className.replace(regex," =
+off")}},iconDown:function(){if(this.className)this.className=3Dthis.clas=
+sName.replace(/ (off|on)/g," down")},addEvent:function(element,eventType=
+,callback){if(element.addEventListener)element.addEventListener(eventTyp=
+e,callback,false);else try{element.attachEvent("on"+eventType,callback)}=
+catch(e){element["on"+eventType]=3Dcallback}},addOnOpen:function(eventCa=
+llback){var eventIndex=3D
+this.onOpenEvents.length;this.onOpenEvents.push(eventCallback);return ev=
+entIndex},wrap:function(callback,opt_thisObj){var closured_callback=3Dca=
+llback,this_object=3Dopt_thisObj||this;return function(){closured_callba=
+ck.apply(this_object)}},addCategory:function(category,opt_title){this.ca=
+tegories=3Dthis.categories||[];var categoryDiv=3Dthis.createElement("div=
+","menuCategory "+category);categoryDiv._categoryName=3Dcategory;if(opt_=
+title){var categoryTitle=3Dthis.createElement("b","categoryTitle "+categ=
+ory,opt_title);
+categoryTitle.style.display=3D"block";this.append(categoryTitle)}this.ap=
+pend(categoryDiv);return this.categories[this.categories.length]=3Dthis.=
+categories[category]=3DcategoryDiv},emptyCategory:function(category){if(=
+!!this.categories[category]){var div=3Dthis.categories[category],i=3Ddiv=
+.childNodes.length-1;for(;i>=3D0;i--)div.removeChild(div.childNodes[i])}=
+},clear:function(){var i=3D0;for(;i<this.categories.length;i++)this.cate=
+gories[this.categories[i]._categoryName]=3Dnull;this.items.splice(0,this=
+.items.length);
+this.categories.splice(0,this.categories.length);this.categories=3D[];th=
+is.items=3D[];this.menu.innerHTML=3D""},removeItem:function(item){var re=
+sult=3Dnull,i=3D0;for(;i<this.items.length;i++){if(this.items[i]=3D=3Dit=
+em){result=3Dthis.items[i];this.items.splice(i,1)}this.items[i].item._in=
+dex=3Di}return result},removeCategory:function(category){var div=3Dthis.=
+categories[category];if(!(!div||!div.parentNode)){div.parentNode.removeC=
+hild(div);var i=3D0;for(;i<this.categories.length;i++)if(this.categories=
+[i]=3D=3D=3Ddiv){this.categories[this.categories[i]._categoryName]=3D
+null;this.categories.splice(i,1);return}var i=3D0;for(;i<div.childNodes.=
+length;i++)div.childNodes[i]._index?this.items.splice(div.childNodes[i].=
+_index,1):this.removeItem(div.childNodes[i])}},addItem:function(html_or_=
+element,opt_href,opt_category,opt_title){var category=3Dopt_category?thi=
+s.categories[opt_category]||this.addCategory(opt_category,opt_title):thi=
+s.categories["default"],menuItem=3Dthis.createElement("a","menuItem",htm=
+l_or_element),menuHref=3Dopt_href||"#",itemText=3Dtypeof html_or_element=
+=3D=3D"string"?
+html_or_element:html_or_element.innerText||"ERROR";menuItem.style.displa=
+y=3D"block";menuItem.setAttribute("href",menuHref);menuItem._index=3Dthi=
+s.items.length;this.append(menuItem,category);this.items[this.items.leng=
+th]=3D{item:menuItem,text:itemText};return menuItem},addSeparator:functi=
+on(opt_category,opt_title){var category=3Dopt_category?this.categories[o=
+pt_category]||this.addCategory(opt_category,opt_title):this.categories["=
+default"],hr=3Dthis.createElement("hr","menuSeparator");this.append(hr,c=
+ategory)},
+adjustSizeAndLocation:function(){var style=3Dthis.menu.style;style.posit=
+ion=3D"absolute";var firstCategory=3Dnull,i=3D0;for(;i<this.categories.l=
+ength;i++){this.categories[i].className=3Dthis.categories[i].className.r=
+eplace(/ first/,"");if(this.categories[i].childNodes.length=3D=3D0)this.=
+categories[i].style.display=3D"none";else{this.categories[i].style.displ=
+ay=3D"";if(!firstCategory){firstCategory=3Dthis.categories[i];firstCateg=
+ory.className+=3D" first"}}}var alreadyVisible=3Dstyle.display!=3D"none"=
+&&style.visibility!=3D"hidden",
+docElemWidth=3Ddocument.documentElement.clientWidth,docElemHeight=3Ddocu=
+ment.documentElement.clientHeight,pageSize=3D{w:(window.innerWidth||docE=
+lemWidth&&docElemWidth>0?docElemWidth:document.body.clientWidth)||1,h:(w=
+indow.innerHeight||docElemHeight&&docElemHeight>0?docElemHeight:document=
+.body.clientHeight)||1},iconPos=3Dthis.find(this.icon),iconSize=3D{w:thi=
+s.icon.offsetWidth,h:this.icon.offsetHeight},targetPos=3Dthis.find(this.=
+target),targetSize=3D{w:this.target.offsetWidth,h:this.target.offsetHeig=
+ht},menuSize=3D
+{w:this.menu.offsetWidth,h:this.menu.offsetHeight};if(!alreadyVisible){v=
+ar oldVisibility=3Dstyle.visibility,oldDisplay=3Dstyle.display;style.vis=
+ibility=3D"hidden";style.display=3D"";style.height=3D"";style.width=3D""=
+;menuSize=3D{w:this.menu.offsetWidth,h:this.menu.offsetHeight};style.dis=
+play=3DoldDisplay;style.visibility=3DoldVisibility}var addScroll=3Dthis.=
+menu.offsetHeight/pageSize.h>0.8;if(addScroll){menuSize.h=3DparseInt(pag=
+eSize.h*0.8,10);style.height=3DmenuSize.h+"px";style.overflowX=3D"hidden=
+";style.overflowY=3D"auto"}else style.height=3D
+style.overflowY=3Dstyle.overflowX=3D"";style.top=3DtargetPos.y+targetSiz=
+e.h+"px";style.left=3DtargetPos.x+"px";if(menuSize.w<175)style.width=3D"=
+175px";if(addScroll)style.width=3DparseInt(style.width,10)+13+"px";if(ta=
+rgetPos.x+menuSize.w>pageSize.w)style.left=3DiconPos.x-(menuSize.w-iconS=
+ize.w)+"px"},html:function(opt_html){var result=3Dthis.menu.innerHTML;if=
+(opt_html)this.menu.innerHTML=3Dopt_html;return result},append:function(=
+html_or_element,opt_target){var element=3Dopt_target||this.menu;if(typeo=
+f opt_target=3D=3D"string"&&
+this.categories[opt_target])element=3Dthis.categories[opt_target];if(typ=
+eof html_or_element=3D=3D"string")element.innerHTML+=3Dhtml_or_element;e=
+lse element.appendChild(html_or_element)},over:function(){this.menu.styl=
+e.display!=3D"none"&&this.show();if(this.thread!=3D-1){clearTimeout(this=
+.thread);this.thread=3D-1}},out:function(){if(this.thread!=3D-1){clearTi=
+meout(this.thread);this.thread=3D-1}this.thread=3DsetTimeout(this.wrap(t=
+his.hide),400)},stopPropagation:function(){return function(e){if(!e)var =
+e=3Dwindow.event;e.cancelBubble=3D
+true;e.stopPropagation&&e.stopPropagation()}},toggle:function(){this.men=
+u.style.display=3D=3D"none"?this.show():this.hide()},show:function(){if(=
+this.menu.style.display!=3D""){var i=3D0;for(;i<this.onOpenEvents.length=
+;i++)this.onOpenEvents[i].call(null,this);this.menu.style.visibility=3D"=
+hidden";this.menu.style.display=3D"";this.adjustSizeAndLocation();this.i=
+conDown.apply(this.icon);this.trigger.nodeName&&this.trigger.nodeName=3D=
+=3D"A"&&this.trigger.blur();this.menu.style.visibility=3D"visible"}},hid=
+e:function(){this.iconOut.apply(this.icon,
+[true]);this.menu.style.display=3D"none"},find:function(element){var cur=
+left=3D0,curtop=3D0;if(element.offsetParent){do{curleft+=3Delement.offse=
+tLeft;curtop+=3Delement.offsetTop}while((element=3Delement.offsetParent)=
+&&element.style&&element.style.position!=3D"relative"&&element.style.pos=
+ition!=3D"absolute")}return{x:curleft,y:curtop}}};window[export_name].in=
+stance=3D[]})();(function(){var target=3Ddocument.getElementById("projec=
+ts-dropdown");if(target){window.myprojects=3Dnew Menu(target);window._ad=
+dProjects=3Dfunction(jsonData){myprojects.clear();var starred=3D[],proje=
+cts=3D[];for(var category in jsonData)switch(category){case "memberof":c=
+ase "ownerof":var i=3D0;for(;i<jsonData[category].length;i++)projects.pu=
+sh(jsonData[category][i]);break;case "starred":var i=3D0;for(;i<jsonData=
+[category].length;i++)starred.push(jsonData[category][i]);break;default:=
+break}projects.sort();var i=3D
+0;for(;i<projects.length;i++)myprojects.addItem(projects[i],"/p/"+projec=
+ts[i]+"/","projects","Projects");starred.sort();var i=3D0;for(;i<starred=
+.length;i++)myprojects.addItem(starred[i],"/p/"+starred[i]+"/","starred"=
+,"Starred");myprojects.addSeparator("controls","");myprojects.addItem("F=
+ind or start a project...","/hosting/","controls");var scriptTag=3Ddocum=
+ent.getElementById("_myprojects_script");scriptTag.parentNode.removeChil=
+d(scriptTag)};var loadItems=3Dfunction(){var script=3Ddocument.getElemen=
+tById("_myprojects_script");
+if(!script){var elem=3Ddocument.createElement("script");elem.src=3DuserP=
+rofileUrl+"projects?jsonp=3D_addProjects";elem.setAttribute("id","_mypro=
+jects_script");document.getElementsByTagName("head")[0].appendChild(elem=
+)}};myprojects.addEvent(window,"load",loadItems);myprojects.addOnOpen(lo=
+adItems);if(window.addEventListener)window.addEventListener("load",funct=
+ion(){document.body.appendChild(myprojects.menu)},false);else window.att=
+achEvent&&window.attachEvent("onload",function(){document.body.appendChi=
+ld(myprojects.menu)})}})();
+})()
+
+------------5Ovzn9r0DJ2I1XCZa1jylp--

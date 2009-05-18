@@ -1,0 +1,1046 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{WEB_TITLE}</title>
+<link rel="shortcut icon" href="http://www.hoang-huy.net/favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="{WEB_TITLE}" href="http://www.hoang-huy.net/rss.php">
+<link href="1tacpham.php_files/screen.css" rel="stylesheet" type="text/css">
+<link href="1tacpham.php_files/style_tooltips.css" rel="stylesheet" type="text/css">
+<script language="javascript1.2" src="1tacpham.php_files/vietkey.js"></script>
+<script language="JavaScript" src="1tacpham.php_files/vietuni.js"></script>
+<script language="JavaScript" src="1tacpham.php_files/playlisthtt.js"></script>
+<script language="javascript" type="text/javascript" src="1tacpham.php_files/javascript.js"></script>
+<script language="javascript" type="text/javascript" src="1tacpham.php_files/tooltips.js"></script><script charset="utf-8" id="injection_graph_func" src="1tacpham.php_files/injection_graph_func.js"></script></head><body><div id="dhtmltooltip"></div><img id="dhtmlpointer" src="1tacpham.php_files/spc.gif" width="0" height="0">
+<script language="javascript" type="text/javascript" src="1tacpham.php_files/prototype.js"></script>
+<script>
+function SoH_Media(obj,is_close) {
+	var hideshow = document.getElementById(obj);
+	if (is_close) {
+		//hideshow.innerHTML = '';
+		//hideshow.style.display = "none";
+		document.getElementById('playing_field').innerHTML = '';
+		//document.getElementById("show_hide").style.display = "none";
+	}
+	else {
+		if(hideshow.style.display != "none") {
+			hideshow.style.display = "none";
+			document.getElementById("SoH").innerHTML = '[+] Hiện mục nghe nhạc';
+		}
+		else {
+			hideshow.style.display = "block";
+			document.getElementById("SoH").innerHTML = '[-] Dấu mục nghe nhạc';
+		}
+	}
+	return false;
+}
+
+// BEGIN RATING
+
+var RATE_OBJECT_IMG = '/img/rate/full.gif';
+var RATE_OBJECT_IMG_HOVER = '/img/rate/full.gif';
+var RATE_OBJECT_IMG_HALF = '/img/rate/half.gif';
+var RATE_OBJECT_IMG_BG = '/img/rate/none.gif';
+
+// END RATING
+
+var loadingText = "<center><img src='/img/loading.gif'> <b>Đang tải dữ liệu ...</b></center>";
+</script>
+
+<div id="LoadingDiv" style="position: absolute; z-index: 1000; left: -500px; top: 300px;"> 
+    <table width="200" bgcolor="#666666" border="0" cellpadding="20" cellspacing="1"> 
+        <tbody><tr> 
+            <td align="center" bgcolor="#ffffff"><img src="1tacpham.php_files/wait.gif" width="32" border="0" height="32"><br> 
+            Đang Tải Dữ Liệu....</td> 
+        </tr> 
+    </tbody></table> 
+</div>
+<!-- BEGIN js --><!-- END js -->
+
+<div id="container">
+  <div class="header">
+    		<script language="javascript">
+			function bookmarksite(title,url)
+			{
+				if (window.sidebar) {// firefox
+					window.sidebar.addPanel(title, url, "");
+				} else if (window.opera && window.print) { // opera
+					var elem = document.createElement('a');
+					elem.setAttribute('href',url);
+					elem.setAttribute('title',title);
+					elem.setAttribute('rel','sidebar');
+					elem.click();
+				} else if (document.all) {// ie
+					window.external.AddFavorite(url, title);
+				}
+			}
+		</script>
+		<div class="blockType09">
+			<span class="left">Mời bạn <a href="#Register"><strong>ĐĂNG KÝ</strong></a> hoặc <a href="#Login"><strong>ĐĂNG NHẬP</strong></a> để lưu thông tin cá nhân</span>
+			<span class="right linkType05"><a href="" onclick="this.style.behavior='url(#default#homepage)'; this.setHomePage('http://emusic.vn');">Đặt <strong>Emusic</strong> làm trang chủ</a> |  <a href="javascript:bookmarksite('Emusic.Vn%20-%20K%C3%AAnh%20nghe%20nh%E1%BA%A1c%20gi%E1%BA%A3i%20tr%C3%AD%20s%E1%BB%91%201%20Vi%E1%BB%87t%20Nam',%20'http://emusic.vn')">Ghi nhớ (bookmark) <strong>Emusic.Vn</strong></a></span>
+			<br class="clear">
+		</div>
+	<a href="#Home" onclick="Title('Trang Chủ');"><img src="1tacpham.php_files/logo.png"></a>
+	<div class="contSearchTop">
+			<form id="search" action="http://hoang-huy.net/timkiem.php?htt=keyword">
+			<div>
+			<b>Tìm theo bài hát:</b>
+			<a href="http://www.hoang-huy.net/timkiem/A.htt"><b>A</b></a> <a href="http://www.hoang-huy.net/timkiem/B.htt"><b>B</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/C.htt"><b>C</b></a> <a href="http://www.hoang-huy.net/timkiem/D.htt"><b>D</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/%C4%90.htt"><b>Đ</b></a> <a href="http://www.hoang-huy.net/timkiem/E.htt"><b>E</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/F.htt"><b>F</b></a> <a href="http://www.hoang-huy.net/timkiem/G.htt"><b>G</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/H.htt"><b>H</b></a> <a href="http://www.hoang-huy.net/timkiem/I.htt"><b>I</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/J.htt"><b>J</b></a> <a href="http://www.hoang-huy.net/timkiem/K.htt"><b>K</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/L.htt"><b>L</b></a> <a href="http://www.hoang-huy.net/timkiem/M.htt"><b>M</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/N.htt"><b>N</b></a> <a href="http://www.hoang-huy.net/timkiem/O.htt"><b>O</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/P.htt"><b>P</b></a> <a href="http://www.hoang-huy.net/timkiem/Q.htt"><b>Q</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/R.htt"><b>R</b></a> <a href="http://www.hoang-huy.net/timkiem/S.htt"><b>S</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/T.htt"><b>T</b></a> <a href="http://www.hoang-huy.net/timkiem/U.htt"><b>U</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/%C6%AF.htt"><b>Ư</b></a> <a href="http://www.hoang-huy.net/timkiem/V.htt"><b>V</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/W.htt"><b>W</b></a> <a href="http://www.hoang-huy.net/timkiem/X.htt"><b>X</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/Y.htt"><b>Y</b></a> <a href="http://www.hoang-huy.net/timkiem/Z.htt"><b>Z</b></a> 
+			<a href="http://www.hoang-huy.net/timkiem/0-9.htt"><b>0 - 9</b></a>
+			</div>
+			<div class="searchTips01">
+				Tìm kiếm theo:
+				<label><input name="tim" value="23" checked="checked" class="checkbox" type="radio">
+				Bài hát</label>
+				<label><input name="tim" value="26" class="checkbox" type="radio">
+				Ca sĩ</label>
+				<label><input name="tim" value="24" class="checkbox" type="radio">
+				Album</label>
+				<label><input name="tim" value="25" class="checkbox" type="radio">
+				Nhạc sĩ</label>
+				<label><input name="tim" value="27" class="checkbox" type="radio">
+				Nhóm nhạc</label>
+			</div>
+			<div class="searchform">
+			<input name="keyword" class="inputType01 left" id="keyword" value="Bài gì cũng có ^^" onfocus="this.value=''" type="text">
+			<input src="1tacpham.php_files/btn_zing.gif" class="left" type="image">
+			</div>
+			
+			<div><span class="txtType01">Những từ khóa hot:</span> 
+			<a href="http://www.hoang-huy.net/timkiem/23/Beat.htt">Beat</a>
+			, <a href="http://www.hoang-huy.net/timkiem/23/Karaoke.htt">Karaoke</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/Tim">Tim</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/Minh%20H%E1%BA%B1ng.htt">Minh Hằng</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/Tu%E1%BA%A5n%20H%C6%B0ng.htt">Tuấn Hưng</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/B%E1%BA%A3o%20Thy.htt">Bảo Thy</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/M4u.htt">M4u</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/Th%C3%B9y%20Chi.htt">Thùy Chi</a>
+			, <a href="http://www.hoang-huy.net/timkiem/26/%C4%90%C3%A0m%20V%C4%A9nh%20H%C6%B0ng.htt">Đàm Vĩnh Hưng</a> ...</div>
+			</form>
+		</div>    <br class="clear">
+        <div class="mainmenu">
+		<div class="mainmenu_left"></div>
+		<div class="mainmenu_mid" style="width: 655px;">
+			<ul>
+				<li><a href="http://www.hoang-huy.net/index.php" class="selectitem" onclick="Title('Trang Chủ');">TRANG CHỦ</a></li>
+				<li class="node"></li>
+				<li><a href="#Home" class="" onclick="Title('TV Trực Tuyến');">Music</a></li>
+				<li class="node"></li>
+				<li><a href="http://hi5.vn/" class="" onclick="Title('Radio Trực Tuyến');">Video Clip</a></li>
+				<li class="node"></li>
+				<li><a href="http://phim.emusic.vn/" target="_blank" class="" onclick="Title('Tin Tức 24h');">PHIM ONLINE</a></li>
+				<li class="node"></li>
+				<li><a href="http://forum.emusic.vn/" target="_blank" class="" onclick="Title('Trà Chanh Blog');">FORUM</a></li>
+				<li class="node"></li>
+				<li><a href="http://www.munhatrang.com/" target="_blank" class="" onclick="Title('Diễn Đàn');">MU ONLINE</a></li>
+			</ul>
+		</div>
+		<div class="mainmenu_right"></div>
+		<br class="clear">
+	</div>
+
+  </div>
+  <div class="contain">
+    <div class="col01">
+			<div class="blockType02 mrB5">
+	<h2>Thể loại</h2>	
+	<div class="fistitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=3">Nhạc Việt Nam</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=2">Alternative/Punk</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=17">Blues</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=4">Classical</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=23">Dance</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=5">Country/Folk</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=6">Electronic</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=7">Inspirational</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=8">Jazz</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=18">Latin</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=19">Musicals</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=9">New Age</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=20">Pop</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=21">R&amp;B/Soul</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=10">Rock</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=11">Urban/Hip Hop</a></span></div>
+	<div class="menuitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=12">World/Reggae</a></span></div>
+	<div class="lastitem"><span><a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=14">Soundtracks/Other</a></span></div>
+</div>      <div style="margin-top: 5px;"> <a href="#Help"><img src="1tacpham.php_files/btn_huongdan.png" width="175" border="0" height="37"></a><br>
+  <a href="#Register"><img src="1tacpham.php_files/btn_dangky.png" width="175" border="0" height="38"></a> </div>
+           
+		    
+			<div class="corTop03">
+	<h2 class="headType06">ca sĩ vn</h2>
+</div>
+<div class="blockType05" style="overflow: auto; height: 300px;">
+	<ul>
+		<!-- BEGIN vnsinger -->
+		<!-- #BEGIN vnsinger.row -->
+		<li><a href="http://www.hoang-huy.net/%7Bsinger.URL%7D" onclick="TitleSing('{singer.NAME}');">{singer.NAME}</a></li>
+		<!-- #END vnsinger.row -->
+		<!-- END vnsinger -->
+	</ul>
+</div>
+<div class="corBot03b mrB5"><img src="1tacpham.php_files/space000.htm" width="1" height="1"></div>			<div class="corTop03">
+	<h2 class="headType06">ca sĩ qt</h2>
+</div>
+<div class="blockType05" style="overflow: auto; height: 300px;">
+	<ul>
+		<!-- BEGIN frsinger -->
+		<!-- #BEGIN frsinger.row -->
+		<li><a href="http://www.hoang-huy.net/%7Bsinger.URL%7D" onclick="TitleSing('{singer.NAME}');">{singer.NAME}</a></li>
+		<!-- #END frsinger.row -->
+		<!-- END frsinger -->
+	</ul>
+</div>
+<div class="corBot03b mrB5"><img src="1tacpham.php_files/space000.htm" width="1" height="1"></div>			
+	<div class="mrT5"></div>
+					
+			
+        
+    </div><div class="col02">
+				<div class="corTop04">
+			<h2 class="headType03">bạn đang nghe nhạc tại Website Emusic.Vn</h2>			
+		</div>
+			<div class="blockType04">
+<table width="100%" cellpadding="0" cellspacing="0">
+	<tbody id="playing">
+	<tr>
+		<td valign="top" align="center"><table width="99%" align="center" cellpadding="5" cellspacing="2">
+			<tbody><tr><td align="center"><!-- BEGIN player -->
+			<div><script language="javascript" tyle="text/javascript">
+document.write(UTF8('032694564968403269456496840445645645445147842694672626946726201845645758303612456452026454456893486034445645456401645645532018456457583052456456820687978763836736728745665787402254564582303444564545640144565486950361245645269467262694672620326945649684052456456820445645645402254564582306745695769467262N018456457583026454456893486067456957V0225456458230124565458750486456452544N02645445689348603269456496841569467262067456957018456457583022545645823012456545875067456957056456238578301845645758302645445689348603444564545640164564553202254564582303612456452026454456893486032694564968483673672874566578740326945649684038524563758233'));
+</script><div style="border: 4px solid rgb(0, 0, 0); background: rgb(0, 0, 0) none repeat scroll 0% 0%; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" align="center"><script type="text/javascript">new fadeshow(fadeimages_player, 340, 62, 0, 5000, 1, 0);</script><div align="right"><a href="http://www.hoang-huy.net/album.php" style="color: rgb(255, 255, 255); font-weight: bold; font-family: verdana; text-decoration: none;">Xem các album khác &gt;&gt;</a></div><object classid="CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,5,715" standby="Loading Microsoft Windows Media Player components..." type="application/x-oleobject" viewastext="" width="100%" height="300"> <param name="FileName" value="mms://hoanghuy.info//music/NhacVietNam15/chieckhangioam.mp3"><param name="TransparentAtStart" value="false"><param name="AutoStart" value="true"><param name="AnimationatStart" value="false"><param name="ShowControls" value="false"><param name="ShowDisplay" value="false"><param name="playCount" value="999"><param name="displaySize" value="0"><param name="Volume" value="100"><embed type="application/x-mplayer2" pluginspage="http://www.microsoft.com/Windows/MediaPlayer/" src="mms://hoanghuy.info//music/NhacVietNam15/chieckhangioam.mp3" name="MediaPlayer" transparentatstart="0" autostart="1" playcount="999" volume="100animationAtStart=0" displaysize="0" width="100%" height="300"> </object> </div>
+
+
+</div>
+			
+			<!-- END player --></td></tr></tbody></table>
+			<table class="border" width="99%" align="center" cellpadding="5" cellspacing="2"><tbody><tr><td>
+			
+			
+			
+			
+			
+			
+<table width="100%" cellpadding="2" cellspacing="2">
+<tbody><tr>
+<td width="18%" align="center"><img src="1tacpham.php_files/u1_t1228562376_I1Jx.jpg" alt="Khánh Phương" width="98" align="left" height="130"></td>
+<td width="38%">
+Bài hát: <b>Chiếc Khăn Gió Ấm</b><br>
+Ca sĩ: <a href="http://www.hoang-huy.net/nghesi.php?htt=nghesi&amp;nsso=1197"><b>Khánh Phương</b></a><br>
+Album: <a href="http://hoang-huy.net/album/tacpham/1.htt"><b>Đang Cập Nhật</b></a><br>
+Thể loại: <a href="http://www.hoang-huy.net/theloai.php?htt=theloai&amp;dong=3"><b>Nhạc Việt Nam</b></a><br>
+Dòng nhạc: <a href="http://www.hoang-huy.net/dongnhac.php?htt=dongnhac&amp;dong=3"><b>Nhạc Nhẹ</b></a><br>
+</td>
+<td>
+Nhạc sĩ: <a href="http://www.hoang-huy.net/nghesi.php?htt=nghesi&amp;nsso=855"><b>Nguyễn Văn Chung</b></a><br>
+Số lần nghe: 483<br>
+			
+			</td></tr>
+<tr><td colspan="3" align="center">Hãy gửi bài hát này cho người thân của bạn !
+			<div class="border" style="" align="center"><input onfocus="this.select()" value="&lt;font size=12&gt;&lt;b&gt;Chiếc Khăn Gió Ấm - Khánh Phương :D&lt;/b&gt;&lt;/font&gt; &gt;&gt; &lt;i&gt; http://hoang-huy.net/tacpham/17361/Chiec%20Khan%20Gio%20Am.htt &gt;&gt; Bài nì hay nhắm nhắm nà :x! Click nghe thử nhoa ;)&lt;/i&gt;" style="" type="text"></div>
+	</td></tr>
+<tr><td class="fr" colspan="3" align="center"><a href="#" onclick="addToPlaylist({song.ID});return false;"><img src="1tacpham.php_files/add.gif"> <b>Thêm vào Playlist</b></a> | <a href="#" onclick="alertBrokenLink({song.ID});return false;"><img src="1tacpham.php_files/broken.gif"> <b>Lỗi</b></a> | <a title="Nhấn chuột phải, chọn Save Target As..." onclick="return false;" href="http://nhac.hoang-huy.net/mms://hoanghuy.info//music/NhacVietNam15/chieckhangioam.mp3"><img src="1tacpham.php_files/download.gif"> <b>Download</b></a><br><a onclick="gift({song.ID},450,280);return false;" href="#Gift"><img src="1tacpham.php_files/gift.gif"> <b>Tặng nhạc</b></a> | <a href="ymsgr:sendim?m=http://hoang-huy.net/tacpham/17361/tangban.htt%20nghe%20thu%20di%20hay%20lam%20do%20:D" title="Gửi cho bạn bè qua Yahoo Chat"><img src="1tacpham.php_files/yahoo.png"><b>Tặng Qua Yahoo</b></a> </td></tr>
+
+<tr><td colspan="3"><div style="width: 100%; display: none;" id="comment_field" align="center"></div></td></tr>
+</tbody></table>			
+			
+			
+	
+			</td></tr>
+		</tbody></table></td>
+	</tr>
+	<!-- BEGIN lyric -->	<tr>
+		<td style="" align="center"><table class="border" width="99%" align="center" bgcolor="#f9f9f9" cellpadding="5" cellspacing="2">
+			<tbody><tr><td class="title_c">Lời bài hát</td></tr>
+			<tr><td><div style="overflow: auto;"><p align="center"><strong><font color="#0000ff">Ở bên kia bầu trời, về đêm chắc đang lạnh dần<br>
+<br>Và em giờ đang, chìm trong giấc mơ êm đềm<br>
+<br>Gửi mây mang vào phòng, vòng tay của anh nồng nàn<br>
+<br>Nhẹ nhàng ôm, cho em yên giấc ngủ ngon.<br>
+<br>Ở bên đây bầu trời, thì mưa cứ rơi hững hờ<br>
+<br>Để tim anh cồn cào, và da diết trong nỗi nhớ<br>
+<br>Dường như, anh nhớ, về em</font></strong></p>
+<br><p align="center"><strong><font color="#0000ff"><img alt="" src="1tacpham.php_files/regular_smile.htm"><img alt="" src="1tacpham.php_files/regular_smile.htm"><img alt="" src="1tacpham.php_files/regular_smile.htm"></font></strong></p>
+<br><p align="center"><strong><font color="#0000ff">Gửi cho em đêm lung linh, và tiếng sóng nơi biển lớn<br>
+<br>Gửi em những ngôi sao trên cao, tặng em chiếc khăn gió ấm<br>
+<br>Để em thấy chẳng hề cô đơn<br>
+<br>Để em thấy mình cần bên nhau<br>
+<br>Để em vững tin, vào tình yêu 2 chúng ta.<br>
+<br>Rồi cơn mưa đêm qua đi<br>
+<br>Ngày mai lúc em thức giấc<br>
+<br>Nắng mai sẽ hôn lên môi em<br>
+<br>Nụ hôn của anh ấm áp<br>
+<br>Và em hãy cười nhiều em nhé<br>
+<br>Vì em mãi là niềm hạnh phúc<br>
+<br>Của anh mà thôi...<br>
+<br></font></strong></p></div></td></tr>
+		</tbody></table></td>
+	</tr>
+	<!-- END lyric -->	</tbody>
+	<tbody><tr>
+		<td><div class="fr" id="show_hide" style="" align="center"><span><a href="#" id="SoH" onclick="return SoH_Media('playing',0);">[-] Dấu mục nghe nhạc</a></span> </div></td>
+	</tr>
+</tbody></table><hr>
+
+			</div>
+						<div><img src="1tacpham.php_files/box_bot4.gif"></div>
+			<div class="mrT5"></div>
+
+
+
+					<div class="corTop04">
+			<h2 class="headType03">Nhạc phẩm do Khánh Phương trình bày</h2>			
+		</div>
+			<div class="blockType04">
+<table width="100%" cellpadding="0" cellspacing="0"><tbody><tr>
+	<td valign="top"><table width="100%" cellpadding="0" cellspacing="0">
+	<tbody><tr><td><table width="100%" cellpadding="2" cellspacing="2">
+		<tbody><tr align="center"><td colspan="2"></td><td width="30"><img src="1tacpham.php_files/play.gif"></td><td width="30"><img src="1tacpham.php_files/download.gif"></td><td width="30"><img src="1tacpham.php_files/lyric.gif"></td><td width="30"><img src="1tacpham.php_files/playlist.gif"></td></tr>
+				<!-- BEGIN list --> 
+		<!-- #BEGIN list_row -->
+		<tr class="m_list_2" align="center"><td width="16"><img src="1tacpham.php_files/play.gif"></td><td align="left"><a href="http://hoang-huy.net/tacpham/17361/Chiec%20Khan%20Gio%20Am.htt"><b>Chiếc Khăn Gió Ấm</b></a><br> » <a href="http://www.hoang-huy.net/nghesi.php?htt=nghesi&amp;nsso=855">Nguyễn Văn Chung</a></td><td><b>484</b></td><td><b>0</b></td><td>12</td><td><a href="#" onclick="addToPlaylist(17361);return false;"><img src="1tacpham.php_files/add.gif"></a></td></tr>
+		<!-- #END list_row -->
+		<!-- END list -->
+		
+	</tbody></table></td></tr>
+	<tr align="center"><td></td></tr>
+	</tbody></table></td>
+</tr></tbody></table>
+			</div>
+			<div><img src="1tacpham.php_files/box_bot4.gif"></div>
+			﻿	</div>
+                <div class="col03">
+		<script>
+function annoucement(){
+	alert("Vui lòng đăng nhập để sử dụng chức năng này!!!!");
+	return false;
+}
+</script>
+		<div><img src="1tacpham.php_files/box_top3.gif"></div>
+		<div class="blockType01">
+			<h2><img src="1tacpham.php_files/icon_log.gif"> Đăng nhập</h2>
+			<form method="post" onsubmit="return false;" name="quick_login">
+			<div id="login_loading" style="display: none;"></div>
+				<label>Tên đăng nhập:</label>
+				<input name="name" class="input190" maxlength="32" type="text">
+				<label>Mật khẩu:</label>
+				<input name="pwd" class="input190" maxlength="32" type="password">
+				<table width="100%" border="0" cellpadding="3" cellspacing="0">
+					<tbody><tr>
+						<td class="brR" width="50%">
+							<input src="1tacpham.php_files/btn_dangnhap.gif" style="border: 0px none ; width: 71px; height: 22px;" onclick="return login('quick_login');" type="image">
+						</td>
+						<td class="pdL14" width="50%"><a href="#Forgot_Password">Quên mật khẩu</a> <br>
+							<span class="linkType01"><strong><a href="#Register">Đăng ký ngay</a></strong></span></td>
+					</tr>
+				</tbody></table>
+			</form><hr>
+</div>
+		<div class="mrB5"><img src="1tacpham.php_files/box_bot5.gif"></div>                <div class="mrT5"></div>
+		   	<div class="corTop05">
+		<h2 class="headType04">BẠN ĐÃ NGHE CHƯA ?</h2> 		
+	</div>
+
+	<div class="blockType05">
+		<table width="100%" border="0" cellpadding="5" cellspacing="0">
+		<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tbody><tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/13202/Co%20Nho%20Tinh%20Dau.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Có Nhớ Tình Đầu</b><br />Ca sỹ: <b class=\'user\'>Lê Hiếu</b><br />Lượt nghe: <b class=\'user\'>10</b><br />')">Có Nhớ Tình Đầu</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=203" class="small pdL14" title="Lê Hiếu">Lê Hiếu</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/13202/Co%20Nho%20Tinh%20Dau.htt" title="Có Nhớ Tình Đầu"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/12461/Robertino%20Loreti%20-%20Jamaica.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Robertino Loreti - Jamaica</b><br />Ca sỹ: <b class=\'user\'>Theo Tác Phẩm</b><br />Lượt nghe: <b class=\'user\'>11</b><br />')">Robertino Loreti - Jamaica</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=988" class="small pdL14" title="Theo Tác Phẩm">Theo Tác Phẩm</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/12461/Robertino%20Loreti%20-%20Jamaica.htt" title="Robertino Loreti - Jamaica"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17173/Outtro.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Outtro</b><br />Ca sỹ: <b class=\'user\'>Small Fire</b><br />Lượt nghe: <b class=\'user\'>13</b><br />')">Outtro</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=1190" class="small pdL14" title="Small Fire">Small Fire</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17173/Outtro.htt" title="Outtro"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/1797/Hoa%20Hoc%20Tro.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Hoa Học Trò</b><br />Ca sỹ: <b class=\'user\'>Đàm Vĩnh Hưng</b><br />Lượt nghe: <b class=\'user\'>21</b><br />')">Hoa Học Trò</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=65" class="small pdL14" title="Đàm Vĩnh Hưng">Đàm Vĩnh Hưng</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/1797/Hoa%20Hoc%20Tro.htt" title="Hoa Học Trò"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/911/Loving%20You%20Sunday%20Morning.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Loving You Sunday Morning</b><br />Ca sỹ: <b class=\'user\'>Scorpions</b><br />Lượt nghe: <b class=\'user\'>6</b><br />')">Loving You Sunday Morning</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=590" class="small pdL14" title="Scorpions">Scorpions</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/911/Loving%20You%20Sunday%20Morning.htt" title="Loving You Sunday Morning"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/2440/Anh%20Em%20Ket%20Nghia.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Anh Em Kết Nghĩa (Bóng Dáng Mùa Xuân 2)</b><br />Ca sỹ: <b class=\'user\'>Lương Bằng Quang</b><br />Lượt nghe: <b class=\'user\'>18</b><br />')">Anh Em Kết Nghĩa (Bóng Dáng Mùa Xuân 2)</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=629" class="small pdL14" title="Lương Bằng Quang">Lương Bằng Quang</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/2440/Anh%20Em%20Ket%20Nghia.htt" title="Anh Em Kết Nghĩa (Bóng Dáng Mùa Xuân 2)"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/14904/Goi%20Anh%20%28remix%29.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Gọi Anh (remix)</b><br />Ca sỹ: <b class=\'user\'>Nguyên Thảo</b><br />Lượt nghe: <b class=\'user\'>16</b><br />')">Gọi Anh (remix)</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=1076" class="small pdL14" title="Nguyên Thảo">Nguyên Thảo</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/14904/Goi%20Anh%20%28remix%29.htt" title="Gọi Anh (remix)"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/2746/Hat%20Di%20Em%20Mua%20Xuan.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Hát Đi Em Mùa Xuân</b><br />Ca sỹ: <b class=\'user\'>Ngô Thanh Vân</b><br />Lượt nghe: <b class=\'user\'>7</b><br />')">Hát Đi Em Mùa Xuân</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=283" class="small pdL14" title="Ngô Thanh Vân">Ngô Thanh Vân</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/2746/Hat%20Di%20Em%20Mua%20Xuan.htt" title="Hát Đi Em Mùa Xuân"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/344/Fuel.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Fuel</b><br />Ca sỹ: <b class=\'user\'>Metallica</b><br />Lượt nghe: <b class=\'user\'>6</b><br />')">Fuel</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=341" class="small pdL14" title="Metallica">Metallica</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/344/Fuel.htt" title="Fuel"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/7236/Like%20A%20Prayer.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Like A Prayer</b><br />Ca sỹ: <b class=\'user\'>Madonna</b><br />Lượt nghe: <b class=\'user\'>3</b><br />')">Like A Prayer</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=787" class="small pdL14" title="Madonna">Madonna</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/7236/Like%20A%20Prayer.htt" title="Like A Prayer"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/13505/Dem%20Sao%20Lung%20Linh.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Đêm Sao Lung Linh</b><br />Ca sỹ: <b class=\'user\'>Sỹ Luân</b><br />Lượt nghe: <b class=\'user\'>6</b><br />')">Đêm Sao Lung Linh</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=1021" class="small pdL14" title="Sỹ Luân">Sỹ Luân</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/13505/Dem%20Sao%20Lung%20Linh.htt" title="Đêm Sao Lung Linh"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/3245/Killing%20Me%20Softly.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Killing Me Softly</b><br />Ca sỹ: <b class=\'user\'>Thanh Thảo</b><br />Lượt nghe: <b class=\'user\'>4</b><br />')">Killing Me Softly</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=397" class="small pdL14" title="Thanh Thảo">Thanh Thảo</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/3245/Killing%20Me%20Softly.htt" title="Killing Me Softly"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/4384/Kim.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Kim</b><br />Ca sỹ: <b class=\'user\'>Eminem</b><br />Lượt nghe: <b class=\'user\'>6</b><br />')">Kim</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=738" class="small pdL14" title="Eminem">Eminem</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/4384/Kim.htt" title="Kim"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/12405/Charles%20Aznavour%20-%20Les%20Deux%20Guitares.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Charles Aznavour - Les Deux Guitares</b><br />Ca sỹ: <b class=\'user\'>Theo Tác Phẩm</b><br />Lượt nghe: <b class=\'user\'>8</b><br />')">Charles Aznavour - Les Deux Guitares</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=988" class="small pdL14" title="Theo Tác Phẩm">Theo Tác Phẩm</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/12405/Charles%20Aznavour%20-%20Les%20Deux%20Guitares.htt" title="Charles Aznavour - Les Deux Guitares"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/2932/Co%20Be%20Nho%20Xinh%203.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Cô Bé Nhỏ Xinh 3</b><br />Ca sỹ: <b class=\'user\'>Như Quỳnh</b><br />Lượt nghe: <b class=\'user\'>17</b><br />')">Cô Bé Nhỏ Xinh 3</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=707" class="small pdL14" title="Như Quỳnh">Như Quỳnh</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/2932/Co%20Be%20Nho%20Xinh%203.htt" title="Cô Bé Nhỏ Xinh 3"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/6428/Duts.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Duts</b><br />Ca sỹ: <b class=\'user\'>Ying Yang Twins</b><br />Lượt nghe: <b class=\'user\'>15</b><br />')">Duts</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=777" class="small pdL14" title="Ying Yang Twins">Ying Yang Twins</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/6428/Duts.htt" title="Duts"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/96/Judgement%20Day.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Judgement Day</b><br />Ca sỹ: <b class=\'user\'>Michael Learns to Rock</b><br />Lượt nghe: <b class=\'user\'>15</b><br />')">Judgement Day</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=154" class="small pdL14" title="Michael Learns to Rock">Michael Learns to Rock</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/96/Judgement%20Day.htt" title="Judgement Day"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/8533/Time%20Gate%20%28Update%29%20%28Marc%20Vision%29.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Time Gate (Update) (Marc Vision)</b><br />Ca sỹ: <b class=\'user\'>DJ Tiesto</b><br />Lượt nghe: <b class=\'user\'>5</b><br />')">Time Gate (Update) (Marc Vision)</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=811" class="small pdL14" title="DJ Tiesto">DJ Tiesto</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/8533/Time%20Gate%20%28Update%29%20%28Marc%20Vision%29.htt" title="Time Gate (Update) (Marc Vision)"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/15172/Vang%20Anh%20Mua%20Dong.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Vắng Anh Mùa Đông</b><br />Ca sỹ: <b class=\'user\'>Hoàng Lê Vi</b><br />Lượt nghe: <b class=\'user\'>11</b><br />')">Vắng Anh Mùa Đông</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=749" class="small pdL14" title="Hoàng Lê Vi">Hoàng Lê Vi</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/15172/Vang%20Anh%20Mua%20Dong.htt" title="Vắng Anh Mùa Đông"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+<!-- BEGIN random -->
+	<!-- #BEGIN random.begin_tag --><!-- #END random.begin_tag -->
+		<!-- #BEGIN random.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/8695/Forever%20Today.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Forever Today</b><br />Ca sỹ: <b class=\'user\'>DJ Tiesto</b><br />Lượt nghe: <b class=\'user\'>10</b><br />')">Forever Today</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=811" class="small pdL14" title="DJ Tiesto">DJ Tiesto</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/8695/Forever%20Today.htt" title="Forever Today"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END random.row -->
+	<!-- #BEGIN random.end_tag --><!-- #END random.end_tag -->
+<!-- END random -->
+		</tbody></table>		
+	</div>
+	<div><img src="1tacpham.php_files/box_bot6.gif"></div>		<div class="mrT5"></div>
+			<div class="corTop05">
+		<h2 class="headType04">MỚI NHẤT THÁNG 11</h2> 		
+	</div>
+
+	<div class="blockType05">
+		
+		<center><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" id="/flash.swf" width="190" align="middle" height="100">
+	<param name="allowScriptAccess" value="sameDomain">
+	<param name="movie" value="/flash.swf">
+	<param name="quality" value="high">
+	<param name="bgcolor" value="#ffffff">
+	<embed src="1tacpham.php_files/flash.swf" quality="high" bgcolor="#ffffff" name="/flash.swf" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" width="190" align="middle" height="100">
+</object></center>
+<br>
+<table width="100%" border="0" cellpadding="5" cellspacing="0">
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tbody><tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17320/Love%21Love%21Love%21.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Love!Love!Love!</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>285</b>')">Love!Love!Love!</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17320/Love%21Love%21Love%21.htt" title="Love!Love!Love!"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17319/Loi%20Chia%20Tay%20De%20Noi%20The%20Sao%20Anh%20Remix.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Lời chia tay dễ nói thế sao anh remix</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>403</b>')">Lời chia tay dễ nói thế sao anh remix</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17319/Loi%20Chia%20Tay%20De%20Noi%20The%20Sao%20Anh%20Remix.htt" title="Lời chia tay dễ nói thế sao anh remix"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17318/Loi%20Hua.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Lời hứa</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>124</b>')">Lời hứa</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17318/Loi%20Hua.htt" title="Lời hứa"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17317/Mot%20Ngay%20Vang%20Anh%20Voi%20Em%20That%20Vo%20Nghia.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Một ngày vắng anh với em thật vô nghĩa</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>299</b>')">Một ngày vắng anh với em thật vô nghĩa</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17317/Mot%20Ngay%20Vang%20Anh%20Voi%20Em%20That%20Vo%20Nghia.htt" title="Một ngày vắng anh với em thật vô nghĩa"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17316/Giat%20Minh%20Em%20Mat%20Anh.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Giật mình em mất anh</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>255</b>')">Giật mình em mất anh</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17316/Giat%20Minh%20Em%20Mat%20Anh.htt" title="Giật mình em mất anh"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17315/Co%20Bao%20Gio%20Anh%20Biet.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Có bao giờ anh biết</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>206</b>')">Có bao giờ anh biết</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17315/Co%20Bao%20Gio%20Anh%20Biet.htt" title="Có bao giờ anh biết"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17314/Vi%20Nho%20Vi%20Yeu.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Vì nhớ vì yêu</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>226</b>')">Vì nhớ vì yêu</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17314/Vi%20Nho%20Vi%20Yeu.htt" title="Vì nhớ vì yêu"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17313/Think%20of%20you.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Think of you</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>198</b>')">Think of you</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17313/Think%20of%20you.htt" title="Think of you"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17312/VIen%20keo%20moi.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Viên kẹo mới</b><br />Ca sỹ: <b class=\'user\'>Thu Thủy</b><br />Lượt nghe: <b class=\'user\'>173</b>')">Viên kẹo mới</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=414" class="small pdL14" title="Thu Thủy">Thu Thủy</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17312/VIen%20keo%20moi.htt" title="Viên kẹo mới"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17311/Trai%20Tim%20Luon%20Gan%20Nhau.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Trái Tim Luôn Gần Nhau</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>232</b>')">Trái Tim Luôn Gần Nhau</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17311/Trai%20Tim%20Luon%20Gan%20Nhau.htt" title="Trái Tim Luôn Gần Nhau"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17310/Mot%20Vong%20Trai%20Dat.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Một Vòng Trái Đất</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>263</b>')">Một Vòng Trái Đất</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17310/Mot%20Vong%20Trai%20Dat.htt" title="Một Vòng Trái Đất"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17309/De%20Anh%20Cu%20Ngu%20Quen.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Để Anh Cứ Ngủ Quên</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>146</b>')">Để Anh Cứ Ngủ Quên</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17309/De%20Anh%20Cu%20Ngu%20Quen.htt" title="Để Anh Cứ Ngủ Quên"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17308/Phut%20Giao%20Thua%20Lang%20Le.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Phút Giao Thừa Lặng Lẽ</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>187</b>')">Phút Giao Thừa Lặng Lẽ</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17308/Phut%20Giao%20Thua%20Lang%20Le.htt" title="Phút Giao Thừa Lặng Lẽ"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17307/Hoa%20Co%20Mua%20Xuan.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Hoa Cỏ Mùa Xuân</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>152</b>')">Hoa Cỏ Mùa Xuân</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17307/Hoa%20Co%20Mua%20Xuan.htt" title="Hoa Cỏ Mùa Xuân"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17306/Lam%20Sao%20Noi%20Yeu%20Em.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Làm Sao Nói Yêu Em</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>182</b>')">Làm Sao Nói Yêu Em</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17306/Lam%20Sao%20Noi%20Yeu%20Em.htt" title="Làm Sao Nói Yêu Em"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17305/Goi%20Ten%20Anh.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Gọi Tên Anh</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>197</b>')">Gọi Tên Anh</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17305/Goi%20Ten%20Anh.htt" title="Gọi Tên Anh"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17304/Tim%20Den%20Ngay%20Mai.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Tìm Đến Ngày Mai</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>132</b>')">Tìm Đến Ngày Mai</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17304/Tim%20Den%20Ngay%20Mai.htt" title="Tìm Đến Ngày Mai"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17303/Co%20Nhau%20Ngay%20Xuan.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Có Nhau Ngày Xuân</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>138</b>')">Có Nhau Ngày Xuân</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17303/Co%20Nhau%20Ngay%20Xuan.htt" title="Có Nhau Ngày Xuân"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17302/Tet%20Nguyen%20Dan.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Tết Nguyên Đán</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>128</b>')">Tết Nguyên Đán</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17302/Tet%20Nguyen%20Dan.htt" title="Tết Nguyên Đán"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+<!-- BEGIN top_newest -->
+	<!-- #BEGIN top_newest.begin_tag --><!-- #END top_newest.begin_tag -->
+		<!-- #BEGIN top_newest.row -->
+			<tr>
+				<td class="bgType01" valign="top" width="87%">
+					<img src="1tacpham.php_files/icon_not.gif" width="10" height="10"> 
+					<span class="linkType02"><a href="http://hoang-huy.net/tacpham/17301/Tet%20Den.htt" onmouseout="hideddrivetip()" onmouseover="ddrivetip('<b>Tết Đến</b><br />Ca sỹ: <b class=\'user\'>Various Artist</b><br />Lượt nghe: <b class=\'user\'>128</b>')">Tết Đến</a></span><br>
+					<a href="http://www.hoang-huy.net/nghesi.php?htt=tacpham&amp;nsso=991" class="small pdL14" title="Various Artist">Various Artist</a>
+				</td>
+				<td class="bgType01" valign="top" width="13%">
+					<a href="http://hoang-huy.net/tacpham/17301/Tet%20Den.htt" title="Tết Đến"><img src="1tacpham.php_files/icon_mic.gif" width="19" height="20"></a>
+				</td>
+			</tr>
+		<!-- #END top_newest.row -->
+	<!-- #BEGIN top_newest.end_tag --><!-- #END top_newest.end_tag -->
+<!-- END top_newest -->
+			<tr>
+				<td colspan="2" class="" valign="top" align="right">
+					<span style=""><a href="#Home"><img src="1tacpham.php_files/btn_xemtiep.gif" width="72" height="21"></a></span>
+				</td>
+			</tr>
+		</tbody></table>		
+	</div>
+	<div><img src="1tacpham.php_files/box_bot6.gif"></div>		<div class="mrT5"></div>
+			<div class="corTop05">
+		<h2 class="headType04">liên kết</h2> 		
+	</div>
+	<div class="blockType05">		
+	<!-- BEGIN ads -->
+	<!-- #BEGIN ads.row -->
+	<div class="contType01">
+	<a href="http://www.hoang-huy.net/%7Bads.URL%7D" target="_blank"><img src="1tacpham.php_files/ads.htm" title="{ads.WEB}" alt="{ads.WEB}" width="196"></a>
+	<br class="clear">
+	</div>
+	<!-- #END ads.row -->
+	<!-- END ads -->
+	</div>
+	<div><img src="1tacpham.php_files/box_bot6.gif"></div>		<div class="mrB5 mrT5">
+		</div>
+	</div>
+  <div class="clear" style="height: 20px;"></div>
+  	<div class="footer">
+		<a href="#Home">Trang chủ</a><span>|</span><a href="http://phim.emusic.vn/" target="_blank">Phim Online</a><span>|</span><a href="http://forum.emusic.vn/" target="_blank">Forum</a><span>|</span><a href="http://www.munhatrang.com/" target="_blank">Mu Online</a><span>|</span><a target="_blank" href="http://www.hoang-huy.net/rss.php"><img src="1tacpham.php_files/rss.gif" alt="RSS" style="border: 0px none ;"></a>
+		<div style="font-weight: normal;">Copyright © 2008 by <a href="http://emusic.vn/" target="_blank">Emusic.Vn</a>. Style by ZingStar</div>
+	</div>
+</div>
+</div></body></html>

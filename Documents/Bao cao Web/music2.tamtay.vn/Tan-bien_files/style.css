@@ -1,0 +1,905 @@
+body { margin:0px; padding:0; background : #FFFFFF;}
+body,td,th {
+    color: #505050;
+    font-family: tahoma;
+    font-size:11px;
+}
+td, th {border: 1px solid #ddd}
+.tbody { margin:0px; padding:0px;}
+
+a:link      { /*color: #286f99;*/ color:#003399; text-decoration:none}
+a:visited   { color: #003399; text-decoration:none}
+a:hover     { color: #003399; text-decoration:underline}
+a:active    { color: #003399; text-decoration:none}
+img         {border:0px solid #000000;}
+.clear      { clear:both;}
+.line {border-bottom:1px dotted #CCCCCC; border-top:1px solid #FFFFFF;  overflow:hidden; height:1px; margin:2px 0px 2px 0px;}
+hr  { border: 0; height: 1px; color: #eee; background-color: #eee; }
+.display-none { display:none}
+.display-block { display:block}
+
+/**/
+.trangchu {
+    background:url(../../images/icon/house.gif) no-repeat;
+    padding: 3px 0px 3px 20px;
+}
+
+.tatca { 
+    background:url(../../images/icon/music.gif) no-repeat;
+    padding: 3px 0px 3px 20px;
+}
+
+.album_all {
+    background:url(../../images/icon/cd_add.gif) no-repeat;
+    padding: 3px 0px 3px 20px;
+}
+
+.nghesy {
+	background:url(../../images/icon/mytt.png) no-repeat;
+	padding: 3px 0px 3px 20px;
+}
+.bogo {
+	float:right;
+	padding: 3px 0px 3px 20px;
+}
+
+.playlist_all {
+    background:url(../../images/icon/page.gif) no-repeat;
+    padding: 3px 0px 3px 20px;
+}
+
+.nhaccuatoi {
+    background:url(../../images/icon/phone.gif) no-repeat;
+    padding: 3px 0px 3px 20px;
+}
+.quantri {
+	background:url(../../images/icon/icon_addcomment.png) no-repeat;
+	padding: 3px 0px 3px 20px;
+}
+
+/*Menu trai : */
+.left_menu_title    { color:#777; font-weight:bold; padding-left:5px;}
+.left_menu          { margin:5px 0px 15px 0px;}
+.left_menu p        { background:url(../images/icon/icon_arrow.gif) left top no-repeat; margin: 0px 0px 7px 5px; padding: 0px 0px 0px 10px; font-family:tahoma; font-size:11px;}
+.left_menu .active  { font-weight:bold;}
+.left_menu div      { margin:0px 0px 10px 0px}
+.left_menu div p    { background:url(../images/icon/spacer.gif) ;margin:0px 0px 3px 6px}
+.left_menu div p .active{ font-weight:normal; /*color:#333333*/}
+
+.date { color: #505050; background: #FFF; text-align: right; margin: 4px 0 5px 0; padding: 0.4em 0 0 0; border-top: 1px solid #ddd;}
+.date a { color: #546078; }
+.ttcontent  { margin:0px auto; width:980px; padding-top:10px; margin-bottom:10px;}
+
+/*header*/
+    h1 {
+    font-size:11px;
+    margin:0px;
+}
+    h2 { font-family:Arial; font-size:14pt; padding:0 0 10px 0; font-weight:normal; color:#333333; margin:0}
+    h3 { font-size:16px; margin:0px;}
+    h4 { font-size:17px; margin:0px;}
+    h5 { font-size:18px; margin:0px;}
+    h6 { font-size:19px; margin:0px;}
+    
+    /*FORM*/
+    form { margin:0px; padding:0px;}
+    input.text, textarea { margin: 0; border: 1px solid #c1c9d5; background: #FFF; color: #444; font-family:tahoma; font-size:11px; padding:3px; }
+    input.text:hover, textarea:hover { border: 1px solid #5b74a2;}
+    input.button {      
+        height:21px; padding:2px;
+        border-width: 1px 1px 1px 1px; border-style: solid;
+        border-color: #b9c5dd #5b74a2 #5b74a2 #b9c5dd;
+        background-color:#e5ebf5;
+        color: #3c5480; font-size: 11px; font-family: tahoma; text-align: center;
+        cursor:pointer;
+    }
+    .btn_search { width:44px;}
+    .btn_search:hover { border:1px solid #5b74a2; background-color:#d1e3f0;}
+    
+    input.button_normal { cursor:pointer; border:1px solid #c1c9d5; background-color:#FFFFFF; color:#3c5480; font-family:tahoma; font-size:11px; padding:2px;}
+    input.button_normal:hover { border:1px solid #5b74a2; background-color:#f1f5fb;}
+    
+    .btn_submit_comment { width:90px;}
+    .btn_update { width:90px; font-weight:bold;}
+    .button_ecard {
+        background:transparent url(../images/icon/button.gif) no-repeat scroll 0% 50%;
+        color:#FFFFFF;
+        cursor:pointer;
+        font-family:Tahoma;
+        font-size:13px;
+        font-weight:bold;
+        height:29px;
+        padding:2px 2px 2px 10px;
+        width:152px;
+    }
+    
+    /*Tieu de cua moi trang (Hien thi o giua):*/
+    .title_page     { background:url(../images/icon/comment.gif) no-repeat left center;/* background-color:#E6E9EE; */color:#000000; font-weight:bold; font-size:14px; margin:6px 0px 12px 0px; padding-left:14px;}
+    /*Khi ko co menu con thi hien khoang trang:*/
+    .title_nomenu   {border-bottom:1px solid #000000; padding:5px 3px 3px 3px; background-color:#E6E9EE;}
+    .title_block    {
+    /*background:url(../images/icon/all_clip_icons.gif) 0px -113px repeat-x;*/
+background:#D1E3F0 url(../images/icon/flex_arrow_open.gif) no-repeat scroll left center;
+border-top:1px solid #A6D0E7;
+color:#333333;
+cursor:pointer;
+font-weight:bold;
+padding:3px 4px 3px 18px;
+
+}
+    .title_none     { background:url(../images/icon/flex_arrow_shut.gif) no-repeat left center; background-color:#d1e3f0; border-top:1px solid #a6d0e7; font-weight:bold;   color:#333333; padding:3px 4px 3px 18px; cursor:pointer; }
+    .content_block  { padding:0px; border:0px solid #d1e3f0; background-color:#FFFFFF; border-top:0px;}
+    .content_none   { display:none}
+    .statistics_block {background-color:#E6E9EE; float:left; padding:3px; margin-bottom:4px;}
+    .total_block    { float:left; font-size:10px;}
+    .seeall_block   { float:right; font-size:10px;}
+    .view_more      {
+    color:#333333;
+    background-color:#f2f7fa;
+    padding:4px 8px 4px 8px;
+    font-family:tahoma;
+    font-size:11px;
+    text-align:right;
+    padding-left:8px;
+    border-bottom:1px solid #d1e3f0;
+    border-left: 0px solid #b3d1e7;
+    border-right: 0px solid #b3d1e7;
+    /*width:640px;*/
+}
+    .view_more a    { color:#333333 }
+    .view_more a:hover  { color:#000000 }
+    
+/*TOP*/
+    .pagetop {margin-bottom:5px;/* background-color:#546078*/}
+    
+    /*Tab on off*/
+    .tabon2     { /*width:100px;*/ font-weight:bold; margin-right:10px; margin-left:10px;}
+    .tabon2 a   { color:#666}
+    .taboff2    { margin-right:8px; margin-left:8px; font-weight:normal; border-right:1px solid #FFFFFF; border-bottom:0px solid #b3d1e7;}
+    /*.taboff:hover     { border-top:2px solid #BFC7D2;}*/
+
+    .home_title_promoted {
+    color:#333;
+    background:url(../images/icon/all_clip_icons.gif) 0px -113px repeat-x;
+    background-color:#FFFFFF;
+    border-top:1px solid #b3d1e7;
+    padding:6px 6px 2px 6px;
+    margin-bottom:1px;
+    border-left: 0px solid #b3d1e7;
+    border-right: 0px solid #b3d1e7;
+}
+    .home_clip_tab {
+    color:#aaaaaa;
+    background:url(../images/icon/all_clip_icons.gif) 0px -113px repeat-x;
+    border-top:1px solid #b3d1e7;
+    border-bottom:0px solid #eef5f7;
+    padding:6px 6px 4px 0px;
+    
+}
+    .top { margin:0px auto; width:980px; }
+    .logo { margin:10px 0px 15px 0px; float:left;width:250px} /*; background:url(../images/logo_tamtay_vn.png) right top no-repeat*/
+    .logo .img { margin-top:15px;}
+    .navi { color:#999999; text-align:right; padding:10px 0px 0px 0px; margin-right: 0px;}
+    .username { color:#CC0000; font-weight:bold;}
+    .adv_top {margin:55px 0px 5px 0px; text-align:right; border:0px solid #e5e5e5;}
+    .adv_top img { border:0px solid #FFF;}
+    
+    .menu_top { background-color:#d1e3f0; /*background-color:#d1e3f0;*/ padding:5px 0px 5px 0px; border:1px solid; border-width:1px 0px 1px 0px; border-color:#a3c7e2;}
+    .menu_top a { font-weight:bold;}
+    .menu_top .line { background:url(../images/top_line.gif) center no-repeat; width:2px; height:10px; margin:0px 15px 0px 15px;}
+    
+    .clip_navi { margin:0px 0px 10px 0px; color:#aaa; font-size:10px;}
+    .clip_navi span { margin:0px 10px 0px 5px; font-size:11px;}
+    .clip_navi .leftside {float:left;}
+    .clip_navi .rightside {float:right; color:#505050; margin-top:-5px}
+
+
+/*Noi dung cua moi tab:==================================*/
+.home_content {
+    padding:10px 0px 0px 0px;
+    border:1px solid #a6d0e7;
+    border-width:0px 0px 0px 0px;
+    background-color:#FFFFFF;
+}
+
+/*.adv_top {background-color:#FFFFFF; float:right; width:700px; margin-top:8px; text-align:right}*/
+
+/*Phan trang: ====================================*/
+    .page           { margin-top:5px; margin-bottom:5px; text-align:right;}
+    .number_current { padding:2px 3px 2px 3px; background-color:white; border: 1px solid #f5d5bb; color: #d2691e; font-weight:normal}
+    .number         { padding:2px 3px 2px 3px; border:1px solid #e5eef4; margin-left:3px;}
+    a.number        { color:#89b8d2}
+
+/*Footer*/
+    .footer { width:100%; border-top:2px solid #7dabce; text-align:center; padding:10px 0px 10px 0px;}
+
+/*HOME PAGE:=====================*/
+    .scroll_y { overflow-y:scroll; height:200px;}
+
+    .home_player_name { 
+        font-size:11px; 
+        font-family:tahoma; 
+        padding:4px; 
+        text-align:center; 
+        border:1px solid #f6e4b8; 
+        background-color:#ffffdb;
+    }
+    
+    .home_player_name .name {
+        margin:0px;
+        padding:0px;
+    }
+    
+    .home_player_name .name a{
+        color:#cc6600;
+        font-size:12px; 
+    }
+    
+    .home_player_name .artist, .home_player_name .artist a { 
+        color:#777;
+        font-size:11px;
+    }   
+    
+    /*Clip Of Day:*/
+    .clip_of_day {float:left; width:280px;/* height:200px; overflow-y:scroll;*/ padding:0px;}
+    .clip_of_day .list {float:left; width:85px; margin-left:6px; margin-top:10px;}  
+    /*Search*/
+    .search_border { border:1px solid #ff9900; padding:1px;  background-color:#fffcf0}
+    .search_title {
+    font-weight:bold;
+    text-transform:none;
+    margin-bottom:10px;
+    background-color:#fae2d3;
+    padding:3px;
+    color:#333333
+}
+    .search_name    { font-family:tahoma; font-size:14px; font-weight:bold; padding:4px 0px 6px 0px;}
+    
+    /*Quang cao*/
+    .home_ads { padding-top:3px;}
+    .home_ads .list { margin-bottom:5px; text-align:center}
+    .clip_home_function {
+    border:1px solid #A3C7E2;
+    border-width:1px 0px 0px 0px;
+    background-color:#f2f9fe;
+    font-size:11px;
+    padding:6px;
+    margin-bottom:10px;
+    text-align:left;
+    border-left: 1px solid #b3d1e7;
+    border-right: 1px solid #b3d1e7;
+    }
+
+/*Hien thi tu khoa tim kiem nhieu nhat:*/
+    .tag_cloud
+    {
+        text-align: justify;
+    }
+    
+    .tag_cloud span
+    {
+        margin-right: 6px;
+        margin-left: 6px;
+    }
+    
+    .tag_cloud a
+    {
+        text-decoration: none;
+        display: inline;
+    }
+    
+    .tag_cloud a:hover
+    {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #6E9215;
+    }
+    
+    .tag_cloud .smallest
+    {
+        font-size: 11px;
+    }
+    
+    .tag_cloud .small
+    {
+        font-size: 15px;
+    }
+    
+    .tag_cloud .normal
+    {
+        font-size: 21px;
+    }
+    
+    .tag_cloud .large
+    {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .tag_cloud .large a
+    {
+        color: #0086C6;
+    }
+    
+    .tag_cloud .large a:hover
+    {
+        color: #ffffff;
+    }
+    
+    .tag_cloud .largest
+    {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .tag_cloud .largest a
+    {
+        color: #EF5308;
+    }
+    
+    .tag_cloud .largest a:hover
+    {
+        color: #ffffff;
+    }
+    
+.slide_back { background:url(../images/icon/all_clip_icons.gif) -32px 0px no-repeat; width:22px; height:20px; background-color:#ccc; margin-top:-4px; cursor:pointer; }
+.slide_next { background:url(../images/icon/all_clip_icons.gif) -54px 0px no-repeat; width:22px; height:20px; background-color:#ccc; margin-top:-4px; cursor:pointer; }
+.slide_back_hover { background:url(../images/icon/all_clip_icons.gif) -76px 0px no-repeat; width:22px; height:20px; background-color:#ccc; margin-top:-4px; cursor:pointer; }
+.slide_next_hover { background:url(../images/icon/all_clip_icons.gif) -98px 0px no-repeat; width:22px; height:20px; background-color:#ccc; margin-top:-4px; cursor:pointer; }
+
+/*Nut upload: */
+.btn_upload { background:url(../images/icon/all_clip_icons.gif) 0px -195px no-repeat; width:92px; height:25px; cursor:pointer;}
+.btn_upload_hover { background:url(../images/icon/all_clip_icons.gif) -92px -195px no-repeat; width:92px; height:25px; cursor:pointer; }
+
+/*Tai ve Silver Light:*/
+.download-silverlight {text-align:left;}
+.download-silverlight img {border-style: none;}
+
+/*Danh sach 4 video noi bat o dau trang:================================================================*/
+.all_music_hot {}
+.all_music_hot .music_list { float:left; width:212px; margin-right:10px; border-bottom:1px solid #ccc; margin-bottom:10px;}
+.all_music_hot .music_list .hot-run { float:left; width:20px;}
+.all_music_hot .music_list .hot-name { float:left; width:180px; background:url(../images/icon/control_play.png) no-repeat left top; }
+.all_music_hot .music_list .hot-name a{ font-weight:normal; font:9pt tahoma;}
+.all_music_hot .music_list .artist {margin-left:20px; margin-right:0px; }
+.all_music_hot .music_list .artist a{color:#888; font-size:11px;}
+.all_music_hot .music_list .artist a:visited{ color:#888; font-size:11px;}
+.all_music_hot .music_list .player-preview {margin-top:2px;}
+
+
+/*Thanh vien noi bat====================================================*/
+.member-hot {
+    height: 250px;
+}
+
+.member-hot .member-item {
+    padding:4px 0px;    
+}
+
+.member-hot .left-item {
+    float:left; 
+    margin-bottom:8px; 
+    width:210px;
+    background-color:#fff;
+}
+
+.member-hot .right-item {
+    float:right; 
+    margin-right:4px;
+    width:60px;
+}
+
+.member-hot .right-item img{
+    width:60px;
+    height:60px;
+}
+
+.member-hot .left-item .artist-item {
+    margin-bottom:5px;
+    background:url(../images/icon/user.gif) left no-repeat;
+    padding:2px;
+    padding-left:20px;
+}
+
+.member-hot .left-item .artist-item a, .member-hot .left-item .artist-item a:visited, .member-hot .left-item .artist-item a:hover{
+    color:#CC6600;
+}
+
+.member-hot .left-item .name-item {
+    background:url(../images/icon/cp_audio.gif) no-repeat left;
+    padding:2px;
+    padding-left:20px;
+}
+
+.member-hot .left-item .date-item {
+    color:#888;
+    background:url(../images/icon/time.gif) no-repeat left;
+    padding:2px;
+    padding-left:20px;
+}
+
+/*Danh sach nhac pham cot phai:*/
+.right-list { height:250px;}
+.right-list .song-item { 
+    padding:3px 0px;
+    border-bottom:1px dashed #ccc;
+}
+.right-list .song-item .name{
+    background:url(../images/icon/cp_audio.gif) no-repeat left;
+    padding:2px 0px;
+    padding-left:20px;
+}
+.right-list .song-item .name .artist a{
+    color:#418383;
+}
+.right-list .song-item .user a{ 
+    color:#666666;
+    padding-left:20px;
+}
+
+.artist-listenall{
+cursor:pointer; border:none; background-color:#FFFFFF; color:#3c5480; font-family:arial; font-size:12px; padding:2px;
+padding-left:20px; margin-top:5px;
+background:url(../../images/icon/music.gif) no-repeat 2px 2px;
+}
+
+/*Trang chi tiet video:====================================================*/
+.detail_rc { /*Detail page: Right_Column*/
+    float:left; 
+    width:160px; 
+    margin-left:10px;
+    background-color:#FFFFFF;
+}
+.label_right_detail { font-weight:bold; color:#333333; margin-top:2px; /*display:block;*/ }
+.moi_vao_nhom { background:url(../images/icon/all_clip_icons.gif) 0px -29px no-repeat; width:16px; height:16px;}
+.them_vao_nhom { background:url(../images/icon/all_clip_icons.gif) -16px -29px no-repeat; width:16px; height:16px;}
+.them_vao_su_kien { background:url(../images/icon/all_clip_icons.gif) -32px -29px no-repeat; width:16px; height:16px;}
+.thong_bao_pham_quy { background:url(../images/icon/all_clip_icons.gif) -48px -29px no-repeat; width:16px; height:16px;}
+
+.player_area {
+    border-top:1px solid #a6d0e7;
+}
+.player_area h1 {
+    font-family:tahoma; 
+    font-size:16px; 
+    color:#003458; 
+    font-weight:bold; 
+    margin:10px 0px 8px 0px;
+}
+.player_area .player-background {
+    background:url(../images/detail_rec.gif) left top no-repeat;
+    padding:10px; 
+    padding-top:24px;
+    padding-bottom:5px;
+    text-align:center;
+}
+.player_area .info_a {  
+    color:#333; 
+    padding-top:8px;
+}
+
+.player_area .info_b {
+    border:1px solid #dfecf6; 
+    border-width:0px 0px 0px 0px; 
+    padding:6px 0px 0px 0px; 
+    text-align:center;
+}
+
+.player_area .info_b .artist-value {
+    color:#AA5500;
+}
+
+.player_area .info_b .category-value {
+    color:#007777;
+}
+
+.player_area .keyword {
+    border-top:1px solid #dfecf6; 
+    padding:5px 0px;
+}
+
+.player_area .lyric-short {
+    border-top:1px solid #dfecf6; 
+    padding:5px 0px;
+}
+
+.player_area .lyric-full {
+    border-top:1px solid #dfecf6; 
+    padding:5px 0px;
+}
+
+/*Danh sach ca khuc kieu list: ============================================== */
+.song-list { padding:10px 0px 0px 0px}
+.song-list .song-item { border-bottom:1px solid #f8f8f8; margin:6px 0px 3px 0px; padding-bottom:3px;}
+.song-list .song-item .hot-run { float:left; width:25px;}
+/*.song-list .song-item .hot-name { float:left; width:470px; background:url(../images/icon/control_play.png) no-repeat left top; }*/
+.song-list .song-item .hot-name { float:left; width:315px;}
+.song-list .song-item .hot-name a{ font-weight:normal; font:9pt tahoma;}
+.song-list .song-item .hot-name a:hover{ font-weight:normal; font:9pt tahoma; color:#CC6600;}
+.song-list .song-item .hot-time { float:left; width:60px; text-align:center}
+.song-list .song-item .hot-star { float:left; width:80px; text-align:center}
+.song-list .song-item .hot-view { float:left; width:100px;}
+.song-list .song-item .hot-addtoplaylist { float:left; width:20px;}
+.song-list .song-item .player-preview { background:url(../images/bg_player_preview.gif) no-repeat top left; padding:20px 10px 10px 10px; margin-top:2px;}
+.song-list .song-item .header { font-weight:bold; font-family:tahoma; font-size:9pt}
+.category .song-item .hot-name { width:481px;}
+
+.song-list .song-item .more-info { margin:3px 5px 0 25px; }
+.song-list .song-item .more-info .stat-info{ color:#666666; float: right; }
+.song-list .song-item .more-info .artist a{ color:#418383; font-size:8.5pt; float: left; width: 230px}
+.song-list .song-item .hot-name .artist a{ color:#418383; font-size:8.5pt; line-height:22px}
+
+/*Danh sach album1:     */
+.all_album { }
+.all_album .album1          {
+    float:left;
+    width:280px;
+    background-color:#fff;
+    margin:7px 0px 8px 0px;
+}
+/*Danh sach album:      */
+.all_album .album           {
+    float:left;
+    width:220px;
+    background-color:#fff;
+    margin:7px 0px 8px 0px;
+}
+.all_album .album .cover2   {
+    float:left;
+    width:40px;
+    border:1px solid #ddd;
+    margin-right:7px;
+}
+.all_album .album .cover    {
+    float:left;
+    width:62px;
+    border:1px solid #ddd;
+    margin-right:7px;
+}
+.all_album .album .cover1   {
+    float:left;
+    width:156px;
+    border:1px solid #ddd;
+    margin-right:4px;
+    height: 144px;
+    margin-left: 5px;
+}
+.all_album .album .cover img    {
+    width:60px;
+    height:60px;
+    border:1px solid #fff;
+}
+.all_album .album .name     { float:left; width:140px; margin-bottom:3px;}
+.all_album .album .name a   {  font-weight:normal; font-family:tahoma; font-size:12px; color:#336633}
+.all_album .album .name a:hover { font-weight:normal; font-family:tahoma; font-size:12px; color:#666600}
+.all_album .album .count    { float:left; width:140px; margin-bottom:0px; font-style:italic; color:#777}
+.all_album .album .artist   { float:left; width:140px; color:#666666}
+.all_album .album .artist a { color:#336666}
+
+/*Danh sach album cot phai:     */
+.right_album { }
+.right_album .album { float:left; width:90px; background-color:#fff; margin:10px 4px 10px 0px; text-align:center}
+.right_album .album .cover { width:62px; border:1px solid #ddd; margin:0px 0px 3px 10px;}
+.right_album .album .cover img { width:60px; height:60px; border:1px solid #fff;}
+.right_album .album .name { margin-bottom:3px;}
+.right_album .album .name a{  font-weight:normal;}
+.right_album .album .name a:hover{  font-weight:normal; color:#E87400}
+
+/*CHi tiet album:       */
+.album_detail { margin:7px 0px 8px 0px;}
+.album_detail .left-item    { float:left; width:152px; margin-right:10px;}
+.album_detail .right-item   { float:left; width:500px;}
+
+.album_detail .left-item    .cover  { border:1px solid #ddd; width:152px}
+.album_detail .left-item    .cover img  { width:150px; height:auto; border:1px solid #fff;}
+.album_detail .right-item   .label { float:left; width:100px; color:#666666; clear:left; font:9pt tahoma; margin-bottom:3px; }
+.album_detail .right-item   .value { float:left; width:400px; font:9pt tahoma; margin-bottom:3px; color:#333333}
+.album_detail .right-item   .albumname { font-family:tahoma; font-size:14px; font-weight:bold; color:#DD4800; margin-bottom:8px;}
+
+/*Danh sach Nghe sy:*/
+.all_artist { }
+.all_artist .artist { float:left; text-align:center; width:105px; background-color:#fff; margin:7px 5px 8px 0px;}
+.all_artist .artist .cover { margin:0px auto; width:62px; text-align:center; border:1px solid #ddd;}
+.all_artist .artist .cover img { margin:0px auto; width:60px; height:60px; border:1px solid #fff}
+.all_artist .artist .name { margin:5px 0px 0px 0px; text-align:center}
+.all_artist .artist .name a{ font-weight:normal; font-family:tahoma; font-size:12px; color:#003366}
+.all_artist .artist .name a:hover{ font-family:tahoma; font-size:12px; color:#CC6600}
+.all_artist .artist .view { color:#888}
+
+/*Danh sach Playlist:       */
+.all_playlist { }
+.all_playlist .playlist { float:left; width:208px; background-color:#fff; margin:7px 0px 8px 10px;}
+.all_playlist .playlist .cover { float:left; width:62px; border:1px solid #ddd; margin-right:4px;}
+.all_playlist .playlist .cover img { width:60px; height:60px; border:1px solid #fff;}
+.all_playlist .playlist .name {float:left; width:140px; margin-bottom:3px;}
+.all_playlist .playlist .name a{  font-weight:normal; font-family:tahoma; font-size:12px;}
+.all_playlist .playlist .name a:hover{  font-weight:normal; font-family:tahoma; font-size:12px; color:#E87400}
+.all_playlist .playlist .artist { float:left; width:140px; color:#666666;  padding-top:5px;}
+.all_playlist .playlist .date { float:left; width:140px; color:#666666; margin-top:0px; text-align:left; border:0px; padding:0px;}
+.all_playlist .myplaylist { float:left; width:270px; background-color:#fff; margin:12px 0px 8px 10px;}
+.all_playlist .myplaylist .cover { float:left; width:62px; border:1px solid #ddd; margin-right:4px;}
+.all_playlist .myplaylist .cover img { width:60px; height:60px; border:1px solid #fff;}
+.all_playlist .myplaylist .name {float:left; width:200px; margin-bottom:3px;}
+.all_playlist .myplaylist .name a{  font-weight:normal; font-family:tahoma; font-size:12px;}
+.all_playlist .myplaylist .name a:hover{  font-weight:normal; font-family:tahoma; font-size:12px; color:#E87400}
+.all_playlist .myplaylist .artist { float:left; width:250px; color:#666666;  padding-top:5px;}
+.all_playlist .myplaylist .date { float:left; width:200px; color:#666666; margin-top:0px; text-align:left; border:0px; padding:0px;}
+.all_playlist .myplaylist .plaction { float:left; width:200px; color:#666666; margin-top:0px; text-align:left; border:0px; padding:0px;}
+
+/*Danh sach Playlist cot phai:      */
+.right_playlist { }
+.right_playlist .playlist { float:left; width:90px; background-color:#fff; margin:10px 4px 10px 0px; text-align:center}
+.right_playlist .playlist .cover { width:62px; border:1px solid #ddd; margin:0px 0px 3px 10px;}
+.right_playlist .playlist .cover img { width:60px; height:60px; border:1px solid #fff;}
+.right_playlist .playlist .name { margin-bottom:3px;}
+.right_playlist .playlist .name a{  font-weight:normal;}
+.right_playlist .playlist .name a:hover{  font-weight:normal; color:#E87400}
+
+.embed { margin: 5px 20px 0 0; float: left; text-align:center;  }
+.embed .image { width: 25px; height: 25px; }
+.embed .desc { font-weight:bold; font-family:Arial; font-size:11px; color:#003399; margin-top:2px; }
+.embed2 {}
+.embed2 .edialog {position:absolute; top:100px; left:100px; width:340px; border-right : 2px solid #DDD; border-left : 1px solid #DDD; border-top : 1px solid #DDD; border-bottom : 2px solid #DDD; background-color:#F5F8F7; font: 12px Arial; color:#333; background-image: url(../images/edlg_bgr2.gif); background-repeat: repeat-x; z-index:1000}
+.embed2 .eheader {height:22px; border-bottom:1px dotted #DDD}
+.embed2 .eclose {display: block; float: right; width: 14px; height: 13px; margin-right:3px; cursor: pointer}
+
+/*Tim theo chu cai dau tien:*/
+.abc {
+    background-color:#f9f9f9; 
+    text-align:right;
+    padding:3px;
+    font: 11px tahoma;
+}
+.abc a  { 
+    font: 11px tahoma;
+    padding:3px 4px; 
+    cursor:pointer; 
+    color:#006600;
+    text-transform:uppercase;
+}
+.abc .selected {
+    font: 11px tahoma;
+    font-weight:bold;
+    color:#333;
+    background-color:#D1E3F0;
+    border:0px solid #ccc; 
+}
+
+/*Nut tao playlist cot phai*/
+.music-function {
+    margin-bottom:10px;
+}
+
+/* sonbn add*/
+
+
+wbr:after { content: "\00200B" }
+
+.overlay {
+    width: 100%; 
+    height: 100%;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 98;
+}
+.dialog {
+    width: 50%;
+    background: #EEEEEE;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    z-index: 99;
+    border: 1px solid black;
+    padding: 12px;
+}
+.dialog td,tr,th{
+    border: 0px;
+}
+
+.dialog_checkbox{
+    float:left;
+    margin:0 0 13px;
+    height: 18px;
+    width: 18px;
+}
+
+.dialog_select{
+    float:left;
+    margin: 0 0 13px;
+    color: #484848;
+    font-family: tahoma;
+    font-size: 11px;
+    width: 250px;
+}
+
+.dialog_label {
+    float:left;
+    line-height: 16px;
+    margin: 0 0 0 5px ;
+    width: 75px;
+    text-align: left;
+}
+
+.dialog_input{
+    float: left;
+    margin:0 0 13px;
+    color: #484848;
+    font-family: tahoma;
+    font-size: 11px;
+    width:250px;
+}
+
+.dialog_textarea{
+    float: left;
+    margin:0 0 13px;
+    color: #484848;
+    font-family: tahoma;
+    font-size: 11px;
+    width:245px;
+    height: 50px;
+    overflow: auto;
+}
+.infoblock td { border: none; }
+.admin_title {
+	float: left;
+	width:100%;
+	display: inline;
+	text-align: center;
+	padding: 5px;
+	font-size: 20px;
+	font-height: 120%;
+	}
+.createplaylist a, .createplaylist img {
+width: 138px;height:25px;border: 0px;
+}
+.createplaylist a{
+background: transparent url('../images/playlist_create_my.gif') no-repeat scroll 0 -25px;
+float:left;
+}
+.createplaylist a:hover{
+background: transparent url('../images/playlist_create_my.gif') no-repeat scroll 0 0;
+}	
+.myplaylist2 a, .myplaylist2 img{
+border: 0px;width: 162px;height:25px;
+}
+.myplaylist2 a {
+background: transparent url('../images/playlist_create_my.gif') no-repeat scroll -138px -25px;
+float:left;
+}
+.myplaylist2 a:hover{
+background: transparent url('../images/playlist_create_my.gif') no-repeat scroll -138px 0;
+}
+
+.mymusic { margin-bottom:5px; }
+.mymusic .micon { float: left; width: 16px; height: 16px; margin-right: 5px; }
+.mymusic .minfo { float: left; overflow: hidden; width: 174px; }
+.mymusic .lefticon {float: left; margin-right:5px; width:19px}
+.mymusic .songtitle { margin-right:5px; font-family: tahoma; font-size: 9pt; }
+.mymusic .listen {float: right; margin-right:5px;  width:65px; text-align:center; }
+.mymusic .datecreate { float: right; margin-right:5px; width:65px; text-align:center; }
+.mymusic .songinfo {float: right; margin-right:5px; width: 70px; text-align:center;}
+.mymusic .adminicon {float: right; margin-right:5px; width: 16px; }
+.mymusic .artist a{ color:#418383; font-size:8.5pt; line-height:20px}
+.mymusic .artist{font-size:8.5pt; line-height:20px}
+.button-submit {
+ font-family: tahoma;
+ padding:2px;
+ font-size: 11px;
+ background-color:#3B5998;
+ border-color:#D9DFEA #0E1F5B #0E1F5B #D9DFEA;
+ color:#FFFFFF;
+}
+.mmmenu {margin:4px 0; padding:2px 0px 2px 22px;}
+.mmtrash {background: transparent url('../images/sound_delete.png') no-repeat}
+.mmpromoted {background: transparent url('../images/upromote.png') no-repeat}
+.mmupload {background: transparent url('../images/cd_add.png') no-repeat}
+.mmsongs {background: transparent url('../images/icon/pls.gif') no-repeat}
+.mmplaylist {background: transparent url('../images/icon/phone.png') no-repeat}
+
+#promoteDiv div{padding:0 0 0 0px;overflow:hidden;}
+#promoteDiv .buttons{padding:3px 0;float:left;margin-right:-62px;overflow:hidden;}
+#promoteDiv .buttons li{float:left;padding-right:4px;	list-style:none;
+}
+#promoteDiv .buttons li a{display:block;width:26px;height:26px;text-indent:-5000px;overflow:hidden;background-image:url('../images/seo-thumbs.gif');background-repeat:no-repeat;}
+#addMark{background-position:0 -40px;}
+#minusMark{background-position:0 -172px;}
+#addMark:hover,#addMark.on{background-position:0 -106px;}
+#minusMark:hover,#minusMark.on{background-position:0 -238px;}
+
+.navi-sub {
+ clear:both;
+ display:block;
+ background:#fff url(../images/navi-sub.gif) repeat-x bottom;
+ padding:8px 10px 6px 10px;
+ margin-bottom:15px;
+}
+.navi-sub h1{
+ font:9pt arial;
+ font-weight:bold;
+ color:#333;
+}
+ul.tab {
+	background: url(../images/tab-line.gif) repeat-x left bottom;
+	list-style: none;
+	margin: 0;
+	padding: 6px 0;
+	position: relative;
+	padding-left:5px;
+}
+
+ul.tab li {	
+	display: inline;
+	padding: 0;
+	margin:0px;
+}
+
+/* Style for link tag */
+ul.tab a {
+	font-weight: normal;
+	color:#333333;
+	margin: 0;
+	padding: 5px 10px;
+	margin-right: 0px;
+	text-decoration:none;
+	border: 1px solid #94a3c4;
+	background: #eceff5;
+}
+
+ul.tab a:hover {
+	background-color:#3b5998;
+	color:white;
+	border:1px solid #3b5998;
+	border-bottom:0px;
+	text-decoration:none;
+}
+
+ul.tab li a.on {
+	background: #FFF;
+	border: 1px solid #94a3c4;
+	border-bottom: 1px solid #FFF;
+	font-weight: bold;
+	padding: 5px 10px;
+	color:#b83a0e;
+	text-decoration:none;
+}
+ul.tab li a:hover.on {
+	background: #FFF;
+	border: 1px solid #94a3c4;
+	border-bottom: 1px solid #FFF;
+	font-weight: bold;	
+	color:#b83a0e;
+	text-decoration:none;
+}
+
+.bm { background: transparent url(../images/bookmark_ico.png) no-repeat scroll;margin-right:5px; width:18px; height: 18px; float: left}
+.bm img { width: 18px; height:18px; border:none }
+.itm0 { background-position: 0 0 }
+.itm1 { background-position: -18px 0 }
+.itm2 { background-position: -36px 0 }
+.itm3 { background-position: -54px 0 }
+.itm4 { background-position: -72px 0 }
+.itm5 { background-position: -90px 0 }
+.itm6 { background-position: -108px 0 }
+.itm7 { background-position: -126px 0 }
+.itm8 { background-position: -144px 0 }
+.itm9 { background-position: -162px 0 }
+.photo_album{width:130px; height:148px; overflow:hidden;float:left; margin:5px 10px 0 0; text-align:center}
+.photo_album img {width:120px; height:120px}
+.sleft {float:left; width:80px; margin-right:10px; padding:5px 0}
+.sright {float:left; width:380px; padding:5px 0}
+
+.my {background: transparent url(../images/my_all_icon.gif) no-repeat scroll;width:16px;height:16px}
+.my img {width:16px;height:16px;border:none}
+.mitm00{background-position: 0 0}
+.mitm01{background-position: -16px 0}
+.mitm02{background-position:-32px 0}
+.mitm03{background-position:-48px 0}
+.mitm10{background-position:0px -16px}
+.mitm11{background-position:-16px -16px}
+.mitm12{background-position:-32px -16px}
+.mitm13{background-position:-48px -16px}
+.popupcheck {background: transparent url(../images/popup_check.gif) no-repeat scroll; height:25px; width:200px; float:left; margin-right:5px;
+font:13px Tahoma; padding-top:3px}
+.popupcheck input{margin-left:5px}
+.popupcheck label{margin-left:2px}
+.popupcheck img{background: transparent url(../images/help.gif) no-repeat scroll; width:16px;height:16px; margin-left:8px;}

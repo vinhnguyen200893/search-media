@@ -1,0 +1,11 @@
+<ProfilerSettings>
+	<CommandLineExe>C:\Program Files\TestDriven.NET 2.0\ProcessInvocation.exe</CommandLineExe>
+	<CommandLineArgs>/assemblyName:"TestDriven.TestRunner.Server, Version=2.0.1935.0, Culture=neutral, PublicKeyToken=50ecb853f8c6b8d2" /xmlName:"M:TestDriven.TestRunner.Coverage.NCoverCoverageTestRunner.run(System.String,System.String,System.String,System.String,System.String)" /parameter:"tcp://127.0.0.1:1268/e16bb025-410f-415d-9268-fc74e3b499f1" /parameter:"tcp://127.0.0.1:1268/f380cc39-71ab-43f0-afc8-a1172b1db0d7" /parameter:"C:\Inetpub\wwwroot\MediaDownloader\bin\MediaDownloader.dll" /parameter:"T:MediaDownloader.media" /parameter</CommandLineArgs>
+	<WorkingDirectory />
+	<Assemblies>MediaDownloader</Assemblies>
+	<CoverageFile>C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\Mutant Design\TestDriven.NET 2.0\Coverage\MediaDownloader\Coverage0.xml</CoverageFile>
+	<LogFile />
+	<VerboseLog>false</VerboseLog>
+	<NoLog>false</NoLog>
+	<NoXslCopy>false</NoXslCopy>
+</ProfilerSettings>

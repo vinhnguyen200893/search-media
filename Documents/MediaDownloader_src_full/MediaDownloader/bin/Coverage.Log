@@ -1,0 +1,192 @@
+EVENT:   Profiler Initialize
+MESSAGE: Monitoring Assemblies: MediaDownloader;
+MESSAGE: ------------------------------------------------------------------ Module: 0x79b7c000
+MESSAGE: Failed to load symbols for module [mscorlib.dll] in [c:\windows\microsoft.net\framework\v1.1.4322].
+EVENT:   Loaded Module [c:\windows\microsoft.net\framework\v1.1.4322\mscorlib.dll]
+MESSAGE: Module [0x79b7c000] attached To assembly [0x00148d40]
+EVENT:   Loaded Assembly [mscorlib][0x00148d40]
+MESSAGE: ------------------------------------------------------------------ Module: 0x00178580
+MESSAGE: Failed to load symbols for module [ProcessInvocation.exe] in [C:\Program Files\TestDriven.NET 2.0].
+EVENT:   Loaded Module [C:\Program Files\TestDriven.NET 2.0\ProcessInvocation.exe]
+MESSAGE: Module [0x00178580] attached To assembly [0x00171640]
+EVENT:   Loaded Assembly [ProcessInvocation][0x00171640]
+MESSAGE: ------------------------------------------------------------------ Module: 0x0019be90
+MESSAGE: Failed to load symbols for module [testdriven.testrunner.server.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.testrunner.server.dll]
+MESSAGE: Module [0x0019be90] attached To assembly [0x00180128]
+EVENT:   Loaded Assembly [TestDriven.TestRunner.Server][0x00180128]
+MESSAGE: ------------------------------------------------------------------ Module: 0x7b2f60b0
+MESSAGE: Failed to load symbols for module [system.dll] in [c:\windows\assembly\gac\system\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system\1.0.5000.0__b77a5c561934e089\system.dll]
+MESSAGE: Module [0x7b2f60b0] attached To assembly [0x00192978]
+EVENT:   Loaded Assembly [System][0x00192978]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001a76d0
+MESSAGE: Failed to load symbols for module [testdriven.testrunner.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.testrunner.dll]
+MESSAGE: Module [0x001a76d0] attached To assembly [0x00196d38]
+EVENT:   Loaded Assembly [TestDriven.TestRunner][0x00196d38]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001903d0
+MESSAGE: Failed to load symbols for module [system.runtime.remoting.dll] in [c:\windows\assembly\gac\system.runtime.remoting\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system.runtime.remoting\1.0.5000.0__b77a5c561934e089\system.runtime.remoting.dll]
+MESSAGE: Module [0x001903d0] attached To assembly [0x001a5018]
+EVENT:   Loaded Assembly [System.Runtime.Remoting][0x001a5018]
+MESSAGE: ------------------------------------------------------------------ Module: 0x7bebc000
+MESSAGE: Failed to load symbols for module [system.xml.dll] in [c:\windows\assembly\gac\system.xml\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system.xml\1.0.5000.0__b77a5c561934e089\system.xml.dll]
+MESSAGE: Module [0x7bebc000] attached To assembly [0x001b0ba0]
+EVENT:   Loaded Assembly [System.Xml][0x001b0ba0]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001cae48
+MESSAGE: Failed to load symbols for module [testdriven.services.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.services.dll]
+MESSAGE: Module [0x001cae48] attached To assembly [0x001d5368]
+EVENT:   Loaded Assembly [TestDriven.Services][0x001d5368]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001e7ef8
+MESSAGE: Failed to load symbols for module [testdriven.testrunner.server.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.testrunner.server.dll]
+MESSAGE: Module [0x001e7ef8] attached To assembly [0x001b3d00]
+EVENT:   Loaded Assembly [TestDriven.TestRunner.Server][0x001b3d00]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001f8c28
+MESSAGE: Failed to load symbols for module [system.dll] in [c:\windows\assembly\gac\system\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system\1.0.5000.0__b77a5c561934e089\system.dll]
+MESSAGE: Module [0x001f8c28] attached To assembly [0x001ed950]
+EVENT:   Loaded Assembly [System][0x001ed950]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001f52f0
+MESSAGE: Failed to load symbols for module [testdriven.testrunner.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.testrunner.dll]
+MESSAGE: Module [0x001f52f0] attached To assembly [0x001efba8]
+EVENT:   Loaded Assembly [TestDriven.TestRunner][0x001efba8]
+MESSAGE: ------------------------------------------------------------------ Module: 0x00206598
+MESSAGE: Failed to load symbols for module [system.xml.dll] in [c:\windows\assembly\gac\system.xml\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system.xml\1.0.5000.0__b77a5c561934e089\system.xml.dll]
+MESSAGE: Module [0x00206598] attached To assembly [0x001f1c78]
+EVENT:   Loaded Assembly [System.Xml][0x001f1c78]
+MESSAGE: ------------------------------------------------------------------ Module: 0x00207070
+MESSAGE: Loaded symbols for module [mediadownloader.dll] in [c:\inetpub\wwwroot\mediadownloader\bin].
+EVENT:   Loaded Module [c:\inetpub\wwwroot\mediadownloader\bin\mediadownloader.dll]
+MESSAGE: Module [0x00207070] attached To assembly [0x00206790]
+EVENT:   Monitoring Assembly [MediaDownloader][0x00206790]
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly [MediaDownloader]
+MESSAGE: ------------------------------------------------------------------ Module: 0x00207070
+MESSAGE: Failed to load symbols for module [testdriven.framework.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.framework.dll]
+MESSAGE: Module [0x00207070] attached To assembly [0x001efba8]
+EVENT:   Loaded Assembly [TestDriven.Framework][0x001efba8]
+MESSAGE: ------------------------------------------------------------------ Module: 0x00206598
+MESSAGE: Failed to load symbols for module [testdriven.testrunner.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.testrunner.dll]
+MESSAGE: Module [0x00206598] attached To assembly [0x00206790]
+EVENT:   Loaded Assembly [TestDriven.TestRunner][0x00206790]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001e7ef8
+MESSAGE: Failed to load symbols for module [testdriven.adhoc.dll] in [c:\program files\testdriven.net 2.0\adhoc].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\adhoc\testdriven.adhoc.dll]
+MESSAGE: Module [0x001e7ef8] attached To assembly [0x001ed950]
+EVENT:   Loaded Assembly [TestDriven.AdHoc][0x001ed950]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001f52f0
+MESSAGE: Failed to load symbols for module [system.dll] in [c:\windows\assembly\gac\system\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system\1.0.5000.0__b77a5c561934e089\system.dll]
+MESSAGE: Module [0x001f52f0] attached To assembly [0x00208bd0]
+EVENT:   Loaded Assembly [System][0x00208bd0]
+MESSAGE: ------------------------------------------------------------------ Module: 0x001f8c28
+MESSAGE: Failed to load symbols for module [system.xml.dll] in [c:\windows\assembly\gac\system.xml\1.0.5000.0__b77a5c561934e089].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system.xml\1.0.5000.0__b77a5c561934e089\system.xml.dll]
+MESSAGE: Module [0x001f8c28] attached To assembly [0x001e8f00]
+EVENT:   Loaded Assembly [System.Xml][0x001e8f00]
+MESSAGE: ------------------------------------------------------------------ Module: 0x00190c30
+MESSAGE: Failed to load symbols for module [testdriven.framework.dll] in [c:\program files\testdriven.net 2.0].
+EVENT:   Loaded Module [c:\program files\testdriven.net 2.0\testdriven.framework.dll]
+MESSAGE: Module [0x00190c30] attached To assembly [0x002107c8]
+EVENT:   Loaded Assembly [TestDriven.Framework][0x002107c8]
+MESSAGE: ------------------------------------------------------------------ Module: 0x0023fde8
+MESSAGE: Loaded symbols for module [mediadownloader.dll] in [c:\inetpub\wwwroot\mediadownloader\bin].
+EVENT:   Loaded Module [c:\inetpub\wwwroot\mediadownloader\bin\mediadownloader.dll]
+MESSAGE: Module [0x0023fde8] attached To assembly [0x00238838]
+EVENT:   Monitoring Assembly [MediaDownloader][0x00238838]
+MESSAGE: ------------------------------------------------------------------ Module: 0x04776b90
+MESSAGE: Failed to load symbols for module [system.web.dll] in [c:\windows\assembly\gac\system.web\1.0.5000.0__b03f5f7f11d50a3a].
+EVENT:   Loaded Module [c:\windows\assembly\gac\system.web\1.0.5000.0__b03f5f7f11d50a3a\system.web.dll]
+MESSAGE: Module [0x04776b90] attached To assembly [0x0023f690]
+EVENT:   Loaded Assembly [System.Web][0x0023f690]
+EVENT:   Class Load [MediaDownloader.media] from [MediaDownloader]
+MESSAGE: Loading Method [Page_Load] on [MediaDownloader.media]
+MESSAGE: Loading Method [OnInit] on [MediaDownloader.media]
+MESSAGE: Loading Method [InitializeComponent] on [MediaDownloader.media]
+MESSAGE: Loading Method [cmdDownload_Click] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetHtmlContent] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkNhacso] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkI4vn] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkVnmusic] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkBennhac] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkSonic200] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkSonic200New] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkGiaidieu] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetLinkDocbao] on [MediaDownloader.media]
+MESSAGE: Loading Method [GetAsxUrl] on [MediaDownloader.media]
+MESSAGE: Loading Method [AsxReader] on [MediaDownloader.media]
+MESSAGE: Loading Method [decode] on [MediaDownloader.media]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.media]
+MESSAGE: Symbols not available.
+EVENT:   Unloaded Assembly [MediaDownloader]
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly []
+EVENT:   Unloaded Assembly [MediaDownloader]
+EVENT:   Unloaded Assembly []
+EVENT:   Profiler Shutdown
+MESSAGE: Loading Method [Page_Load] on [MediaDownloader.skins.VHeader]
+MESSAGE: Loading Method [OnInit] on [MediaDownloader.skins.VHeader]
+MESSAGE: Loading Method [InitializeComponent] on [MediaDownloader.skins.VHeader]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.skins.VHeader]
+MESSAGE: Symbols not available.
+MESSAGE: Loading Method [Page_Load] on [MediaDownloader.docbao]
+MESSAGE: Loading Method [OnInit] on [MediaDownloader.docbao]
+MESSAGE: Loading Method [InitializeComponent] on [MediaDownloader.docbao]
+MESSAGE: Loading Method [cmdDownload_Click] on [MediaDownloader.docbao]
+MESSAGE: Loading Method [GetHtmlContent] on [MediaDownloader.docbao]
+MESSAGE: Loading Method [GetLinkDocbao] on [MediaDownloader.docbao]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.docbao]
+MESSAGE: Symbols not available.
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Application_Start] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Session_Start] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Application_BeginRequest] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Application_EndRequest] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Application_AuthenticateRequest] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Application_Error] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Session_End] on [MediaDownloader.Global]
+MESSAGE: Loading Method [Application_End] on [MediaDownloader.Global]
+MESSAGE: Loading Method [InitializeComponent] on [MediaDownloader.Global]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.media]
+MESSAGE: Symbols not available.
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.MyUri]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.MyWebRequest]
+MESSAGE: Loading Method [Create] on [MediaDownloader.MyWebRequest]
+MESSAGE: Loading Method [GetResponse] on [MediaDownloader.MyWebRequest]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.MyWebResponse]
+MESSAGE: Loading Method [Connect] on [MediaDownloader.MyWebResponse]
+MESSAGE: Loading Method [SendRequest] on [MediaDownloader.MyWebResponse]
+MESSAGE: Loading Method [SetTimeout] on [MediaDownloader.MyWebResponse]
+MESSAGE: Loading Method [ReceiveHeader] on [MediaDownloader.MyWebResponse]
+MESSAGE: Loading Method [Close] on [MediaDownloader.MyWebResponse]
+MESSAGE: Loading Method [Page_Load] on [MediaDownloader.Test.test]
+MESSAGE: Loading Method [OnInit] on [MediaDownloader.Test.test]
+MESSAGE: Loading Method [InitializeComponent] on [MediaDownloader.Test.test]
+MESSAGE: Loading Method [cmdGetContent_Click] on [MediaDownloader.Test.test]
+MESSAGE: Loading Method [GetWebContent] on [MediaDownloader.Test.test]
+MESSAGE: Loading Method [GetHtmlContent] on [MediaDownloader.Test.test]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.Test.test]
+MESSAGE: Symbols not available.
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.Test.MyUri]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.Test.MyWebRequest]
+MESSAGE: Loading Method [Create] on [MediaDownloader.Test.MyWebRequest]
+MESSAGE: Loading Method [GetResponse] on [MediaDownloader.Test.MyWebRequest]
+MESSAGE: Loading Method [.ctor] on [MediaDownloader.Test.MyWebResponse]
+MESSAGE: Loading Method [Connect] on [MediaDownloader.Test.MyWebResponse]
+MESSAGE: Loading Method [SendRequest] on [MediaDownloader.Test.MyWebResponse]
+MESSAGE: Loading Method [SetTimeout] on [MediaDownloader.Test.MyWebResponse]
+MESSAGE: Loading Method [ReceiveHeader] on [MediaDownloader.Test.MyWebResponse]
+MESSAGE: Loading Method [Close] on [MediaDownloader.Test.MyWebResponse]

@@ -1,0 +1,45 @@
+<Configuration>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\Default.aspx.cs" offset="37634" line="1135" column="0" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\Default.aspx" offset="0" line="69" column="46" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\kikicoco.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\Default.aspx.resx" offset="2742" line="-1" column="-1" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\docbao.aspx.resx" offset="2742" line="-1" column="-1" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\docbao.aspx" offset="1281" line="-1" column="-1" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\docbao.aspx.cs" offset="2692" line="-1" column="-1" />
+      <TrackedFile location="D:\Inetpub\wwwroot\MediaDownloader\Web.config" offset="0" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Net.WebResponse">
+      <Item value="Headers" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.Label">
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string[]">
+      <Item value="Length" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.RegularExpressions.Match">
+      <Item value="Value" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Net.WebHeaderCollection">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string">
+      <Item value="IndexOf" priority="4" />
+      <Item value="Substring" priority="0" />
+      <Item value="Replace" priority="0" />
+      <Item value="ToLower" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.HttpResponse">
+      <Item value="Write" priority="3" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+</Configuration>

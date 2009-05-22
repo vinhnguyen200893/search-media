@@ -1,0 +1,47 @@
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline
+}
+
+form
+{
+    background-color: #CEF;
+    border:1px solid #6CD; 
+    width: auto; 
+    height: auto;
+    padding: 3px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+.button {
+	visibility: visible;
+	position: relative;}
+
+.bigbox
+{
+    width: 100%;
+}
+
+.smallbox
+{
+    width: 300px;
+}
+body
+{
+    font-family: Verdana;
+    margin-top: 20px;
+    font-size: 11px;
+}
+.disclaimer
+{
+    font-size: 9px;
+}
+.minor
+{
+    font-size: 9px;
+}

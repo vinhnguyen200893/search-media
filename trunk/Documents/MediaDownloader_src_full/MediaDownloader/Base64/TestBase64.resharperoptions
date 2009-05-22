@@ -1,0 +1,13 @@
+<Configuration>
+  <CompletionStatisticsManager />
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="C:\Inetpub\wwwroot\MediaDownloader\Base64\Form1.cs" offset="5064" line="62" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+</Configuration>

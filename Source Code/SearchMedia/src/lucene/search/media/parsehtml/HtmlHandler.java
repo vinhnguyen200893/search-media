@@ -17,8 +17,9 @@ import org.w3c.dom.NodeList;
  */
 public class HtmlHandler {
 //get element at specific position
-    int step=1;
-    int step_object=1;
+   public int step=1;
+   public int step_object=1;
+ 
     /*
      * convert text from unicode to ascii
      */
@@ -254,26 +255,54 @@ public class HtmlHandler {
                 return dl.toLowerCase();
             }
 
-    protected  void getComment(StringBuffer sb,Node node,int pos)
+     /*
+     * get Text of Node at position with specific name
+     */
+    protected  boolean getLinkSource(StringBuffer sb, Node node,String element)
     {
-        
-        if (node.getNodeType() == Node.COMMENT_NODE) {
-        if(pos==step_object)
-            sb.append(node.getTextContent());
-         step_object++;
-        }
+        if (node.getNodeType() == Node.ELEMENT_NODE) {
+            if (element.equalsIgnoreCase(node.getNodeName())) {
+                   getText(sb, node);
 
+          }
+        }
         NodeList children = node.getChildNodes();
         if (children != null) {
           int len = children.getLength();
           for (int i = 0; i < len; i++) {
-            getComment(sb, children.item(i),pos);
+            getLinkSource(sb, children.item(i), element);
+
           }
         }
+        return false;
+      }
+    protected  void getComment(StringBuffer sb,Node node,int pos)
+    {
+        
+        if (node.getNodeType() == Node.COMMENT_NODE)
+        {
+            if(pos==step_object )
+            {
+               sb.append(node.getNodeValue().toString()+"\n");              
+              
+               return;
+               
+            }
+             step_object++;
+        }
+       
+            NodeList children = node.getChildNodes();
+            if (children != null) {
+              int len = children.getLength();
+              for (int i = 0; i < len; i++) {
+                getComment( sb,children.item(i),pos);
+
+              }
+              return;
+            }
+
 
       }
-
-
     /*
      * get Text of Node at position with specific name
      */
@@ -292,9 +321,8 @@ public class HtmlHandler {
         if (children != null) {
           int len = children.getLength();
           for (int i = 0; i < len; i++) {
-            if (getText(sb, children.item(i), element,position)) {
-              return true;
-            }
+            getText(sb, children.item(i), element,position);
+                         
           }
         }
         return false;
@@ -315,6 +343,31 @@ public class HtmlHandler {
         }
 
       }
+ /*
+     * get Text of Node at position with specific name
+     */
+    protected  boolean getTitle(StringBuffer sb, Node node)
+    {
+        if (node.getNodeType() == Node.ELEMENT_NODE) {
+            if (node.getNodeName().equalsIgnoreCase("head"))
+            {
+                    getText(sb, node,"title",1);
+                    return true;
+
+            }
+        }
+        NodeList children = node.getChildNodes();
+        if (children != null) {
+          int len = children.getLength();
+          for (int i = 0; i < len; i++) {
+            getTitle(sb, children.item(i));
+
+          }
+        }
+        return false;
+      }
+
+
     /*
      * get attribute of node
      */
@@ -431,8 +484,8 @@ public class HtmlHandler {
         return false;
     }
 
-int stepchild=1;
-int posvalue=0;
+    int stepchild=1;
+    int posvalue=0;
 	 protected  void getTableNode(StringBuffer sb, Node node,ArrayList childtag,ArrayList childvalue)
     {
 
@@ -474,31 +527,72 @@ int posvalue=0;
         }
     }
 
-protected  String[] AnalysisTitle(String sb)
-{
+    protected  String[] AnalysisTitle(String sb)
+    {
     String[]sub=sb.split("[-|]");
     return sub;
-}
-     public static void main(String args[]) throws Exception {
-    HoangHuyNetHandler handler = new HoangHuyNetHandler();
-    org.apache.lucene.document.Document doc = handler.getDocument(
-      new FileInputStream(new File(args[0])));
-   // while(doc.fields().hasMoreElements()){
-    //System.out.println(doc.get("url"));
-    if(doc!=null){
-        System.out.println(doc.getField("songvn").stringValue());
-        System.out.println(doc.getField("songen").stringValue());
-        System.out.println(doc.getField("singervn").stringValue());
-        System.out.println(doc.getField("singeren").stringValue());
-        System.out.println(doc.getField("linkobject").stringValue());
-        System.out.println(doc.getField("linksource").stringValue());
-        System.out.println(doc.getField("linkmedia").stringValue());
-        System.out.println(doc.getField("albumen").stringValue());
-        System.out.println(doc.getField("albumvn").stringValue());
-
-    //doc.fields().nextElement();
-  //}
     }
+    protected  String AnalysisComment(String sb)
+    {
+        String[]sub=sb.split("\n");
+        int begin=sub[0].lastIndexOf("from")+5;
+        int end=sub[0].indexOf("by");
+        String linksource=sub[0].substring(begin,end);
+        return linksource;
+    }
+    protected  boolean getTextOfTag(StringBuffer sb, Node node,String element)
+    {
+
+          if (node.getNodeType() == Node.ELEMENT_NODE) {
+            if (element.equalsIgnoreCase(node.getNodeName())) {
+            //  if (node.getNodeName().equalsIgnoreCase("object")) {
+                if(node.hasAttributes()){             
+                Node para=node.getAttributes().item(0);
+                if(para.getNodeName().equalsIgnoreCase("class") && para.getNodeValue().equalsIgnoreCase("gen"))
+                {
+                    getText(sb, node);
+                    return true;
+                }
+               
+              }
+          
+             
+          }
+        }
+        NodeList children = node.getChildNodes();
+        if (children != null) {
+          int len = children.getLength();
+          for (int i = 0; i < len; i++) {
+              if(getTextOfTag(sb, children.item(i), element))
+            //if (getObjects(sb, children.item(i), element)) {
+              return true;
+           //}
+          }
+        }
+        return false;
+      }
+
+    public static void main(String args[]) throws Exception {
+//    HoangHuyNetHandler handler = new HoangHuyNetHandler();
+//    org.apache.lucene.document.Document doc = handler.getDocument(
+//      new FileInputStream(new File(args[0])));
+//   // while(doc.fields().hasMoreElements()){
+//    //System.out.println(doc.get("url"));
+//    if(doc!=null){
+//        System.out.println(doc.getField("songvn").stringValue());
+//        System.out.println(doc.getField("songen").stringValue());
+//        System.out.println(doc.getField("singervn").stringValue());
+//        System.out.println(doc.getField("singeren").stringValue());
+//        System.out.println(doc.getField("linkobject").stringValue());
+//        System.out.println(doc.getField("linksource").stringValue());
+//        System.out.println(doc.getField("linkmedia").stringValue());
+//        System.out.println(doc.getField("albumen").stringValue());
+//        System.out.println(doc.getField("albumvn").stringValue());
+//
+//    //doc.fields().nextElement();
+//  //}
+//    }
+        
   }
 
 }

@@ -48,10 +48,10 @@ private DOMFragmentParser parser = new DOMFragmentParser();
 
        StringBuffer sb = new StringBuffer();
    // HtmlHandler html=new HtmlHandler();
-    getText(sb, node, "title",1);
+    getTitle(sb, node);
     String title = sb.toString();
    if (title != null){
-
+//only index object obtain link media if this page has title(name of media)
      MediaObject obj=new MediaObject();
     //analysis the title
      String[]Str=AnalysisTitle(title);
@@ -67,42 +67,25 @@ private DOMFragmentParser parser = new DOMFragmentParser();
         else if(i==3)//first is name song with UTF-8 encode
          obj.setSingervn(Str[i]);
     }
-        //only index object obtain link media if this page has title(name of media)
-        //get source link(real link on website)
+        
+     //get lyrics
+     sb=new StringBuffer();
+        getTextOfTag(sb, node, "span");
+        if(sb!=null)
+            obj.setLyric(sb.toString());
+     //get source link(real link on website)
         sb=new StringBuffer();
         getText(sb, node, "httrack",1);
         if(sb!=null)
             obj.setLinksource(sb.toString());
 
+        Operators Op=new Operators();
+      doc=Op.addDocumentObject(obj);
 
-
-//        //get singer
-//        sb=new StringBuffer();
-//        getText(sb, node, "b", 4);
-//        if(sb!=null)
-//        {
-//            obj.setSingervn(sb.toString());
-//            obj.setSingeren(unicodeToAscii(sb.toString()));
-//        }
-//        //get album
-//        sb=new StringBuffer();
-//        getText(sb, node, "b", 5);
-//        if(sb!=null)
-//        {
-//            obj.setAlbumvn(sb.toString());
-//            obj.setAlbumen(unicodeToAscii(sb.toString()));
-//        }
-       Operators Op=new Operators();
-       doc=Op.addDocumentObject(obj);
-
-    }    
+    }
     return doc;
-
   }
-   
- 
-
-  public  void  index(File file)
+   public  void  index(File file)
     throws FileHandlerException,DocumentHandlerException {
     if (file.canRead()) {
       if (file.isDirectory()) {
@@ -160,25 +143,25 @@ private DOMFragmentParser parser = new DOMFragmentParser();
   }
    public static void main(String args[]) throws Exception {
     MusicYeuCaHatHandler handler = new MusicYeuCaHatHandler();
-    handler.index(new File(args[0]));
-//    org.apache.lucene.document.Document doc = handler.getDocument(
-//      new FileInputStream(new File(args[0])));
-//   // while(doc.fields().hasMoreElements()){
-//    //System.out.println(doc.get("url"));
-//    if(doc!=null){
-//        System.out.println(doc.getField("songvn").stringValue());
-//        System.out.println(doc.getField("songen").stringValue());
-//        System.out.println(doc.getField("singervn").stringValue());
-//        System.out.println(doc.getField("singeren").stringValue());
-//        System.out.println(doc.getField("linkobject").stringValue());
-//        System.out.println(doc.getField("linksource").stringValue());
-//        System.out.println(doc.getField("linkmedia").stringValue());
-//        System.out.println(doc.getField("albumen").stringValue());
-//        System.out.println(doc.getField("albumvn").stringValue());
-//
-//    //doc.fields().nextElement();
-//  //}
-//    }
+//    handler.index(new File(args[0]));
+    org.apache.lucene.document.Document doc = handler.getDocument(
+      new FileInputStream(new File(args[0])));
+   // while(doc.fields().hasMoreElements()){
+    //System.out.println(doc.get("url"));
+    if(doc!=null){
+        System.out.println(doc.getField("songvn").stringValue());
+        System.out.println(doc.getField("songen").stringValue());
+        System.out.println(doc.getField("singervn").stringValue());
+        System.out.println(doc.getField("singeren").stringValue());
+        System.out.println(doc.getField("linkobject").stringValue());
+        System.out.println(doc.getField("linksource").stringValue());
+        System.out.println(doc.getField("linkmedia").stringValue());
+        System.out.println(doc.getField("albumen").stringValue());
+        System.out.println(doc.getField("albumvn").stringValue());
+
+    //doc.fields().nextElement();
+  //}
+    }
 
     }
 }

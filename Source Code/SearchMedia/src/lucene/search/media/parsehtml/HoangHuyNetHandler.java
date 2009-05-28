@@ -88,7 +88,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
        }
         sb=new StringBuffer();
         //getText(sb, node, "httrack",1);
-        getComment(sb, node, 1);
+       // getComment(sb, node, 1);
         if(sb!=null)
             obj.setLinksource(sb.toString());
               

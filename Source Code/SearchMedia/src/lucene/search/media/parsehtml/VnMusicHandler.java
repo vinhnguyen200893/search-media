@@ -6,7 +6,6 @@
 package lucene.search.media.parsehtml;
 
 import org.apache.lucene.document.Document;
-import lucene.search.media.indexer.*;
 import org.cyberneko.html.parsers.DOMFragmentParser;
 import org.xml.sax.SAXException;
 import org.xml.sax.InputSource;
@@ -16,9 +15,9 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.File;
+import lucene.search.media.indexer.Operators;
 import lucene.search.media.objects.MediaObject;
 import lucene.search.media.parseframework.*;
-
 /**
  *
  * @author Administrator
@@ -45,16 +44,20 @@ private DOMFragmentParser parser = new DOMFragmentParser();
     org.apache.lucene.document.Document doc =
       new org.apache.lucene.document.Document();
 
-    //flag to assign to index or no
-    boolean index=false;
+     MediaObject obj=new MediaObject();
     StringBuffer sb = new StringBuffer();
+     getComment(sb, node, 1);
+     if(sb!=null)
+      obj.setLinksource(AnalysisComment(sb.toString()));
+    //flag to assign to index or no
+   
    // HtmlHandler html=new HtmlHandler();
-   MediaObject obj=new MediaObject();
+    sb=new StringBuffer();
     getText(sb, node, "h1",1);
     //get object
     StringBuffer Strobj=new StringBuffer();
     StringBuffer link=new StringBuffer();
-    getObjects(Strobj, node, "object",1,false,true,link);
+    getObjects(Strobj, node, "object",2,false,true,link);
     if (sb.toString() != null){
         obj.setSongvn(sb.toString());
         obj.setSongen(unicodeToAscii(sb.toString()));  
@@ -62,10 +65,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
         obj.setLinkmedia(link.toString());
         //only index object obtain link media if this page has title(name of media)
         //get source link(real link on website)
-        sb=new StringBuffer();
-        getText(sb, node, "httrack",1);
-        if(sb!=null)
-            obj.setLinksource(sb.toString());
+        
 
                
 //        //get singer
@@ -91,68 +91,9 @@ private DOMFragmentParser parser = new DOMFragmentParser();
     return doc;
 
   }
-   
- 
-
-  public  void  index(File file)
-    throws FileHandlerException,DocumentHandlerException {
-    if (file.canRead()) {
-      if (file.isDirectory()) {
-        String[] files = file.list();
-        if (files != null) {
-          for (int i = 0; i < files.length; i++) {
-              try{
-            index(new File(file, files[i]));
-              }
-              catch(Exception e){
-                    continue;
-
-              }
-          }
-        }
-      }
-      else {
-       // System.out.println("Indexing " + file);
-          if(file.getName().endsWith(".html")){
-        try {
-          Document doc = getDocument(new FileInputStream(file));
-          if (doc != null) {
-              //if(doc.getField("title")!=null)
-                System.out.println(file.getAbsolutePath()+":");
-                System.out.println(doc.getField("songvn").stringValue());
-                System.out.println(doc.getField("songen").stringValue());
-                System.out.println(doc.getField("singervn").stringValue());
-                System.out.println(doc.getField("singeren").stringValue());
-                System.out.println(doc.getField("linkobject").stringValue());
-                System.out.println(doc.getField("linksource").stringValue());
-                System.out.println(doc.getField("linkmedia").stringValue());
-                System.out.println(doc.getField("albumen").stringValue());
-                System.out.println(doc.getField("albumvn").stringValue());
-                //writer.addDocument(doc);
-
-          }
-          else {
-            System.err.println("Cannot handle "
-              + file.getAbsolutePath() + "; skipping");
-
-          }
-        }
-        catch (IOException e) {
-          System.err.println("Cannot index "
-            + file.getAbsolutePath() + "; skipping ("
-            + e.getMessage() + ")");
-
-        }
-        finally{
-
-        }
-      }
-      }
-    }
-  }
-   public static void main(String args[]) throws Exception {
-    VnMusicHandler handler = new VnMusicHandler();
-    handler.index(new File(args[0]));
+    public static void main(String args[]) throws Exception {
+//    VnMusicHandler handler = new VnMusicHandler();
+//
 //    org.apache.lucene.document.Document doc = handler.getDocument(
 //      new FileInputStream(new File(args[0])));
 //   // while(doc.fields().hasMoreElements()){
@@ -171,6 +112,6 @@ private DOMFragmentParser parser = new DOMFragmentParser();
 //    //doc.fields().nextElement();
 //  //}
 //    }
-
-    }
+//
+   }
 }

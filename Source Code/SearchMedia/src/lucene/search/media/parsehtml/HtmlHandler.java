@@ -277,16 +277,14 @@ public class HtmlHandler {
         return false;
       }
     protected  void getComment(StringBuffer sb,Node node,int pos)
-    {
-        
+    {        
         if (node.getNodeType() == Node.COMMENT_NODE)
         {
             if(pos==step_object )
             {
-               sb.append(node.getNodeValue().toString()+"\n");              
-              
-               return;
-               
+               sb.append(node.getNodeValue().toString()+"\n");            
+         
+               return;               
             }
              step_object++;
         }
@@ -300,8 +298,6 @@ public class HtmlHandler {
               }
               return;
             }
-
-
       }
     /*
      * get Text of Node at position with specific name
@@ -387,7 +383,6 @@ public class HtmlHandler {
                  sb.append(" >");
         }
     }
-
     /*
      * get object tag in HTML page
      */
@@ -403,19 +398,6 @@ public class HtmlHandler {
               if(child.getNodeType()==Node.ELEMENT_NODE){
               sb.append("<"+child.getNodeName());//<param>
               getAttributes(sb, child,false,getlink,link);
-//              if(child.hasAttributes()){
-//              for(int j=0;j<child.getAttributes().getLength();j++){
-//                  Node para=child.getAttributes().item(j);
-//                 if(para.getNodeName().equalsIgnoreCase("width"))
-//                    sb.append("  width ='300' ");
-//                 else if(para.getNodeName().equalsIgnoreCase("height"))
-//                     sb.append("  height ='50' ");
-//                 else
-//
-//                     sb.append(" "+para.getNodeName()+" ='"+para.getNodeValue()+"'");
-//
-//              }
-//              }
               sb.append(" />");//</param>
               }
 
@@ -425,7 +407,6 @@ public class HtmlHandler {
       }
     protected  boolean getObjects(StringBuffer sb, Node node,String element,int pos,boolean width_height,boolean getlink,StringBuffer link)
     {
-
           if (node.getNodeType() == Node.ELEMENT_NODE) {
             if (element.equalsIgnoreCase(node.getNodeName())) {
             //  if (node.getNodeName().equalsIgnoreCase("object")) {
@@ -454,6 +435,11 @@ public class HtmlHandler {
         }
         return false;
       }
+   //clip.vn 
+    protected  boolean getObjects_clipvn(StringBuffer sb, Node node,String element,int pos,boolean getlink,StringBuffer link)
+    {
+        return getObjects(sb,node,element,pos,false,getlink,link);
+    } //clip.vn
      /*
      * get tag child in table
      * childtag: name of tags
@@ -538,6 +524,14 @@ public class HtmlHandler {
         int begin=sub[0].lastIndexOf("from")+5;
         int end=sub[0].indexOf("by");
         String linksource=sub[0].substring(begin,end);
+        return linksource;
+    }
+    protected  String AnalysisComment_phimtogo(String sb)
+    {
+        String[]sub=sb.split("\n");
+        int begin=sub[1].lastIndexOf("from")+5;
+        int end=sub[1].indexOf("by");
+        String linksource=sub[1].substring(begin,end);
         return linksource;
     }
     protected  boolean getTextOfTag(StringBuffer sb, Node node,String element)

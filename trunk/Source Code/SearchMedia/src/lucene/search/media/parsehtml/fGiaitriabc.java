@@ -1,6 +1,7 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ * 
  */
 
 package lucene.search.media.parsehtml;
@@ -22,7 +23,7 @@ import lucene.search.media.parseframework.*;
  *
  * @author Administrator
  */
-public class fClipVnHandler extends HtmlHandler  implements DocumentHandler {
+public class fGiaitriabc extends HtmlHandler  implements DocumentHandler {
 private DOMFragmentParser parser = new DOMFragmentParser();
 
   public Document getDocument(InputStream is)
@@ -52,52 +53,32 @@ private DOMFragmentParser parser = new DOMFragmentParser();
     //sb contains array comment and only first item in this array  is available
     getComment(sb, node, 1);
     if(sb!=null)
-        obj.setLinksource(AnalysisComment(sb.toString()));
+        obj.setLinksource(AnalysisComment_phimtogo(sb.toString()));
     sb=new StringBuffer();
     getText(sb, node, "title",1);
     String title = sb.toString();
       //get object
-      sb=new StringBuffer();
+    sb=new StringBuffer();
     //note :link in nhaccuatui is sourcelink not is a media link
-    
-    if (title != null ){
+    StringBuffer link=new StringBuffer();
+    getObjects(sb, node, "object",1,false,true,link);
 
-      // obj.setLinkobject(sb.toString());
-    //analysis the title
+    if (title != null && !sb.toString().equals("")){
+      obj.setLinkobject(link.toString());
+
+        //analysis the title
        String[]Str=AnalysisTitle(title);
-    
-       obj.setSongvn(Str[0]);
+       obj.setSongvn(Str[1]);
          //only index object obtain link media if this page has title(name of media)
-       obj.setSongen(unicodeToAscii(Str[0]));
+       obj.setSongen(unicodeToAscii(Str[1]));
+
+       Operators Op=new Operators();
+       doc=Op.addDocumentObject(obj);
     }
-    else{ // title is important , title use to index
-        return doc;
-    }
-    sb=new StringBuffer();
-    //getText(sb, node, "input",4);
-    //getObjects_clipvn(StringBuffer sb, Node node,String element,int pos,boolean getlink, link)
-    StringBuffer link = new StringBuffer();
-
-    //get tag input in file html , get text
-    getObjects_clipvn( sb,  node, "input", 4, true, link);
-
-    String[] str = sb.toString().split("'");
-    // direct link play on browsers 
-    String link_object = str[14];
-    //get object
-    sb=new StringBuffer();
-    //note :link in nhaccuatui is sourcelink not is a media link
-
-    if ( link_object!= null ){
-        obj.setLinkobject(link_object);        
-    }
-   Operators Op=new Operators();
-   doc=Op.addDocumentObject(obj);
-
     return doc;
   }
   public static void main(String args[]) throws Exception {
-    fClipVnHandler handler = new fClipVnHandler();
+    fGiaitriabc handler = new fGiaitriabc();
     org.apache.lucene.document.Document doc = handler.getDocument(
       new FileInputStream(new File(args[0])));
    // while(doc.fields().hasMoreElements()){

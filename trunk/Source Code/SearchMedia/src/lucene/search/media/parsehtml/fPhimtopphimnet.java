@@ -22,7 +22,7 @@ import lucene.search.media.parseframework.*;
  *
  * @author Administrator
  */
-public class fClipVnHandler extends HtmlHandler  implements DocumentHandler {
+public class fPhimtopphimnet extends HtmlHandler  implements DocumentHandler {
 private DOMFragmentParser parser = new DOMFragmentParser();
 
   public Document getDocument(InputStream is)
@@ -59,18 +59,16 @@ private DOMFragmentParser parser = new DOMFragmentParser();
       //get object
       sb=new StringBuffer();
     //note :link in nhaccuatui is sourcelink not is a media link
-    
+
     if (title != null ){
 
       // obj.setLinkobject(sb.toString());
     //analysis the title
        String[]Str=AnalysisTitle(title);
-    
-       obj.setSongvn(Str[0]);
+       obj.setSongvn(Str[0] + Str[1]);
          //only index object obtain link media if this page has title(name of media)
-       obj.setSongen(unicodeToAscii(Str[0]));
-    }
-    else{ // title is important , title use to index
+       obj.setSongen(unicodeToAscii(Str[0])+unicodeToAscii( Str[1]));
+    }else{
         return doc;
     }
     sb=new StringBuffer();
@@ -79,17 +77,16 @@ private DOMFragmentParser parser = new DOMFragmentParser();
     StringBuffer link = new StringBuffer();
 
     //get tag input in file html , get text
-    getObjects_clipvn( sb,  node, "input", 4, true, link);
-
+    getObjects_clipvn( sb,  node, "object", 2, true, link);
     String[] str = sb.toString().split("'");
-    // direct link play on browsers 
-    String link_object = str[14];
+    // direct link play on browsers
+    String link_object = str[1];
     //get object
     sb=new StringBuffer();
     //note :link in nhaccuatui is sourcelink not is a media link
 
     if ( link_object!= null ){
-        obj.setLinkobject(link_object);        
+        obj.setLinkobject(link_object);
     }
    Operators Op=new Operators();
    doc=Op.addDocumentObject(obj);
@@ -97,7 +94,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
     return doc;
   }
   public static void main(String args[]) throws Exception {
-    fClipVnHandler handler = new fClipVnHandler();
+    fPhimtopphimnet handler = new fPhimtopphimnet();
     org.apache.lucene.document.Document doc = handler.getDocument(
       new FileInputStream(new File(args[0])));
    // while(doc.fields().hasMoreElements()){

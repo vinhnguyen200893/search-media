@@ -49,13 +49,16 @@ private DOMFragmentParser parser = new DOMFragmentParser();
 
    
    StringBuffer sb = new StringBuffer();
-    MediaObject obj=new MediaObject();
+   MediaObject obj=new MediaObject();
    
        //get source link(real link on website)
     //sb contains array comment and only first item in this array  is available
     getComment(sb, node, 1);
-    if(sb!=null)
-        obj.setLinksource(AnalysisComment(sb.toString()));
+   if(sb!=null){
+            String[]linkreal=AnalysisLinkComment(sb.toString());
+            obj.setLinksource(linkreal[0]);
+            obj.setDatemodified(linkreal[1]);
+        }
     sb=new StringBuffer();
     getText(sb, node, "title",1);
     String title = sb.toString();
@@ -67,8 +70,9 @@ private DOMFragmentParser parser = new DOMFragmentParser();
 
     if (title != null && !sb.toString().equals("")){
 
-
        obj.setLinkobject(sb.toString());
+       //object tag has link service
+       obj.setService(getLinkInTag(sb.toString(), "file=", "'", false));
     //analysis the title
        String[]Str=AnalysisTitle(title);
        obj.setLinkobject(sb.toString());

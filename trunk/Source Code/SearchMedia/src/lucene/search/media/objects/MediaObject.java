@@ -17,6 +17,8 @@ public class MediaObject {
     private String _linkobject;
     private String _linksource;
     private String _linkmedia;
+    private String _datemodified;
+    private String _service;
 //    private String _artist;
 //    private String _size;
 //    private String _length;
@@ -35,6 +37,8 @@ public class MediaObject {
         this._songen="";
         this._songvn="";
         this._linksource="";
+        this._datemodified="";
+        this._service="";
 
 //        this._type="";
 //        this._artist="";
@@ -182,6 +186,34 @@ public class MediaObject {
      */
     public void setLinkmedia(String linkmedia) {
         this._linkmedia = linkmedia;
+    }
+
+    /**
+     * @return the _datemodified
+     */
+    public String getDatemodified() {
+        return _datemodified;
+    }
+
+    /**
+     * @param datemodified the _datemodified to set
+     */
+    public void setDatemodified(String datemodified) {
+        this._datemodified = datemodified;
+    }
+
+    /**
+     * @return the _service
+     */
+    public String getService() {
+        return _service;
+    }
+
+    /**
+     * @param service the _service to set
+     */
+    public void setService(String service) {
+        this._service = service;
     }
 
   

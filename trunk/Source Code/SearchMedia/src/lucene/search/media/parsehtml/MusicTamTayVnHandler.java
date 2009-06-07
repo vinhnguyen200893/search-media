@@ -23,7 +23,7 @@ import lucene.search.media.parseframework.*;
  *
  * @author Administrator
  */
-public class MusicYeuCaHatHandler extends HtmlHandler implements DocumentHandler {
+public class MusicTamTayVnHandler extends HtmlHandler implements DocumentHandler {
 private DOMFragmentParser parser = new DOMFragmentParser();
 
   public Document getDocument(InputStream is)
@@ -46,8 +46,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
       new org.apache.lucene.document.Document();
 
 
-       StringBuffer sb = new StringBuffer();
-   // HtmlHandler html=new HtmlHandler();
+    StringBuffer sb = new StringBuffer();
     getTitle(sb, node);
     String title = sb.toString();
    if (title != null){
@@ -59,24 +58,19 @@ private DOMFragmentParser parser = new DOMFragmentParser();
     for(int i=0;i<Str.length;i++)
     {
         if(i==0)//first is name songen
-          obj.setSongen(Str[i]);
-        else if(i==1)//first is name song with UTF-8 encode
-         obj.setSingeren(Str[i]);
-        else if(i==2)//first is name song with UTF-8 encode
-         obj.setSongvn(Str[i]);
-        else if(i==3)//first is name song with UTF-8 encode
-         obj.setSingervn(Str[i]);
-    }
-        
-     //get lyrics
-     sb=new StringBuffer();
-        getTextOfTable(sb, node, "table",22);
-        if(sb!=null)
         {
-            obj.setLyric(sb.toString());
-            String  embed=encodeEmbedTag(sb.toString());
-            obj.setLinkobject(embed);
+            obj.setSongvn(Str[i]);
+            obj.setSingervn(Str[i]);
         }
+        else if(i==1)//first is name song with UTF-8 encode
+        {
+            obj.setSingeren(Str[i]);
+            obj.setSongen(Str[i]);
+        }
+         
+    }
+     
+         
      //get source link(real link on website)
         sb=new StringBuffer();
         getComment(sb, node, 1);
@@ -85,43 +79,61 @@ private DOMFragmentParser parser = new DOMFragmentParser();
             obj.setLinksource(linkreal[0]);
             obj.setDatemodified(linkreal[1]);
         }
+        //get object tag
+        sb=new StringBuffer();
+        StringBuffer link=new StringBuffer();
+        getObjects(sb, node, "object",1,false,true,link);
+        if (sb.toString() != null)
+        {
+            String media=getLinkService(link.toString());
+            obj.setLinkobject(generateObject(media, 200, 80));
+            obj.setService(media);
+        }
         Operators Op=new Operators();
-      doc=Op.addDocumentObject(obj);
+        doc=Op.addDocumentObject(obj);
 
     }
     return doc;
   }
-  public String encodeEmbedTag(String sub)
-  {
-      int begin=sub.lastIndexOf("document.write('");
-      int end=-1;
-       if(begin!=-1) 
-       {
-           end=sub.lastIndexOf(");")+2;
-           return "<script  type=\"text/javascript\"> "+sub.substring(begin,end)+" </script>";
-       }
-       else
-           return "";
-        
-  }
+ public String getLinkService(String sub)
+ {
+        int begin=sub.lastIndexOf("../")+2;
+        int end=sub.indexOf(".wmv");
+        return "http://music2.tamtay.vn"+sub.substring(begin,end);
+ }
+
    public static void main(String args[]) throws Exception {
-    MusicYeuCaHatHandler handler = new MusicYeuCaHatHandler();
+    MusicTamTayVnHandler handler = new MusicTamTayVnHandler();
 //    handler.index(new File(args[0]));
     org.apache.lucene.document.Document doc = handler.getDocument(
       new FileInputStream(new File(args[0])));
    // while(doc.fields().hasMoreElements()){
     //System.out.println(doc.get("url"));
     if(doc!=null){
-        System.out.println(doc.getField("songvn").stringValue());
-        System.out.println(doc.getField("songen").stringValue());
-        System.out.println(doc.getField("singervn").stringValue());
-        System.out.println(doc.getField("singeren").stringValue());
-        System.out.println(doc.getField("linkobject").stringValue());
-        System.out.println(doc.getField("linksource").stringValue());
-        System.out.println(doc.getField("linkmedia").stringValue());
-        System.out.println(doc.getField("albumen").stringValue());
-        System.out.println(doc.getField("albumvn").stringValue());
-        System.out.println(doc.getField("lyric").stringValue());
+              System.out.println("FILE :");
+               System.out.println(new File(args[0]).getAbsolutePath()+":");
+               System.out.println("SONG");
+                System.out.println(doc.getField("songvn").stringValue());
+                System.out.println(doc.getField("songen").stringValue());
+                System.out.println("SINGER");
+                System.out.println(doc.getField("singervn").stringValue());
+                System.out.println(doc.getField("singeren").stringValue());
+                System.out.println("OBJECT");
+                System.out.println(doc.getField("linkobject").stringValue());
+                System.out.println("LINK SOURCE");
+                System.out.println(doc.getField("linksource").stringValue());
+                System.out.println("DATE  MODIFIED");
+               System.out.println(doc.getField("date").stringValue());
+
+                System.out.println("LINK MEDIA");
+                System.out.println(doc.getField("linkmedia").stringValue());
+                System.out.println("ALBUM");
+                System.out.println(doc.getField("albumen").stringValue());
+                System.out.println(doc.getField("albumvn").stringValue());
+
+                System.out.println("LYRICS");
+                System.out.println(doc.getField("lyric").stringValue());
+
 
     //doc.fields().nextElement();
   //}

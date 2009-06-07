@@ -47,8 +47,11 @@ private DOMFragmentParser parser = new DOMFragmentParser();
      MediaObject obj=new MediaObject();
     StringBuffer sb = new StringBuffer();
      getComment(sb, node, 1);
-     if(sb!=null)
-      obj.setLinksource(AnalysisComment(sb.toString()));
+     if(sb!=null){
+            String[]linkreal=AnalysisLinkComment(sb.toString());
+            obj.setLinksource(linkreal[0]);
+            obj.setDatemodified(linkreal[1]);
+        }
     //flag to assign to index or no
    
    // HtmlHandler html=new HtmlHandler();

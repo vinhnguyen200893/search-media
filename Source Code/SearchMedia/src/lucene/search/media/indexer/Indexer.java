@@ -111,16 +111,42 @@ public class Indexer
           Document doc = fileHandler.getDocument(dir,file);
           if (doc != null) {
               //if(doc.getField("title")!=null)
-                System.out.println(file.getAbsolutePath()+":");
+//                System.out.println(file.getAbsolutePath()+":");
+//                System.out.println(doc.getField("songvn").stringValue());
+//                System.out.println(doc.getField("songen").stringValue());
+//                System.out.println(doc.getField("singervn").stringValue());
+//                System.out.println(doc.getField("singeren").stringValue());
+//                System.out.println(doc.getField("linkobject").stringValue());
+//                System.out.println(doc.getField("linksource").stringValue());
+//                System.out.println(doc.getField("linkmedia").stringValue());
+//                System.out.println(doc.getField("albumen").stringValue());
+//                System.out.println(doc.getField("albumvn").stringValue());
+                System.out.println("FILE :");
+               System.out.println(file.getAbsolutePath()+":");
+               System.out.println("SONG");
                 System.out.println(doc.getField("songvn").stringValue());
                 System.out.println(doc.getField("songen").stringValue());
+                System.out.println("SINGER");
                 System.out.println(doc.getField("singervn").stringValue());
                 System.out.println(doc.getField("singeren").stringValue());
+                System.out.println("OBJECT");
                 System.out.println(doc.getField("linkobject").stringValue());
+                System.out.println("LINK SOURCE");
                 System.out.println(doc.getField("linksource").stringValue());
+                System.out.println("DATE  MODIFIED");
+               System.out.println(doc.getField("date").stringValue());
+
+                System.out.println("LINK MEDIA");
                 System.out.println(doc.getField("linkmedia").stringValue());
+                 System.out.println("SERVICE");
+                System.out.println(doc.getField("service").stringValue());
+                
+                System.out.println("ALBUM");
                 System.out.println(doc.getField("albumen").stringValue());
-                System.out.println(doc.getField("albumvn").stringValue());     
+                System.out.println(doc.getField("albumvn").stringValue());
+
+                System.out.println("LYRICS");
+                System.out.println(doc.getField("lyric").stringValue());
                 writer.addDocument(doc);
 
           }

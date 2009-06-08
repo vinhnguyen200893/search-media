@@ -498,16 +498,14 @@ public class HtmlHandler {
         return false;
 
     }
-    /*
-=======
-      }
+         
    //clip.vn 
     protected  boolean getObjects_clipvn(StringBuffer sb, Node node,String element,int pos,boolean getlink,StringBuffer link)
     {
         return getObjects(sb,node,element,pos,false,getlink,link);
     } //clip.vn
      /*
->>>>>>> .r38
+
      * get tag child in table
      * childtag: name of tags
      * childvalue: postion of child tag

@@ -327,18 +327,8 @@ public class HtmlHandler {
             }
         }
         return false;
-<<<<<<< .mine
-    }
 
-    protected boolean getComment(StringBuffer sb, Node node, int pos) {
-
-        if (node.getNodeType() == Node.COMMENT_NODE) {
-            if (pos == step_object) {
-                sb.append(node.getNodeValue().toString() + "\n");
-                return true;
-
-=======
-      }
+    }      
     protected  void getComment(StringBuffer sb,Node node,int pos)
     {        
         if (node.getNodeType() == Node.COMMENT_NODE)
@@ -348,7 +338,7 @@ public class HtmlHandler {
                sb.append(node.getNodeValue().toString()+"\n");            
          
                return;               
->>>>>>> .r38
+
             }
             step_object++;
         }
@@ -360,14 +350,12 @@ public class HtmlHandler {
                 getComment(sb, children.item(i), pos);
                     
             }
-<<<<<<< .mine
-            return true;
+
+            return ;
         }
-        return false;
+        return ;
 
 
-=======
->>>>>>> .r38
     }
     /*
      * get Text of Node at position with specific name
@@ -505,9 +493,10 @@ public class HtmlHandler {
                 }
             //}
             }
+            return true;
         }
         return false;
-<<<<<<< .mine
+
     }
     /*
 =======
@@ -652,8 +641,8 @@ public class HtmlHandler {
         String linksource = sub[0].substring(begin, end);
         return linksource;
     }
-<<<<<<< .mine
-=======
+
+
     protected  String AnalysisComment_phimtogo(String sb)
     {
         String[]sub=sb.split("\n");
@@ -662,10 +651,7 @@ public class HtmlHandler {
         String linksource=sub[1].substring(begin,end);
         return linksource;
     }
-    protected  boolean getTextOfTag(StringBuffer sb, Node node,String element)
-    {
->>>>>>> .r38
-
+    
     protected String[] AnalysisLinkComment(String sb) {
         String[] sub = sb.split("\n");
         String[] linksource = new String[2];

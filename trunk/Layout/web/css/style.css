@@ -103,6 +103,13 @@ body a.light:hover {
 .login img{
 	border:0px;
 }
+.search_adv{	
+	margin: 20px 0px 0px 0px;
+	padding-left:300px;
+	float:left;
+	
+	
+}
 /***Footer***/
 .foo{
 	background:url(../images/FooterBg.jpg) center top no-repeat #8FC5CC;

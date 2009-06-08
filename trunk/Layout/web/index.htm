@@ -13,7 +13,20 @@
    			<td  valign="top" height="350">			
 				<div class="bgHeader" >
 					<div class= "login">
-						<img src="images/login.jpg">
+						<table id="login" cellpadding="0" cellspacing="0" border="0">
+							<tr>
+								<td>
+									<input type="image" id="l_11" src="images/l_11.jpg" >
+								</td>
+								<td>
+									<input type="image" id="l_12" src="images/l_12.jpg" >
+								</td>
+								<td>
+									<input type="image" id="l_13" src="images/l_13.jpg" >
+								</td>
+							</tr>
+						</table>
+
 					</div>
 					 <table cellspacing="0" cellpadding="0">
 						<tr>
@@ -39,7 +52,7 @@
 										</tr>
 										<tr>
 											<td colspan= "2">
-												<input type="text" size="40"></input>
+												<input id="textbox_search" type="text" size="40"></input>
 											</td>
 											<td>
 												<input type="image" src="images/search.jpg" align="right" id="search" onClick="search()">
@@ -48,18 +61,36 @@
 										
 										<tr >
 											<td colspan = "2" align="center" >
-												<input type="image" id="search_adv"  src="images/search_adv.jpg" name="search_adv" id="search_adv" onclick="search_adv()">
+												<input type="image" id="search_adv"  src="images/search_adv.jpg" id="search_adv" onclick="search_adv()">
 											</td>											
-									   </tr>
-									   <tr>
-											<span id= "avd" name="adv" >
-											</span>
-									   </tr>
+									   </tr>									  
 									</table>
 								</td> 
 							</tr>
 						</table>
-					</div>
+					</div>					
+					<div class="search_adv" id= "avd" name="adv" style="visibility: hidden ; height:0px" >
+						<table border="1"  cellpadding="0" cellspacing="0" >
+							<tr>
+								<input type="checkbox" , name="search_adv" checked="checked" value ="singer"> Ca sĩ <br>
+							</tr>
+							<tr>
+								<input type="checkbox" , name="search_adv" checked="checked" value ="a"> Nhạc sĩ <br>
+							</tr>
+							<tr>
+								<input type="checkbox" , name="search_adv" checked="checked" value ="a"> Lời bài hát <br>
+							</tr>
+<tr>
+								<input type="checkbox" , name="search_adv" checked="checked" value ="singer"> Ca sĩ <br>
+							</tr>
+							<tr>
+								<input type="checkbox" , name="search_adv" checked="checked" value ="a"> Nhạc sĩ <br>
+							</tr>
+							<tr>
+								<input type="checkbox" , name="search_adv" checked="checked" value ="a"> Lời bài hát <br>
+							</tr>							
+						</table>
+					</div>				  
 				</div>				
 			</td>
 		<td>&nbsp;</td>   

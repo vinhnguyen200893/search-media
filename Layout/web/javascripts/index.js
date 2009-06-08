@@ -1,6 +1,6 @@
 //defautl search by music
 var flag = 0;
-
+var flag_search_adv=0;
 function right(current_str,find_str){
 	var cL = current_str.length;
 	var fL = find_str.length;
@@ -13,15 +13,22 @@ function right(current_str,find_str){
 	return current_str.substring(pos+fL,cL);
 }
 function search_adv()
-{		
-	//var _img = document.getElementsById("search_adv");
-	var s = document.getElementById("search_adv").src;
-	var f = right(s,"/");
-	alert(f);
-	
-	var s1 = s.
-	var adv = document.getElementsById("adv");	
-	
+{	
+	//var s = document.getElementById("search_adv").style.visibility;
+	//alert(s);
+	if(document.getElementById("avd").style.visibility == "hidden")
+	{
+		flag_search_adv = 1;
+		document.getElementById("avd").style.visibility = "visible";
+		document.getElementById("avd").style.height = "auto";
+		
+	}
+	else
+	{
+		flag_search_adv = 0;
+		document.getElementById("avd").style.visibility = "hidden";
+		document.getElementById("avd").style.height = "0px";		
+	}
 }
 function search()
 {

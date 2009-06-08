@@ -69,6 +69,7 @@ public class AmNhacTimNhanhHandler extends HtmlHandler implements DocumentHandle
                 String[] Str = AnalysisTitle(title);
                 obj.setLinkobject(getLinkInTag(sb.toString(), "<object", "</object>", true));
                 obj.setService(getLinkInTag(sb.toString(), "xmlPath=", ".xml", false));
+                obj.setIdservice("AM_NHAC_TIM_NHANH");
                 for (int i = 0; i < Str.length; i++) {
 
                     if (i == 0)//first is name song

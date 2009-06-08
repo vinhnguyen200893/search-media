@@ -88,6 +88,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
             String media=getLinkService(link.toString());
             obj.setLinkobject(generateObject(media, 200, 80));
             obj.setService(media);
+            obj.setIdservice("MUSIC_TAM_TAY_VN");
         }
         Operators Op=new Operators();
         doc=Op.addDocumentObject(obj);

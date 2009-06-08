@@ -73,6 +73,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
        obj.setLinkobject(sb.toString());
        //object tag has link service
        obj.setService(getLinkInTag(sb.toString(), "file=", "'", false));
+       obj.setIdservice("NHAC_CUA_TUI");
     //analysis the title
        String[]Str=AnalysisTitle(title);
        obj.setLinkobject(sb.toString());

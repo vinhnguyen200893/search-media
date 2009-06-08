@@ -67,6 +67,7 @@ public class Muzic9Handler extends HtmlHandler implements DocumentHandler {
                     obj.setLinksource(linkreal[0]);
                     obj.setDatemodified(linkreal[1]);
                     obj.setService(media);
+                    obj.setIdservice("MUZIC_9");
                     //genarate object tag
                     obj.setLinkobject(generateObject(media,60,100));
                     //analysis the title

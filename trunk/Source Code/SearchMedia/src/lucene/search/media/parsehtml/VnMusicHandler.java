@@ -13,8 +13,6 @@ import org.w3c.dom.DocumentFragment;
 import org.apache.html.dom.HTMLDocumentImpl;
 import java.io.InputStream;
 import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.File;
 import lucene.search.media.indexer.Operators;
 import lucene.search.media.objects.MediaObject;
 import lucene.search.media.parseframework.*;

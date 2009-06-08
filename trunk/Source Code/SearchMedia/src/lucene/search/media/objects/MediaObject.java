@@ -19,6 +19,7 @@ public class MediaObject {
     private String _linkmedia;
     private String _datemodified;
     private String _service;
+    private String _idservice;
 //    private String _artist;
 //    private String _size;
 //    private String _length;
@@ -214,6 +215,20 @@ public class MediaObject {
      */
     public void setService(String service) {
         this._service = service;
+    }
+
+    /**
+     * @return the _idservice
+     */
+    public String getIdservice() {
+        return _idservice;
+    }
+
+    /**
+     * @param idservice the _idservice to set
+     */
+    public void setIdservice(String idservice) {
+        this._idservice = idservice;
     }
 
   

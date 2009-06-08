@@ -71,7 +71,7 @@ public class ChaChaVnHandler extends HtmlHandler implements DocumentHandler {
             String[] Str = AnalysisTitle(title);
             obj.setLinkobject(setLink(sb.toString()));
             obj.setService(getService(sb.toString()));
-            
+            obj.setIdservice("CHA_CHA_VN");
             for (int i = 0; i < Str.length; i++) {
                 if (i == 1)//first is name song with UTF-8 encode
                 {

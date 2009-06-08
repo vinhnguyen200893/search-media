@@ -36,6 +36,7 @@ public class Operators {
         d.add(Field.UnStored("date",obj.getDatemodified()));
         d.add(Field.UnStored("linkmedia",obj.getLinkmedia()));
         d.add(Field.Text("service",obj.getService()));
+        d.add(Field.Text("idservice",obj.getIdservice()));
         d.add(Field.UnStored("linkobject",obj.getLinkobject()));
         d.add(Field.Text("albumen",obj.getAlbumen()));
         d.add(Field.Text("albumvn",obj.getAlbumvn()));       

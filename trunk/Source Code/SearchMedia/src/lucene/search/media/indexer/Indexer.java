@@ -110,17 +110,6 @@ public class Indexer
         try {
           Document doc = fileHandler.getDocument(dir,file);
           if (doc != null) {
-              //if(doc.getField("title")!=null)
-//                System.out.println(file.getAbsolutePath()+":");
-//                System.out.println(doc.getField("songvn").stringValue());
-//                System.out.println(doc.getField("songen").stringValue());
-//                System.out.println(doc.getField("singervn").stringValue());
-//                System.out.println(doc.getField("singeren").stringValue());
-//                System.out.println(doc.getField("linkobject").stringValue());
-//                System.out.println(doc.getField("linksource").stringValue());
-//                System.out.println(doc.getField("linkmedia").stringValue());
-//                System.out.println(doc.getField("albumen").stringValue());
-//                System.out.println(doc.getField("albumvn").stringValue());
                 System.out.println("FILE :");
                System.out.println(file.getAbsolutePath()+":");
                System.out.println("SONG");
@@ -171,19 +160,20 @@ public class Indexer
   }
 
   public static void main(String[] args) throws Exception {
-    if (args.length < 3) {
+    if (args.length <4) {
       usage();
       System.exit(0);
     }
 
     try{
-    Properties props = new Properties();
-    props.load(new FileInputStream(System.getProperty("user.dir")+"/conf/sitehandler.properties"));
+    Properties prop = new Properties();
+
+    prop.load(new FileInputStream(System.getProperty("user.dir")+"/conf/site_handler.properties"));
 
     //set parameters
     SetupParameters Pa=new SetupParameters();    
     Pa.setAnalyzer(GetAnalyzer.getAnalysis());    
-    Indexer indexer = new Indexer(props);
+    Indexer indexer = new Indexer(prop);
 
     long start = new Date().getTime();
     long numDocs=0;
@@ -216,7 +206,7 @@ public class Indexer
   private static void usage() {
     System.err.println("USAGE: java "
       + Indexer.class.getName()
-      + " /path/to/properties /path/to/file/or/directory"
-      + " /path/to/index");
+      + " 1.Index one directory(Video/Audio):/path/to/data /path/to/indexed/directory 1 "
+      + " 2.Index many directories(Video/Audio):/path/to/data /path/to/indexed/directory 0 ");
   }
 }

@@ -115,8 +115,8 @@ body a.light:hover {
 }
 
 .result{
-	margin: 20px 100px 20px 0px;
-	padding-left:10px;
+	margin: 0px 0px 10px 0px;
+	padding-left:0px;
 	float:left;
 }
 .result img{
@@ -427,3 +427,24 @@ left: 60px; /*position where enlarged image should offset horizontally */
 
 }
 
+#ssb {
+margin-top:0;
+padding:0.1em;
+}
+#bsf, #ssb {
+margin:11px 0;
+}
+#bsf, #ssb, .blk {
+background:#F0F7F9 none repeat scroll 0 0;
+border-top:1px solid #6B90DA;
+}
+#ssb, .clr {
+clear:both;
+}
+#ssb p {
+font-size:12px;
+margin:0.1em 0;
+padding:0.2em;
+text-align:right;
+white-space:nowrap;
+}

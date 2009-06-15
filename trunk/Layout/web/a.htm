@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Search Media</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/index.js"  type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css"  href="css/style_mac.css" />	
+	<script src="js/jquery_mac.js" type="text/javascript" ></script>	
+	<script src="js/interface_mac.js" type="text/javascript" ></script>
+	
+</head>
+<body>
+
+		
+			
+						
+										<div class="dock" id="dock">
+										  <div class="dock-container">
+											  <a class="dock-item" href="#"><img src="images/mac/home.png"  /><span style="color:#FF0000">Home</span></a> 
+											  <a class="dock-item" href="#"><img src="images/mac/singin.png" /><span style="color:#FF0000">Đăng nhập</span></a> 
+											  <a class="dock-item" href="#"><img src="images/mac/singp1.png" /><span style="color:#FF0000">Đăng ký</span></a> 
+										 </div> 
+										</div>
+						
+	
+
+	<script type="text/javascript">		
+		$(document).ready(
+			function()
+			{
+				$('#dock').Fisheye(
+					{
+						maxWidth: 50,
+						items: 'a',
+						itemsText: 'span',
+						container: '.dock-container',
+						itemWidth: 40,
+						proximity: 90,
+						halign : 'center'
+					}
+				)
+				$('#dock2').Fisheye(
+					{
+						maxWidth: 60,
+						items: 'a',
+						itemsText: 'span',
+						container: '.dock-container2',
+						itemWidth: 40,
+						proximity: 80,
+						alignment : 'left',
+						valign: 'bottom',
+						halign : 'center'
+					}
+				)
+			}
+		);
+	</script>
+		
+</body>
+</html>

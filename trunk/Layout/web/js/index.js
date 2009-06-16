@@ -124,8 +124,7 @@ function search()
 
 //ham khi chon button nhac
 function chooseMusic()
-{
-	
+{	
 	document.getElementById("search_adv").src = "images/search_adv_o.jpg";
 	document.getElementById("search_tc").src = "images/search_tc_o.jpg";
 	
@@ -144,7 +143,11 @@ function chooseMusic()
 		document.getElementById("film").src = "images/film.jpg";		
 	}
 	flag_musicOrFilm = 0;		
-	//alert(flag);
+
+	flag_search_adv=0;
+	flag_search_tc=0;
+
+//alert(flag);
 }
 
 //ham xu ly khi nhan button film
@@ -167,5 +170,23 @@ function chooseFilm()
 		document.getElementById("film").src = "images/film_on.jpg";
 	}
 	flag_musicOrFilm = 1;
+	flag_search_adv=0;
+	flag_search_tc=0;
+	//alert(flag);
+}
+
+//nhan chon button dong lai
+function bt_close()
+{
+	document.getElementById("search_adv").src = "images/search_adv_o.jpg";
+	document.getElementById("search_tc").src = "images/search_tc_o.jpg";
+	
+	document.getElementById("adv").style.visibility = "hidden";
+	document.getElementById("adv").style.height = "0px";	
+	
+	document.getElementById("tc").style.visibility = "hidden";
+	document.getElementById("tc").style.height = "0px";	
+	//alert("as");
+	 flag_search_adv=0;
 	//alert(flag);
 }

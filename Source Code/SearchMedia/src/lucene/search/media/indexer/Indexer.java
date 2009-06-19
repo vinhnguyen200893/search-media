@@ -160,7 +160,7 @@ public class Indexer
   }
 
   public static void main(String[] args) throws Exception {
-    if (args.length <4) {
+    if (args.length <3) {
       usage();
       System.exit(0);
     }
@@ -168,7 +168,7 @@ public class Indexer
     try{
     Properties prop = new Properties();
 
-    prop.load(new FileInputStream(System.getProperty("user.dir")+"/conf/site_handler.properties"));
+    prop.load(new FileInputStream(System.getProperty("user.dir")+"/conf/sitehandler.properties"));
 
     //set parameters
     SetupParameters Pa=new SetupParameters();    
@@ -194,7 +194,7 @@ public class Indexer
     }
     catch(FileNotFoundException ex)
     {
-        System.out.println("file 'handler.properties' in config directory not found");
+        System.out.println("file 'sitehandler.properties' in config directory not found");
         System.out.println("please check again");}
   }
 

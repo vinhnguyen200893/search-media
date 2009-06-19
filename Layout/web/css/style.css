@@ -80,8 +80,9 @@ body a.light:hover {
 	text-align:left;
 }
 .logo{
-	margin:50px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
 	padding-left:50px;
+	padding-top:60px;
 	float:left;
 }
 .logo img{
@@ -103,14 +104,16 @@ body a.light:hover {
 .login img{
 	border:0px;
 }
-.search_adv{	
-	margin: 10px 0px 0px 0px;
+.search_adv{		
+	margin: 0px 0px 0px 0px;
 	padding-left:230px;
+	padding-top:0px;
 	float:left;	
 }
 .search_tc{	
 	margin: 0px 0px 0px 0px;
 	padding-left:350px;
+	padding-top:0px;
 	float: left;	
 }
 

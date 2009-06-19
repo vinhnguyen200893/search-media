@@ -53,6 +53,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
    if (title != null){
 //only index object obtain link media if this page has title(name of media)
      MediaObject obj=new MediaObject();
+     obj.setIdservice("MUSIC_YEU_CA_HAT");
     //analysis the title
      String[]Str=AnalysisTitle(title);
 

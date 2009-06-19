@@ -32,6 +32,7 @@ public class SetupParameters {
 
 
     public SetupParameters() {
+
         this.setMergeFactor(1000);
         
     }

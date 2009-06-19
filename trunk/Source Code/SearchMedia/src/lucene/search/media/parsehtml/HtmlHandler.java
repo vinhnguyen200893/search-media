@@ -333,14 +333,14 @@ public class HtmlHandler {
     {        
         if (node.getNodeType() == Node.COMMENT_NODE)
         {
-            if(pos==step_object )
-            {
+           // if(pos==step_object )
+           // {
                sb.append(node.getNodeValue().toString()+"\n");            
          
-               return;               
+              // return;
 
-            }
-            step_object++;
+           // }
+           // step_object++;
         }
 
         NodeList children = node.getChildNodes();
@@ -351,7 +351,7 @@ public class HtmlHandler {
                     
             }
 
-            return ;
+            //return ;
         }
         return ;
 
@@ -493,7 +493,7 @@ public class HtmlHandler {
                 }
             //}
             }
-            return true;
+           // return true;
         }
         return false;
 

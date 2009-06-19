@@ -4,7 +4,6 @@
  */
 
 package lucene.search.media.parsehtml;
-
 import org.apache.lucene.document.Document;
 import org.cyberneko.html.parsers.DOMFragmentParser;
 import org.xml.sax.SAXException;
@@ -43,6 +42,7 @@ private DOMFragmentParser parser = new DOMFragmentParser();
       new org.apache.lucene.document.Document();
 
      MediaObject obj=new MediaObject();
+     obj.setIdservice("VN_MUSIC");
     StringBuffer sb = new StringBuffer();
      getComment(sb, node, 1);
      if(sb!=null){

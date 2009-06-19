@@ -47,7 +47,7 @@ public class HoangHuyNetHandler extends HtmlHandler implements DocumentHandler {
         StringBuffer sb = new StringBuffer();
         // HtmlHandler html=new HtmlHandler();
         MediaObject obj = new MediaObject();
-
+        obj.setIdservice("HOANG_HUY_NET");
         //init arraylist to store tags and value
         ArrayList tags = new ArrayList();
         for (int i = 0; i < 3; i++) {
@@ -83,7 +83,7 @@ public class HoangHuyNetHandler extends HtmlHandler implements DocumentHandler {
             }
             sb = new StringBuffer();
             getComment(sb, node, 1);
-            if (sb != null) {
+            if (!sb.toString().equals("")) {
                 String[] linkreal = AnalysisLinkComment(sb.toString());
                 obj.setLinksource(linkreal[0]);
                 obj.setDatemodified(linkreal[1]);

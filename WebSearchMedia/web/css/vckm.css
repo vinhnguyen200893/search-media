@@ -1,0 +1,750 @@
+.navItem a {
+	color:#063F42;
+	text-decoration:none;
+	font-size:12px;
+	font-weight:bold;
+	display:inline-block;
+	height:33px;
+	line-height:33px;
+	margin:0px 18px 0px 5px;
+	float:left;
+}
+
+.navItem a:hover{
+	color:#E6700E;;
+	text-decoration:none;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#trangchu .trangchu,
+#gioithieu .gioithieu,
+#tintuc .tintuc,
+#sieuthi .sieuthi,
+#mobile .mobile,
+#internet .internet,
+#phone .phone,
+#hotro .hotro {
+	display:inline-block;
+	float:left;
+	background:url(../images/navItemLeft.gif) top left no-repeat;
+	height:23px;
+	line-height:23px;
+	padding-left:3px;
+	margin:5px 20px 0px 5px;
+}
+
+#trangchu .trangchu span,
+#gioithieu .gioithieu span,
+#tintuc .tintuc span,
+#sieuthi .sieuthi span,
+#mobile .mobile span,
+#internet .internet span,
+#phone .phone span,
+#hotro .hotro span {
+	display:block;
+	float:left;
+	background:url(../images/navItemRight.gif) top right no-repeat;
+	height:23px;
+	line-height:23px;
+	padding-right:3px;
+}
+
+#trangchu .trangchu a,
+#gioithieu .gioithieu a,
+#tintuc .tintuc a,
+#sieuthi .sieuthi a,
+#mobile .mobile a,
+#internet .internet a,
+#phone .phone a,
+#hotro .hotro a {
+	display:block;
+	float:left;
+	background:url(../images/navItemBack.gif) top repeat-x;
+	height:23px;
+	line-height:23px;
+	color:#E6700E;
+	font-weight:bold;
+	text-decoration:none;
+	padding:0px 4px 0px 4px;
+	margin:0px;
+}
+
+
+/* BEGIN Ti gia vang, ngoai te, thoi tiet*/
+.collection_info {
+	font-family: Arial;
+	font-size: 9pt;
+	color: black;
+	margin: 0;
+}
+.collection_info #print {
+	background: none;
+}
+.collection_info ul,p,form {
+	padding: 0;
+	margin: 0;
+}
+.collection_info p {
+	font-size:9pt;
+}
+
+.collection_info .clear {
+	clear: both;
+}
+
+.collection_info .col {
+	width: 5px;
+}
+
+.collection_info .misc {
+	background: url(../images/misc-bkg.jpg) repeat-x;
+	padding: 5px;
+	font-size: 8pt;
+}
+
+.collection_info .misc a {
+	color: #e90119;
+	font-size: 9pt;
+	font-weight: bold;
+}
+
+.collection_info .misc span {
+	color: #666;
+	font-style: italic;
+}
+
+.collection_info .misc ul {
+	margin: 5px;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+.collection_info .misc ul ul li {
+	font-weight: normal;
+}
+
+.collection_info .row {
+	margin-bottom: 5px;
+}
+
+.collection_info .box {
+/*
+	border: 1px solid #d7dcdf;
+*/
+}
+
+.collection_info .thead {
+	color: white;
+	white-space: nowrap;
+	font-size: 8pt;
+	height: 19px;
+	font-weight: bold;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+
+.collection_info .thead a:hover,
+.collection_info .thead a {
+	color: white;
+	font-size: 8pt;
+}
+
+.collection_info #gold {
+	margin-top: 5px;
+}
+/* END Ti gia vang, ngoai te, thoi tiet*/
+
+
+/* BEGIN Tin bai */
+#subtitle {
+	color:#990000;
+	font-size:12px;
+	padding:3px 0px;
+	font-weight:bold;
+}
+#tintop_title {
+	color:#333333;
+	font-size: 16px;
+	font-weight:bold;
+	margin: 10px 0 10px 0;
+}
+#time {
+	color:#999999;
+	font-size:11px;
+	padding:3px 0px;
+}
+#tool {
+	font-size:11px;
+}
+#other-news	{
+	background:#FFFFFF none repeat scroll 0%;
+	font-size:11pt;
+}
+.noborder {
+	border:none;
+}
+
+#tintuc #content_home {
+	float:left;
+	width:404px;
+}
+
+/* END Tin bai */
+
+/* BEGIN quang cao */
+.ads table{
+	margin:0 auto;
+}
+
+.ads img{
+	border:0pt;
+}
+/* END quang cao */
+
+/* BEGIN menu left tintuc*/
+#menu-1 .trangnhat,
+#menu-21 .tinkhuyenmai,
+#menu-41 .tinviettel,
+#menu-101 .thegioididong,
+#menu-62 .sanphammoi,
+#menu-63 .vienthongtrongnuoc,
+#menu-64 .vienthongquocte,
+#menu-65 .goccongnghe {
+	background:transparent url(../images/newsMenuItemBgS.jpg) repeat-x scroll center top;
+	border-color:-moz-use-text-color #0D8890 rgb(13, 136, 144);
+	border-style: none solid solid;
+	border-width:medium 1px 1px;
+	font-weight:bold;
+	height:23px;
+	line-height:23px;
+}
+#menu-1 .trangnhat a,
+#menu-21 .tinkhuyenmai a,
+#menu-41 .tinviettel a,
+#menu-101 .thegioididong a,
+#menu-62 .sanphammoi a,
+#menu-63 .vienthongtrongnuoc a,
+#menu-64 .vienthongquocte a,
+#menu-65 .goccongnghe a{
+	color:#E6700E;
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:5px;
+	text-decoration:none;
+}
+#menu-1 .trangnhat span,
+#menu-21 .tinkhuyenmai span,
+#menu-41 .tinviettel span,
+#menu-101 .thegioididong span,
+#menu-62 .sanphammoi span,
+#menu-63 .vienthongtrongnuoc span,
+#menu-64 .vienthongquocte span,
+#menu-65 .goccongnghe span{
+	background: transparent url(../images/arr04.gif) no-repeat scroll 95% 9px;
+	display:block;
+}
+/* END menu left tintuc*/
+/* BEGIN menu left cac_tien_ich */
+#menu-206 .collection-206,
+#menu-207 .collection-207,
+#menu-208 .collection-208,
+#menu-210 .collection-210,
+#menu-209 .collection-209,
+#menu-211 .collection-211,
+#menu-212 .collection-212,
+#menu-161 .collection-161,
+#menu-84 .collection-84,
+#menu-221 .collection-221,
+#menu-213 .collection-213,
+#menu-223 .collection-223,
+#menu-222 .collection-222,
+#menu-215 .collection-215 {
+	color:#E6700E;
+	display:block;
+	font-weight:bold;
+	padding:4px;
+	text-decoration:none;
+}
+
+/* END menu left cac_tien_ich */
+#gioithieu #tintop_title,
+#lienket #tintop_title{
+	color:#E6700E;
+	display:block;
+	font-size:12px;
+	font-weight:bold;
+	margin: 18px 0px;
+}
+
+#gioithieu #time,
+#lienket #time {
+	display: none;
+}
+
+#securities {
+	height: 230px;
+}
+/* menu left Thong bao */
+.introductionItem a {
+	color:#666666;
+	text-decoration:none;
+	font-size:12px;
+	font-weight: normal;
+	line-height:30px;
+}
+
+.introductionItem a:hover {
+	color:#E6700E;
+	text-decoration:none;
+	font-size:12px;
+	font-weight: bold;
+	line-height:30px;
+} 
+
+#menu-184 .thongcao,
+#menu-181 .thongbao,
+#menu-183 .ytuong,
+#menu-182 .tuyendung {
+	background:#FFFFFF url(../Images/IntroductionItemS.jpg) no-repeat scroll right top;
+	line-height:30px;
+	padding:0px 5px;
+}
+
+#menu-184 .thongcao a,
+#menu-181 .thongbao a,
+#menu-183 .ytuong a,
+#menu-182 .tuyendung a {
+	font-weight:bold;
+	color: #006666;
+}
+/* End menu left Thong bao */
+
+/* menu left Gioithieu */
+#menu-181 .article-181,
+#menu-241 .article-241,
+#menu-221 .article-221,
+#menu-261 .article-261,
+#menu-263 .article-263,
+#menu-265 .article-265 {
+	background:#FFFFFF url(../Images/IntroductionItemS.jpg) no-repeat scroll right top;
+	font-weight:bold;
+	line-height:30px;
+	padding:0px 5px;
+}
+
+#menu-181 .article-181 a,
+#menu-241 .article-241 a,
+#menu-221 .article-221 a,
+#menu-261 .article-261 a,
+#menu-263 .article-263 a,
+#menu-265 .article-265 a {
+	font-weight:bold;
+	color: #006666;
+}
+/* End menu left Gioithieu */
+
+/* menu left Lien ket khac */
+#menu-285 .article-285,
+#menu-283 .article-283,
+#menu-281 .article-281 {
+	color:#FF6600;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+#thongbao #feedback {
+	width: 404px;	
+	margin-left: 100px;
+	margin-right: 50px;
+	margin-top: 20px;
+}
+
+#thongbao #content p,
+#lienket #content p, 
+#gioithieu #content p {
+	text-align: justify;
+}
+
+#thongbao .newsCatBoxBorder21 {
+	background:transparent url(../images/boxBorder21.gif) no-repeat scroll left top;
+	padding:5px;
+}
+
+#vsolutions {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.boxServicesBgContent a {
+	text-decoration: none;
+
+}
+
+.boxServicesBgContent .title-service a {
+		font-weight: bold;
+}
+
+/* HoTro - Menu - BEGIN */
+#hotro-menu, #phone-menu, #internet-menu {
+	background:url(../images/moLeftBg.jpg) repeat-y left;
+	padding:0px 0px 0px 3px;
+}
+
+#hotro-menu ul, #phone-menu ul, #internet-menu ul{
+	list-style:none;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	font-size:12px;
+	border-top:1px solid #E8ECF0;
+	width:137px;
+}
+
+#hotro-menu a, #phone-menu a, #internet-menu a {
+	text-decoration: none;
+	padding-left: 11px;
+	display: block;
+}
+
+#hotro-menu a:hover, #phone-menu a:hover, #internet-menu a:hover {
+	color: #f60;
+}
+
+#hotro-menu li, #phone-menu li, #internet-menu li{
+	margin:0px 3px 0px 0px;
+	background:url(../images/menuItem.jpg) top repeat-x #EFF1F4;
+	border:1px solid #E8ECF0;
+	border-top:none;
+	padding:4px;
+}
+
+#hotro-menu span a{
+	padding-left: 0;
+	font-weight: bold;
+}
+
+#hotro-menu .chdl, #hotro-menu .dvht {
+	display: none;
+}
+
+#collection-241 .chdl,
+#collection-242 .dvht,
+#collection-243 .dvht,
+#collection-244 .dvht {
+	display: list-item;
+}
+
+#collection-241 .dschdl a,
+#collection-242 .faq a,
+#collection-243 .newsletter a,
+#collection-244 .ecatalogue a {
+	color: #f60;
+	background:url(../images/arr03.gif) 5px center no-repeat #FFFFFF;
+}
+
+#collection-241 .dschdl span a,
+#collection-242 .faq span a,
+#collection-243 .newsletter span a,
+#collection-244 .ecatalogue span a {
+	font-weight: bold;
+	background: none;
+}
+/* HoTro - Menu - END */
+
+/* Phone - Menu - BEGIN */
+ #phone-menu span a, #internet-menu span a {
+	padding-left: 0;
+	font-weight: bold;
+}
+#phone-menu .dtcd, #phone-menu .voip, #phone-menu .homephone{
+	display: none;
+
+}
+
+#phone-menu{
+	background:url(../images/moLeftBg.jpg) repeat-y left;
+	padding:0px 0px 0px 3px;
+}
+
+
+#menu-593 .dtcd,
+#menu-591 .dtcd,
+#menu-589 .dtcd,
+#menu-587 .dtcd,
+#menu-585 .dtcd,
+#menu-583 .dtcd,
+#menu-581 .dtcd,
+#menu-597 .voip,
+#menu-595 .voip,
+#menu-641 .voip,
+#menu-642 .voip,
+#menu-643 .voip,
+#menu-644 .voip,
+#menu-645 .voip,
+#menu-599 .homephone,
+#menu-601 .homephone,
+#menu-621 .homephone,
+#menu-623 .homephone,
+#menu-625 .homephone,
+#menu-627 .homephone,
+#menu-629 .homephone {
+	display: list-item;
+}
+
+#menu-593 .article-593 a,
+#menu-591 .article-591 a,
+#menu-589 .article-589 a,
+#menu-587 .article-587 a,
+#menu-585 .article-585 a,
+#menu-583 .article-583 a,
+#menu-581 .article-581 a,
+#menu-597 .article-597 a,
+#menu-595 .article-595 a,
+#menu-641 .article-641 a,
+#menu-642 .article-642 a,
+#menu-643 .article-643 a,
+#menu-644 .article-644 a,
+#menu-645 .article-645 a,
+#menu-599 .article-599 a,
+#menu-601 .article-601 a,
+#menu-621 .article-621 a,
+#menu-623 .article-623 a,
+#menu-625 .article-625 a,
+#menu-627 .article-627 a,
+#menu-629 .article-629 a{
+	color: #f60;
+	background:url(../images/arr03.gif) 5px center no-repeat #FFFFFF;
+}
+
+#menu-593 .article-593 span a,
+#menu-591 .article-591 span a,
+#menu-589 .article-589 span a,
+#menu-587 .article-587 span a,
+#menu-585 .article-585 span a,
+#menu-583 .article-583 span a,
+#menu-581 .article-581 span a,
+#menu-597 .article-597 span a,
+#menu-595 .article-595 span a,
+#menu-641 .article-641 span a,
+#menu-642 .article-642 span a,
+#menu-643 .article-643 span a,
+#menu-644 .article-644 span a,
+#menu-645 .article-645 span a,
+#menu-599 .article-599 span a,
+#menu-601 .article-601 span a,
+#menu-621 .article-621 span a,
+#menu-623 .article-623 span a,
+#menu-625 .article-625 span a,
+#menu-627 .article-627 span a,
+#menu-629 .article-629 span a{
+	font-weight: bold;
+	background: none;
+}
+
+/* Phone - Menu - END */
+
+/* Internet - Menu - BEGIN */
+#internet-menu .adsl, #internet-menu .leasedline, #internet-menu .ixp, #internet-menu .gtgt{
+	display: none;
+
+}
+
+#internet-menu{
+	background:url(../images/moLeftBg.jpg) repeat-y left;
+	padding:0px 0px 0px 3px;
+}
+#menu-666 .ixp,
+#menu-681 .ixp,
+#menu-682 .ixp,
+#menu-683 .ixp,
+#menu-667 .gtgt,
+#menu-684 .gtgt,
+#menu-685 .gtgt,
+#menu-686 .gtgt,
+#menu-661 .leasedline,
+#menu-662 .leasedline,
+#menu-663 .leasedline,
+#menu-664 .leasedline,
+#menu-646 .adsl,
+#menu-647 .adsl,
+#menu-648 .adsl,
+#menu-649 .adsl {
+	display: list-item;
+}
+#menu-684 .article-684 a,
+#menu-685 .article-685 a,
+#menu-686 .article-686 a,
+#menu-666 .article-666 a,
+#menu-667 .article-667 a,
+#menu-681 .article-681 a,
+#menu-682 .article-682 a,
+#menu-683 .article-683 a,
+#menu-661 .article-661 a,
+#menu-662 .article-662 a,
+#menu-663 .article-663 a,
+#menu-664 .article-664 a,
+#menu-646 .article-646 a,
+#menu-647 .article-647 a,
+#menu-648 .article-648 a,
+#menu-649 .article-649 a {
+	color: #f60;
+	background:url(../images/arr03.gif) 5px center no-repeat #FFFFFF;
+}
+#menu-684 .article-684 span a,
+#menu-685 .article-685 span a,
+#menu-686 .article-686 span a,
+#menu-666 .article-666 span a,
+#menu-667 .article-667 span a,
+#menu-681 .article-681 span a,
+#menu-682 .article-682 span a,
+#menu-683 .article-683 span a,
+#menu-661 .article-661 span a,
+#menu-662 .article-662 span a,
+#menu-663 .article-663 span a,
+#menu-664 .article-664 span a,
+#menu-646 .article-646 span a,
+#menu-647 .article-647 span a,
+#menu-648 .article-648 span a,
+#menu-649 .article-649 span a{
+	font-weight: bold;
+	background: none;
+}
+/* Internet - Menu - END */
+
+/* HoTro - Background from hotro.css - BEGIN */
+.hotroBg1, .hotroBg2, .hotroBg3 {
+	margin-left: 0 !important;
+}
+/* HoTro - Background from hotro.css - END */
+
+#thongbao .homephoneContentTitle {
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+
+.descBox img {
+	margin-right: 5px;
+	margin-top: 3px;
+}
+
+.wrapDescBox .newsCatBoxHeadline {
+	font-size: 12px;
+}
+
+/* FAQ  BEGIN */
+#faqItems {
+	font-size:12px;
+}
+#faqItems p {
+	text-align:left;
+	padding-left:30px;
+}
+#faqItems .question{
+	color:#E6700E;
+	font-weight:bold;
+	background:url(../images/iconAsk.jpg) no-repeat left;
+	padding-top:12px;
+	padding-bottom:12px;
+}
+#typeSelect {
+	width:150px;
+	margin-top:2px;
+}
+/* FAQ  END */
+/* DS cua hang dai ly BEGIN */
+#boutiqueItems .stt{
+	text-align:center;
+}
+#boutiqueItems .even {
+	background-color:#f0fafb;
+}
+/* DS cua hang dai ly END */
+/* E-CatalogueItems cua hang dai ly BEGIN */
+#ecatalogueItems .imgdownload {
+	width:80px;
+	height:23px;
+	border:none;
+}
+#ecatalogueItems .even {
+	background-color:#f0fafb;
+}
+#ecatalogueItems td{
+	padding-top:4px;
+	padding-bottom:4px;
+}
+/*  E-CatalogueItems cua hang dai ly END */
+
+
+/* Search - BEGIN */
+#result-set, #result-set ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 90%;
+}
+
+#result-set {
+	list-style-type: none;
+	font-size: 9pt;
+	font-family: Tahoma;
+}
+
+#result-set li {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+#result-set li p {
+}
+
+#result-set li p.title a {
+	font-size: 11pt;
+	text-decoration: underline;
+}
+
+#result-set li p.summary {
+	color: #444;
+}
+
+#result-set li ul.metadata {
+	list-style-type: none;
+}
+
+#result-set li ul.metadata li {
+	margin-right: 3px;
+	display: inline;
+	color: #999;
+}
+
+#result-set li ul.metadata li.url {
+	color: #36a200;
+}
+
+#result-set li ul.metadata li a {
+	color: #999;
+}
+
+#result-set em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+#e400 {
+	width: 90%;
+	margin: 0;
+	font-family: Arial;
+	font-size: 10pt;
+	color: black;
+}
+
+#e400 p {
+	margin-bottom: 10px;
+}
+
+#e400 ul {
+	list-style-type: square;
+	line-height: 150%;
+}
+/* Search - END */
+

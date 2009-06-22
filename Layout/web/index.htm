@@ -6,25 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="js/index.js"  type="text/javascript"></script>
 	
-	<script type="text/javascript" src="js/acc/jquery-1.3.2.js"></script>
-	<script type="text/javascript" src="js/acc/ui.core.js"></script>
-	<script type="text/javascript" src="js/acc/ui.accordion.js"></script>
+	<link rel="stylesheet" type="text/css"  href="css/style_mac.css" />	
+	<script src="js/jquery_mac.js" type="text/javascript" ></script>	
+	<script src="js/interface_mac.js" type="text/javascript" ></script>
 	
-	<link type="text/css" href="css/acc/ui.all.css" rel="stylesheet" />
-	
-	<link rel="stylesheet" type="text/css"  href="css/style_mac.css" />		
-
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-		$("#accordion").accordion('option','height',"auto");
-		$("#accordion").accordion();
-		});
-	</script>
-	<script type="text/javascript" src="swfobject.js"></script>
-    <script type="text/javascript" src="flying.js"></script>
 </head>
 <body>	
+	<form action="show_result.htm" method="post">
 	<div class="bg">
 		<table width="100%" border="0"  cellspacing="0" cellpadding="0">
 			<tr width="100%" >
@@ -34,7 +22,15 @@
 						<div class= "login">
 							<table cellpadding="0" cellspacing="0" border="0">
 								<tr>
-									<td align="right">														
+									<td align="right">	
+										<div class="dock" id="dock">
+										  <div class="dock-container">
+											  <a class="dock-item" href="#"><img src="images/mac/home.png"  /><span style="color:#FF0000">Home</span></a> 
+											  <a class="dock-item" href="#"><img src="images/mac/singin.png" /><span style="color:#FF0000">Đăng nhập</span></a> 
+											  <a class="dock-item" href="#"><img src="images/mac/singp1.png" /><span style="color:#FF0000">Đăng ký</span></a> 
+										 </div> 
+										</div>
+																		
 									</td>
 								</tr>
 							</table>
@@ -47,7 +43,7 @@
 								</td>
 							</tr>
 						</table>
-						
+					
 						<div class="frame_search">
 							<table cellspacing="0" cellpadding="0" border="0">
 								<tr>
@@ -55,10 +51,10 @@
 										<table cellspacing="0" cellpadding="2">
 											<tr>
 												<td>
-													<input type="image" id="music" src="images/music_on.jpg" align="right" onClick="chooseMusic()">
+													<input type="image" id="music" src="images/music_on.jpg" align="right" onClick="chooseMusic();return false;">
 												</td>
 												<td>
-													<input type="image" id="film" src="images/film.jpg" align="left" onClick="chooseFilm()">
+													<input type="image" id="film" src="images/film.jpg" align="left" onClick="chooseFilm();return false;">
 												</td>
 												
 											</tr>
@@ -74,10 +70,10 @@
 											</tr>											
 											<tr >
 												<td  align="right" >
-													<input type="image" id="search_adv"  src="images/search_adv_o.jpg"  onclick="search_adv()" >
+													<input type="image" id="search_adv"  src="images/search_adv_o.jpg"  onclick="search_adv();return false;" >
 												</td>
 												<td  align="left" >
-													<input type="image" id="search_tc"  src="images/search_tc_o.jpg"  onclick="search_tc()" >
+													<input type="image" id="search_tc"  src="images/search_tc_o.jpg"  onclick="search_tc();return false;" >
 												</td>											
 										   </tr>									  
 										</table>
@@ -121,10 +117,10 @@
 								</tr>
 								<tr>
 									<td align="left">
-										<input type="button" value="Tìm kiếm" id="bt_search_avd" >
+										<input type="button" value="Tìm kiếm" id="bt_search_avd" onClick="return false;" >
 									</td>
 									<td width="50%"> 
-										<input type="button" value="Đóng lại" id="bt_close" onClick="bt_close()" />
+										<input type="button" value="Đóng lại" id="bt_close" onClick="return btclose();" />
 									</td>																		 								
 								</tr>
 									
@@ -145,25 +141,7 @@
 									<td width="50%"><input id="tc_m_src" name="tc_m" type="radio" value=""  onclick="EnableControls()"/> Nguồn</td>
 								</tr>											
 							</table>				
-						</div>								
-						<div id="ssb">
-						<p>
-							 Kết quả
-							<b>1</b>
-							-
-							<b>10</b>
-							trong khoảng
-							<b>13.100.000</b>
-							cho
-							<b>Dam Vinh Hung</b>
-							. (
-							<b>0,22</b>
-							giây) 
-						</p>
-						</div>
-						<div class="result">
-							<img id="result" src="images/kq.jpg" align="left" height="28">
-						</div>
+						</div>				
 
 					</div>				
 				</td>
@@ -173,192 +151,9 @@
 			<tr>
 				<td>&nbsp;</td>
 				<td width="780" height="70"> 
-				<form id="show_result" >	
-				<!-- This is main content -->				
-				<div id="accordion" >
-					<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
-						</a>
-					</h3>					
-						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
-							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
-								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
-								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
-								</td>
-							  </tr>
-							</table>									
-						</div>				
-						<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
-						</a>
-					</h3>					
-						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
-							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
-								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
-								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
-								</td>
-							  </tr>
-							</table>									
-						</div>				
-						<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
-						</a>
-					</h3>					
-						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
-							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
-								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
-								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
-								</td>
-							  </tr>
-							</table>									
-						</div>				
-						<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
-						</a>
-					</h3>					
-						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
-							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
-								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
-								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
-							  </tr>
-							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
-								</td>
-							  </tr>
-							</table>									
-						</div>				
-										
-				  </div>
-			</form>
+			
+			
+				<!-- This is main content -->	
 				<!-- /This is main content -->
 				</td>
 				<td>&nbsp;</td>
@@ -371,7 +166,16 @@
 							</tr>											
 							<tr width="100%"  >
 								<td   align="center" valign="top" >		
-								
+								<div class="dock" id="dock2" >
+									  <div class="dock-container2">
+									  <a class="dock-item2" href="#" ><span style="color:#FF0000" >Home</span><img src="images/mac/home.png" alt="home" /></a> 
+									  <a class="dock-item2" href="#"><span style="color:#FF0000">Contact</span><img src="images/mac/email.png" alt="contact" /></a> 
+									  <a class="dock-item2" href="#"><span style="color:#FF0000">Music</span><img src="images/mac/music.png" alt="music" /></a> 
+									  <a class="dock-item2" href="#"><span style="color:#FF0000">Video</span><img src="images/mac/video.png" alt="video" /></a> 
+									  <a class="dock-item2" href="#"><span style="color:#FF0000">Top nhạc</span><img src="images/mac/rss.png" alt="rss" /></a> 
+									  <a class="dock-item2" href="#"><span style="color:#FF0000" >Top phim</span><img src="images/mac/rss2.png" alt="rss" /></a> 
+									  </div>
+									</div>	
 								</td>		
 							</tr>
 						</table>
@@ -380,6 +184,38 @@
 			</tr>			
 		</table>
 	</div>
+	</form>
 	
+	<script type="text/javascript">		
+		$(document).ready(
+			function()
+			{
+				$('#dock').Fisheye(
+					{
+						maxWidth: 50,
+						items: 'a',
+						itemsText: 'span',
+						container: '.dock-container',
+						itemWidth: 40,
+						proximity: 90,
+						halign : 'center'
+					}
+				)
+				$('#dock2').Fisheye(
+					{
+						maxWidth: 60,
+						items: 'a',
+						itemsText: 'span',
+						container: '.dock-container2',
+						itemWidth: 40,
+						proximity: 80,
+						alignment : 'left',
+						valign: 'bottom',
+						halign : 'center'
+					}
+				)
+			}
+		);
+	</script>
 </body>
 </html>

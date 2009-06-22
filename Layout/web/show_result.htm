@@ -25,6 +25,7 @@
     <script type="text/javascript" src="flying.js"></script>
 </head>
 <body>	
+ <form  name="checkoutFrm" method="POST" onSubmit="return false;">
 	<div class="bg">
 		<table width="100%" border="0"  cellspacing="0" cellpadding="0">
 			<tr width="100%" >
@@ -55,10 +56,10 @@
 										<table cellspacing="0" cellpadding="2">
 											<tr>
 												<td>
-													<input type="image" id="music" src="images/music_on.jpg" align="right" onClick="chooseMusic()">
+													<input type="image" id="music" src="images/music_on.jpg" align="right" onClick="chooseMusic();return false;">
 												</td>
 												<td>
-													<input type="image" id="film" src="images/film.jpg" align="left" onClick="chooseFilm()">
+													<input type="image" id="film" src="images/film.jpg" align="left" onClick="chooseFilm();return false;">
 												</td>
 												
 											</tr>
@@ -74,10 +75,10 @@
 											</tr>											
 											<tr >
 												<td  align="right" >
-													<input type="image" id="search_adv"  src="images/search_adv_o.jpg"  onclick="search_adv()" >
+													<input type="image" id="search_adv"  src="images/search_adv_o.jpg"  onclick="search_adv() ;return false;"  >
 												</td>
 												<td  align="left" >
-													<input type="image" id="search_tc"  src="images/search_tc_o.jpg"  onclick="search_tc()" >
+													<input type="image" id="search_tc"  src="images/search_tc_o.jpg"  onclick="search_tc();return false;" >
 												</td>											
 										   </tr>									  
 										</table>
@@ -124,7 +125,7 @@
 										<input type="button" value="Tìm kiếm" id="bt_search_avd" >
 									</td>
 									<td width="50%"> 
-										<input type="button" value="Đóng lại" id="bt_close" onClick="bt_close()" />
+										<input type="button" value="Đóng lại" id="bt_close" onClick=" return btclose();" />
 									</td>																		 								
 								</tr>
 									
@@ -173,7 +174,7 @@
 			<tr>
 				<td>&nbsp;</td>
 				<td width="780" height="70"> 
-				<form id="show_result" >	
+			
 				<!-- This is main content -->				
 				<div id="accordion" >
 					<h3>
@@ -358,7 +359,7 @@
 						</div>				
 										
 				  </div>
-			</form>
+			
 				<!-- /This is main content -->
 				</td>
 				<td>&nbsp;</td>
@@ -380,6 +381,24 @@
 			</tr>			
 		</table>
 	</div>
+</form>
+ <script language="JavaScript">
+    function doAction ( b){
+      if (b.value=="Order now"){
+        checkoutFrm.action="saveorder.jsp";
+        checkoutFrm.submit();
+      }
+      if (b.value=="Change"){
+        checkoutFrm.action="shoppingcart.jsp";
+        checkoutFrm.submit();
+      }
+      if (b.value=="Continue shopping"){
+        checkoutFrm.action="default.jsp";
+        checkoutFrm.submit();
+      }
+    }
+    </script>
+	
 	
 </body>
 </html>

@@ -125,6 +125,9 @@ function search()
 //ham khi chon button nhac
 function chooseMusic()
 {	
+	//alert("abc");
+	//var t = document.getElementById("search_adv").src;
+	//alert(t);
 	document.getElementById("search_adv").src = "images/search_adv_o.jpg";
 	document.getElementById("search_tc").src = "images/search_tc_o.jpg";
 	
@@ -175,8 +178,9 @@ function chooseFilm()
 	//alert(flag);
 }
 
+
 //nhan chon button dong lai
-function bt_close()
+function btclose()
 {
 	document.getElementById("search_adv").src = "images/search_adv_o.jpg";
 	document.getElementById("search_tc").src = "images/search_tc_o.jpg";
@@ -186,7 +190,11 @@ function bt_close()
 	
 	document.getElementById("tc").style.visibility = "hidden";
 	document.getElementById("tc").style.height = "0px";	
-	//alert("as");
 	 flag_search_adv=0;
-	//alert(flag);
+}
+
+function query()
+{	
+	window.location('show_result.htm');
+	
 }

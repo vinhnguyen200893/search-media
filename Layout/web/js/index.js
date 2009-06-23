@@ -198,3 +198,147 @@ function query()
 	window.location('show_result.htm');
 	
 }
+
+//lyric
+function NgheCaKhuc_divLyric_DblClick(){
+//alert("ascss");
+var t = document.getElementById("divLyric").style.height ;			
+//alert(t);	
+if(t !='50px')
+{
+	document.getElementById("divLyric").style.height = '50px';
+	document.getElementById("parLyric").style.cursor = 'n-resize';
+	document.getElementById("imgLyricSwitch").src  = 'images/move-down.png';
+	
+}
+else
+{
+	document.getElementById("divLyric").style.height = 'auto';
+	document.getElementById("parLyric").style.cursor = 'default';
+	document.getElementById("imgLyricSwitch").src  = 'images/move-top.png';
+	
+}
+}
+
+function divLyric(obj){
+	//alert("ascss");
+	//var temp = obj.style.height;// ban dau 50px
+	//var dl = document.getElementByName("divLyric").style.height ;			
+	//var pl = document.getElementByName("parLyric").style.cursor ;			
+	//var il = document.getElementByName("imgLyricSwitch").src ;			
+	var t = obj.style.height;	
+	if(t !='50px')
+	{
+		obj.style.height = '50px';
+		//document.getElementById("divLyric").style.height = '50px';
+		//document.getElementById("parLyric").style.cursor = 'n-resize';
+		//document.getElementById("imgLyricSwitch").src  = 'images/move-down.png';
+		
+	}
+	else
+	{
+		obj.style.height = 'auto';
+		//document.getElementById("divLyric").style.height = 'auto';
+		//document.getElementById("parLyric").style.cursor = 'default';
+		//document.getElementById("imgLyricSwitch").src  = 'images/move-top.png';
+		
+	}
+	
+}
+
+////////////////////////////
+//play accordian
+
+function playacc(evt)
+{
+	var t;
+	//alert("asdf");
+	var evt1 = evt || window.event;
+	var obj = evt1.target || window.event.srcElement;	
+	
+	//alert(obj.style.height);
+	var ControlList = document.getElementsByName("imgacc");
+	for(i = 0; i < ControlList.length; i++)
+	{
+		ControlList[i].src = "images/play.jpg";
+	}
+
+	var a = obj.firstChild;
+	alert(a);
+	if(a == null)
+	{
+		alert("aa");
+		obj.removeChild(obj.firstChild);
+		t = right(obj.firstChild.src,"/");	
+		//alert(t);
+		if(t == "play.jpg")
+		{
+		//	obj.removeChild(obj.firstChild);
+			obj.firstChild.src = "images/pause.jpg";
+		}
+		return;
+	}
+	//alert(a.length);
+	//var a = a.text;
+	//kiem tra object text	
+	if(a.length != null)
+	{
+		alert("bb");
+		return;	
+	}
+	
+	if(!a.src )
+	{
+		alert("cc");
+		obj.removeChild(obj.firstChild);		
+		t = right(obj.firstChild.src,"/");	
+		//alert(t);
+		if(t == "play.jpg")
+		{
+			//	obj.removeChild(obj.firstChild);
+			obj.firstChild.src = "images/pause.jpg";
+		}
+		return ;
+	}
+		/*
+	var imgNode = document.createElement("img");
+	imgNode.src = "images/play.jpg";
+	imgNode.height = "40";
+	imgNode.width = "40";
+	imgNode.name = "imgacc";
+	imgNode.border = "0";
+		
+		
+	obj.insertBefore(imgNode,obj.firstChild);
+	*/
+}
+function play_acc(obj)
+{
+	var t,j,i;
+	var dl = document.getElementsByName("divLyric") ;	
+	for( j = 0; j < dl.length; j++)
+	{
+		dl[j].style.height = "50px";
+	}
+	
+	//alert(obj.style.height);
+	var ControlList = document.getElementsByName("imgacc");
+	for( i = 0; i < ControlList.length; i++)
+	{
+		ControlList[i].src = "images/play.jpg";
+	}
+
+//	alert("cc");
+	if(!obj.firstChild.src)
+		obj.removeChild(obj.firstChild);		
+	
+	t = right(obj.firstChild.src,"/");	
+	//alert(t);
+	if(t == "play.jpg")
+	{
+		//	obj.removeChild(obj.firstChild);
+		obj.firstChild.src = "images/pause.jpg";
+	}
+	//ssreturn ;
+		
+}

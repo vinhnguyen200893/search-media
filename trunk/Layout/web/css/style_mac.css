@@ -1,7 +1,7 @@
 /* dock - top */
 .dock {
 	position: relative; 
-	height: 50px; 
+	height: 30px; 
 	text-align: center;
 }
 .dock-container {
@@ -37,14 +37,14 @@ a.dock-item {
 }
 .dock-container2 {
 	position: absolute;
-	height: 50px;
+	height: 35px;
 	background: url(../images/mac/dock-bg.gif);
 	padding-left: 20px;
 }
 a.dock-item2 {
 	display: block; 
 	font: bold 12px Arial, Helvetica, sans-serif;
-	width: 40px; 
+	width: 30px; 
 	color:  #FFFFFF; 
 	bottom: 0px; 
 	position: absolute;

@@ -90,45 +90,37 @@
 							<table border="0"  cellpadding="2" cellspacing="0"  align="right" style="font-size:10px">								
 								<tr>
 									<td align="left">
-										Tên ca sĩ/ diễn viên
-									</td>
-									<td width="50%"> 
-										<input type="text" align="right" id="singer" name="song"  />
-									</td>																		 								
+										Tên ca sĩ/ diễn viên									</td>
+									<td width="50%" colspan="2"> 
+										<input type="text" align="right" id="singer" name="song"  />									</td>																		 								
 								</tr>
 								<tr>
 									<td align="left">
-										Tên album / tên bộ phim
-									</td>
-									<td width="50%"> 
-										<input type="text" align="right" id="album" name="song"  />
-									</td>																		 								
+										Tên album / tên bộ phim									</td>
+									<td width="50%" colspan="2"> 
+										<input type="text" align="right" id="album" name="song"  />									</td>																		 								
 								</tr>
 								<tr>
 									<td align="left">
-										Lời bài hát/ phụ đề phim 
-									</td>
-									<td width="50%"> 
-										<input type="text" align="right" id="lyric" name="song"  />
-									</td>																		 								
+										Lời bài hát/ phụ đề phim									</td>
+									<td width="50%" colspan="2"> 
+										<input type="text" align="right" id="lyric" name="song"  />									</td>																		 								
 								</tr>
 								<tr>
 									<td align="left">
-										Nguồn
-									</td>
-									<td width="50%"> 
-										<input type="text" align="right" id="site_music" name="song"  />
-									</td>																		 								
+										Nguồn									</td>
+									<td width="50%" colspan="2">  
+										<input type="text" align="right" id="site_music" name="song"  />									</td>																		 								
 								</tr>
 								<tr>
-									<td align="left">
-										<input type="button" value="Tìm kiếm" id="bt_search_avd" >
+									<td align="left">&nbsp;</td>
+									<td  align="left"> 
+										<input name="button" type="button" id="bt_search_avd" value="Tìm kiếm" align="left" >
 									</td>
-									<td width="50%"> 
-										<input type="button" value="Đóng lại" id="bt_close" onClick=" return btclose();" />
+									<td align="left">
+										<input type="button" value="Đóng lại" id="bt_close" onClick=" return btclose();" align="left"/>								  
 									</td>																		 								
 								</tr>
-									
 							</table>
 						</div>	
 						<div class="search_tc" id= "tc" name="tc" style="visibility: hidden ; height:0px" >
@@ -178,186 +170,259 @@
 				<!-- This is main content -->				
 				<div id="accordion" >
 					<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
+						<a href="#"  onClick="play_acc(this);return false;">
+							<img src="images/pause.jpg" height="40" width="40" name="imgacc" border="0"  > 	
+							<label id ="rs_song"  style="font-size:10px" > <b   style="color:#FF0000;font-size:15px"> Anh va em  </b> </label>																
 						</a>
 					</h3>					
 						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
+							<table width="651" border="0" align="center" cellpadding="0" cellspacing="2">
 							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
+								<td width="266" rowspan="2"><object width="256" height="61">
+                                  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" />
+								  <param name="quality" value="high" />
+								  <param name="wmode" value="transparent" />
+								  <embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
+                                </object></td>
 								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
+									Nguồn từ: <br/>
+									<label id ="rs_song"  style="font-size:14px;color:#0000FF" > nhaccuatui.com </label></td>
 								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
+									Tác giả:  <br/>
+								<label id="rs_src" style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 							  </tr>
 							  <tr>
 								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
+									Link download <br/>
+									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
+									Mã nhúng forum<br/>
+									<input name="" type="text" value="">								</td>
 							  </tr>
 							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
+							    <td height="45" colspan="3">
+								 <h5>Lời ca khúc</h5>
+ 							 <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 50px;"  title="Double Click để xem tòan bộ lời ca khúc" onDblClick="divLyric(this)" >
+	   
+								<p name="parLyric" style="cursor: n-resize;">
+								</p>
+								<h5>Lyrics: Mười Năm Đợi Chờ - Thiên Trường </h5>
+								<br>
+									Trên chuyến xe ca, về quê hương miền Trung đất nổi xa vời. <br>
+									Ai tới quê tôi, xem hàng dương liễu cát trắng biển xanh rờn. <br>
+									
+									Nhìn dừa xanh xanh, ánh nắng long lanh, gió biển trong lành. <br>
+									Hoàng hôn trầm lắng mây trời bay bay. <br>
+									Xa cách bao lâu, giờ trên xe ca trở về quê nhà. <br>
+									Thăm má thăm ba bao ngày xa cách nhớ thương, thương trong lòng.<br>
+									 Về mừng hôm nay, say gió say trăng, say biển nơi này.<br>
+									 Gặp nhau chúng mình chuyện tình quê hương. <br>
+									Thôi nay hết rồi, mười năm đợi chờ. <br>
+									Mười năm nhớ thương, giờ về quê hương. <br>
+									
+									Tôi thương người em gái, duyên dáng mái tóc thề. <br>
+									Đêm về nhìn trăng lên. <br>
+									Thôi nhé em ơi! Còn đêm nay rồi mai giã từ lên đường.<br>
+									 Xa cách quê hương, nghe tình lưu luyến biết mấy yêu thương nhiều.<br>
+									 Giờ về nơi đây, ai nhớ chăng ai? <br>
+									Em vẫn nơi này, cầu xin ước nguyện, mai còn về thăm em <br>
+						</div>
+	
 								</td>
 							  </tr>
 							</table>									
 						</div>				
-						<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
+					<h3>
+						<a href="#"  onClick="play_acc(this);return false;">
+							<img src="images/play.jpg" height="40" width="40" name="imgacc" border="0" > 	
+							<label id ="rs_song"  style="font-size:10px" ><b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>																
 						</a>
 					</h3>					
 						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
+							<table width="651" border="0" align="center" cellpadding="0" cellspacing="2">
 							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
+								<td width="266" rowspan="2"><object width="256" height="61">
+                                  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" />
+								  <param name="quality" value="high" />
+								  <param name="wmode" value="transparent" />
+								  <embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
+                                </object></td>
 								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
+									Nguồn từ: <br/>
+									<label id ="rs_song"  style="font-size:14px;color:#0000FF" > nhaccuatui.com </label></td>
 								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
+									Tác giả:  <br/>
+								<label id="rs_src" style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 							  </tr>
 							  <tr>
 								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
+									Link download <br/>
+									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
+									Mã nhúng forum<br/>
+									<input name="" type="text" value="">								</td>
 							  </tr>
 							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
+							    <td height="45" colspan="3">
+								 <h5>Lời ca khúc</h5>
+ 							 <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 50px;"  title="Double Click để xem tòan bộ lời ca khúc" onDblClick="divLyric(this)" >
+	   
+								<p name="parLyric" style="cursor: n-resize;">
+								</p>
+								<h5>Lyrics: Mười Năm Đợi Chờ - Thiên Trường </h5>
+								<br>
+									Trên chuyến xe ca, về quê hương miền Trung đất nổi xa vời. <br>
+									Ai tới quê tôi, xem hàng dương liễu cát trắng biển xanh rờn. <br>
+									
+									Nhìn dừa xanh xanh, ánh nắng long lanh, gió biển trong lành. <br>
+									Hoàng hôn trầm lắng mây trời bay bay. <br>
+									Xa cách bao lâu, giờ trên xe ca trở về quê nhà. <br>
+									Thăm má thăm ba bao ngày xa cách nhớ thương, thương trong lòng.<br>
+									 Về mừng hôm nay, say gió say trăng, say biển nơi này.<br>
+									 Gặp nhau chúng mình chuyện tình quê hương. <br>
+									Thôi nay hết rồi, mười năm đợi chờ. <br>
+									Mười năm nhớ thương, giờ về quê hương. <br>
+									
+									Tôi thương người em gái, duyên dáng mái tóc thề. <br>
+									Đêm về nhìn trăng lên. <br>
+									Thôi nhé em ơi! Còn đêm nay rồi mai giã từ lên đường.<br>
+									 Xa cách quê hương, nghe tình lưu luyến biết mấy yêu thương nhiều.<br>
+									 Giờ về nơi đây, ai nhớ chăng ai? <br>
+									Em vẫn nơi này, cầu xin ước nguyện, mai còn về thăm em <br>
+						</div>
+	
 								</td>
 							  </tr>
 							</table>									
 						</div>				
-						<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
+					<h3>
+						<a href="#"  onClick="play_acc(this);return false;">
+							<img src="images/play.jpg" height="40" width="40" name="imgacc" border="0"  > 	
+							<label id ="rs_song"  style="font-size:10px" ><b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>																
 						</a>
 					</h3>					
 						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
+							<table width="651" border="0" align="center" cellpadding="0" cellspacing="2">
 							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
+								<td width="266" rowspan="2"><object width="256" height="61">
+                                  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" />
+								  <param name="quality" value="high" />
+								  <param name="wmode" value="transparent" />
+								  <embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
+                                </object></td>
 								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
+									Nguồn từ: <br/>
+									<label id ="rs_song"  style="font-size:14px;color:#0000FF" > nhaccuatui.com </label></td>
 								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
+									Tác giả:  <br/>
+								<label id="rs_src" style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 							  </tr>
 							  <tr>
 								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
+									Link download <br/>
+									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
+									Mã nhúng forum<br/>
+									<input name="" type="text" value="">								</td>
 							  </tr>
 							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
+							    <td height="45" colspan="3">
+								<h5>Lời ca khúc</h5>
+ 							 <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 50px;"  title="Double Click để xem tòan bộ lời ca khúc" onDblClick="divLyric(this)" >
+	   
+								<p name="parLyric" style="cursor: n-resize;">
+								</p>
+								<h5>Lyrics: Mười Năm Đợi Chờ - Thiên Trường </h5>
+								<br>
+									Trên chuyến xe ca, về quê hương miền Trung đất nổi xa vời. <br>
+									Ai tới quê tôi, xem hàng dương liễu cát trắng biển xanh rờn. <br>
+									
+									Nhìn dừa xanh xanh, ánh nắng long lanh, gió biển trong lành. <br>
+									Hoàng hôn trầm lắng mây trời bay bay. <br>
+									Xa cách bao lâu, giờ trên xe ca trở về quê nhà. <br>
+									Thăm má thăm ba bao ngày xa cách nhớ thương, thương trong lòng.<br>
+									 Về mừng hôm nay, say gió say trăng, say biển nơi này.<br>
+									 Gặp nhau chúng mình chuyện tình quê hương. <br>
+									Thôi nay hết rồi, mười năm đợi chờ. <br>
+									Mười năm nhớ thương, giờ về quê hương. <br>
+									
+									Tôi thương người em gái, duyên dáng mái tóc thề. <br>
+									Đêm về nhìn trăng lên. <br>
+									Thôi nhé em ơi! Còn đêm nay rồi mai giã từ lên đường.<br>
+									 Xa cách quê hương, nghe tình lưu luyến biết mấy yêu thương nhiều.<br>
+									 Giờ về nơi đây, ai nhớ chăng ai? <br>
+									Em vẫn nơi này, cầu xin ước nguyện, mai còn về thăm em <br>
+						</div>
+	
 								</td>
 							  </tr>
 							</table>									
 						</div>				
-						<h3>
-						<a href="#">
-							<img src="images/media.jpg" height="40" width="40"> 	
-							<label id ="rs_song"  style="font-size:10px" > Ten bai hat : <b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>	
-							<label id ="rs_song"  style="font-size:10px" >Nguon từ : nhaccuatui.com </label>								
+					<h3>
+						<a href="#"  onClick="play_acc(this);return false;">
+							<img src="images/play.jpg" height="40" width="40" name="imgacc" border="0" > 	
+							<label id ="rs_song"  style="font-size:10px" ><b style="color:#FF0000;font-size:15px" > Anh va em  </b> </label>																
 						</a>
 					</h3>					
 						<div >
-							<table width="651" border="1" align="center" cellpadding="0" cellspacing="2">
+							<table width="651" border="0" align="center" cellpadding="0" cellspacing="2">
 							  <tr>
-								<td width="266" rowspan="3">
-									<object width="256" height="61">
-									  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" /><param name="quality" value="high" /><param name="wmode" value="transparent" /><embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
-								  </object>
-								</td>
+								<td width="266" rowspan="2"><object width="256" height="61">
+                                  <param name="movie" value="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" />
+								  <param name="quality" value="high" />
+								  <param name="wmode" value="transparent" />
+								  <embed width="256" height="61" src="http://static.mp3.zing.vn/skins/default/flash/player/mp3Player_skin3.swf?xmlurl=http://mp3.zing.vn/blog/?YS82ZS9hNmVlZTYyODmUsIC5MjY4NGRkMDg1NmQ0NzM0Mzg1YzI0OC5cUIbaBmUsICDN8R2nDs3xUxINdUngZyBLaOG6r2MgSHV5fGZhWeBHNl" quality="high" wmode="transparent" type="application/x-shockwave-flash"></embed>
+                                </object></td>
 								<td width="176">	
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Anh va em </label>
-								</td>
+									Nguồn từ: <br/>
+									<label id ="rs_song"  style="font-size:14px;color:#0000FF" > nhaccuatui.com </label></td>
 								<td width="193">
-									Tác giả:<br>
-								<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>					
-								</td>
+									Tác giả:  <br/>
+								<label id="rs_src" style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 							  </tr>
 							  <tr>
 								<td>
-									Link download<br>
-									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>
-								</td>
+									Link download <br/>
+									<label id="rs_src"style="font-size:14px;color:#0000FF" > nhaccuatui.com </label>								</td>
 								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">									
-								</td>
+									Mã nhúng forum<br/>
+									<input name="" type="text" value="">								</td>
 							  </tr>
 							  <tr>
-								<td>
-									Thể loại<br>
-									<label id="rs_song" style="font-size:14px;color:#0000FF" > Nhạc nhẹ </label>									
-								</td>
-								<td>
-									Mã nhúng forum<br>
-									<input name="" type="text" value="">
+							    <td height="45" colspan="3">
+								  <h5>Lời ca khúc</h5>
+ 							 <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 50px;"  title="Double Click để xem tòan bộ lời ca khúc" onDblClick="divLyric(this)" >
+	   
+								<p name="parLyric" style="cursor: n-resize;">
+								</p>
+								<h5>Lyrics: Mười Năm Đợi Chờ - Thiên Trường </h5>
+								<br>
+									Trên chuyến xe ca, về quê hương miền Trung đất nổi xa vời. <br>
+									Ai tới quê tôi, xem hàng dương liễu cát trắng biển xanh rờn. <br>
+									
+									Nhìn dừa xanh xanh, ánh nắng long lanh, gió biển trong lành. <br>
+									Hoàng hôn trầm lắng mây trời bay bay. <br>
+									Xa cách bao lâu, giờ trên xe ca trở về quê nhà. <br>
+									Thăm má thăm ba bao ngày xa cách nhớ thương, thương trong lòng.<br>
+									 Về mừng hôm nay, say gió say trăng, say biển nơi này.<br>
+									 Gặp nhau chúng mình chuyện tình quê hương. <br>
+									Thôi nay hết rồi, mười năm đợi chờ. <br>
+									Mười năm nhớ thương, giờ về quê hương. <br>
+									
+									Tôi thương người em gái, duyên dáng mái tóc thề. <br>
+									Đêm về nhìn trăng lên. <br>
+									Thôi nhé em ơi! Còn đêm nay rồi mai giã từ lên đường.<br>
+									 Xa cách quê hương, nghe tình lưu luyến biết mấy yêu thương nhiều.<br>
+									 Giờ về nơi đây, ai nhớ chăng ai? <br>
+									Em vẫn nơi này, cầu xin ước nguyện, mai còn về thăm em <br>
+						</div>
+	
 								</td>
 							  </tr>
 							</table>									
 						</div>				
-										
+									
+																						
 				  </div>
 			
 				<!-- /This is main content -->

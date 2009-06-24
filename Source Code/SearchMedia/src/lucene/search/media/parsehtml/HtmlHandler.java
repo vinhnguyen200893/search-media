@@ -628,7 +628,7 @@ public class HtmlHandler {
     }
 
     protected String[] AnalysisTitle(String sb) {
-        String[] sub = sb.split("[-|]");
+        String[] sub = sb.split("[-|,]");
         return sub;
     }
 

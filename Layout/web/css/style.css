@@ -128,7 +128,7 @@ body a.light:hover {
 /***Footer***/
 .foo{
 	background:url(../images/FooterBg.jpg) center top no-repeat #8FC5CC;
-	height:263px;
+	height:250px;
 	clear:both;
 	font-size:11px;
 	padding:0px 0px 0px 0px;
@@ -136,13 +136,13 @@ body a.light:hover {
 .fooAd{
 	text-align:center;
 	margin:0px 0px 30px 0px;
-	padding:30px 0px 0px 0px;
+	padding:10px 0px 0px 0px;
 	border:none;
 	clear:both;
 }
 .fooLink{
 	text-align:center;
-	padding:5px 0px 5px 0px;
+	padding:20px 0px 0px 0px;
 	clear:both;
 }
 .fooLink a{
@@ -154,19 +154,14 @@ body a.light:hover {
 	text-decoration:none;
 }
 .fooCopyright{
-	font-size:11px;
+	font:Arial, Helvetica, sans-serif;
+	color:#000066;	
+	font-size:12px;
+	font-weight:bold;
 	text-align:center;
-	padding:10px 0px 10px 0px;
+	padding:70px 0px 0px 0px;
 	clear:both;
 	position:relative;
-}
-.fooCopyright a{
-	color:#FFFF00;
-	text-decoration:underline;
-}
-.fooCopyright a:hover{
-	color:#FFFF00;
-	text-decoration:underline;
 }
 /***End of Footer***/
 /* Menu */
@@ -453,6 +448,5 @@ white-space:nowrap;
 }
 
 /**Lyric**/
-.box-loibaihat { height:1%;color:#333333;text-decoration:none;background-color:#ebf3f5;margin-top:3px;padding-top:7px;padding-right:10px;padding-bottom:7px;padding-left:10px; }
+.box-loibaihat { height:1%;color:#333333;text-decoration:none;background-color:#ebf3f5;margin-top:3px;padding-top:3px;padding-right:5px;padding-bottom:3px;padding-left:5px; }
 .box-loibaihat span { color:#727272;text-decoration:none;padding-bottom:4px;display:block; }
-

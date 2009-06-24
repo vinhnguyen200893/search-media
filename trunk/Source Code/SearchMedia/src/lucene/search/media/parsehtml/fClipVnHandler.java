@@ -69,6 +69,11 @@ private DOMFragmentParser parser = new DOMFragmentParser();
        obj.setSongvn(Str[0]);
          //only index object obtain link media if this page has title(name of media)
        obj.setSongen(unicodeToAscii(Str[0]));
+
+       obj.setAlbumvn(Str[0]);
+         //only index object obtain link media if this page has title(name of media)
+       obj.setAlbumen(unicodeToAscii(Str[0]));
+
     }
     else{ // title is important , title use to index
         return doc;
@@ -83,13 +88,18 @@ private DOMFragmentParser parser = new DOMFragmentParser();
 
     String[] str = sb.toString().split("'");
     // direct link play on browsers 
-    String link_object = str[14];
+    String link_media = str[14];
+
+    String link_object = sb.toString();
     //get object
     sb=new StringBuffer();
     //note :link in nhaccuatui is sourcelink not is a media link
 
     if ( link_object!= null ){
-        obj.setLinkobject(link_object);        
+        obj.setLinkobject(link_object);
+        obj.setLinkmedia(link_media);
+        obj.setService(link_media);
+        obj.setIdservice("CLIP_VN");
     }
    Operators Op=new Operators();
    doc=Op.addDocumentObject(obj);
@@ -103,17 +113,31 @@ private DOMFragmentParser parser = new DOMFragmentParser();
    // while(doc.fields().hasMoreElements()){
     //System.out.println(doc.get("url"));
     if(doc!=null){
+
+         System.out.println("SONG");
         System.out.println(doc.getField("songvn").stringValue());
         System.out.println(doc.getField("songen").stringValue());
+
+        System.out.println("SINGER");
         System.out.println(doc.getField("singervn").stringValue());
         System.out.println(doc.getField("singeren").stringValue());
+
+        System.out.println("OBJECT");
         System.out.println(doc.getField("linkobject").stringValue());
+
+        System.out.println("LINK SOURCE");
         System.out.println(doc.getField("linksource").stringValue());
+
+        System.out.println("LINK MEDIA");
         System.out.println(doc.getField("linkmedia").stringValue());
+
+        System.out.println("SERVICE");
+        System.out.println(doc.getField("service").stringValue());
+
+        System.out.println("ALBUM");
         System.out.println(doc.getField("albumen").stringValue());
         System.out.println(doc.getField("albumvn").stringValue());
 
-        doc.fields().nextElement();
     }
   }
 }

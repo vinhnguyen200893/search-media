@@ -220,28 +220,32 @@ else
 }
 }
 
-function divLyric(obj){
-	//alert("ascss");
-	//var temp = obj.style.height;// ban dau 50px
-	//var dl = document.getElementByName("divLyric").style.height ;			
-	//var pl = document.getElementByName("parLyric").style.cursor ;			
-	//var il = document.getElementByName("imgLyricSwitch").src ;			
-	var t = obj.style.height;	
-	if(t !='50px')
+function divLyric(){
+	var il = document.getElementsByName("imgLyric") ;	
+	var dl = document.getElementsByName("divLyric") ;	
+	
+	if(dl[0].style.height != '50px')
 	{
-		obj.style.height = '50px';
-		//document.getElementById("divLyric").style.height = '50px';
-		//document.getElementById("parLyric").style.cursor = 'n-resize';
-		//document.getElementById("imgLyricSwitch").src  = 'images/move-down.png';
-		
+		for( j = 0; j < il.length; j++)
+		{
+			il[j].src = "images/move-down.png";
+		}
+		for( j = 0; j < dl.length; j++)
+		{
+			dl[j].style.height = "50px";
+		}
+			
 	}
 	else
 	{
-		obj.style.height = 'auto';
-		//document.getElementById("divLyric").style.height = 'auto';
-		//document.getElementById("parLyric").style.cursor = 'default';
-		//document.getElementById("imgLyricSwitch").src  = 'images/move-top.png';
-		
+		for( j = 0; j < il.length; j++)
+		{
+			il[j].src = "images/move-top.png";
+		}		
+		for( j = 0; j < dl.length; j++)
+		{
+			dl[j].style.height = "auto";
+		}				
 	}
 	
 }
@@ -315,6 +319,13 @@ function playacc(evt)
 function play_acc(obj)
 {
 	var t,j,i;
+
+	var il = document.getElementsByName("imgLyric") ;	
+	for( j = 0; j < il.length; j++)
+	{
+		il[j].src = "images/move-down.png";
+	}
+		
 	var dl = document.getElementsByName("divLyric") ;	
 	for( j = 0; j < dl.length; j++)
 	{

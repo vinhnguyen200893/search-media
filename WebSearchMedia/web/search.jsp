@@ -32,6 +32,10 @@
             $("#accordion").accordion();
         });
     </script>
+    <script type="text/javascript" src="javascripts/tooltip/BubbleTooltips.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){enableTooltips()};
+    </script>
 
     <!--GREY BOX-->
     <script type="text/javascript">
@@ -109,11 +113,11 @@
                 }
                 File f = new File(path);
 
-                //make search          
+                //make search
                 if (request.getParameter("page") != null) {
                     pageNum = Integer.parseInt(request.getParameter("page")) - 1;
                 }
-      
+
                 Searcher s = new Searcher();
                 if (type_search.equals("normal"))//normal search
                 {
@@ -133,7 +137,7 @@
                             field += "en";
                         }
                     }
-                    h = s.search(f, field, query,pageNum,max_page);
+                    h = s.search(f, field, query, pageNum, max_page);
                 } else//advance search
                 {
                     HtmlHandler html = new HtmlHandler();
@@ -184,15 +188,18 @@
                     if (request.getParameter("lyric") != null) {
                         q.set_Map("lyric", request.getParameter("lyric").toUpperCase());
                     }
-                    h = s.searchAdvance(f, q,pageNum,max_page);
+                    h = s.searchAdvance(f, q, pageNum, max_page);
 
                 }
-                String begin="";
-                if(pageNum==0) begin=String.valueOf(pageNum+1);
-                else begin=String.valueOf(pageNum*max_page);
-                String end=String.valueOf(pageNum*max_page+max_page);
-                        
-                sb.append("Kết quả <b>"+begin+" - "+end + "</b>, Tổng <b>"+h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
+                String begin = "";
+                if (pageNum == 0) {
+                    begin = String.valueOf(pageNum + 1);
+                } else {
+                    begin = String.valueOf(pageNum * max_page);
+                }
+                String end = String.valueOf(pageNum * max_page + max_page);
+
+                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
 
                 total = h.getTotaldocs();
                 //int offset = (pageNum - 1) * rowsPerPage;
@@ -347,11 +354,11 @@
                             <!-- This is main content -->
                             <div id="accordion" >
                                 <%
-                                ArrayList arr=new ArrayList();
-                                arr=h.getHits();
+            ArrayList arr = new ArrayList();
+            arr = h.getHits();
 
-            for (int i =0; i < arr.size(); i++) {
-                Document doc = (Document)arr.get(i);
+            for (int i = 0; i < arr.size(); i++) {
+                Document doc = (Document) arr.get(i);
                 String r_id_service = "";
                 if (doc.getField("idservice") != null) {
                     r_id_service = doc.getField("idservice").stringValue();
@@ -401,9 +408,18 @@
                 }
                                 %>
                                 <h3 style="max-height:50px">
-                                    <a href="#"  onClick="play_acc(this);return false;">
+                                    <a href="#"  onClick="play_acc(this);return false;" title='
+                                       <%
+                                    if (r_lyric.equals("")) {
+                                        out.print("Lyric: đang cập nhật ...");
+                                    } else {
+                                        out.print(r_lyric.substring(0, r_lyric.length() > 200 ? 200 : r_lyric.length()) + " ...");
+                                    }
+                                       %>
+                                       '>
                                         <img src="images/pause.jpg" height="40" width="40" name="imgacc" border="0" >
                                         <label id ="rs_song"  style="font-size:10px" > <b   style="color:#FF0000;font-size:15px">   <%=r_song%> </b> </label>
+                                        <label id="rs_src" style="font-size:14px;color:#0000FF" ><%=r_singer%></label>
                                     </a>
                                 </h3>
                                 <div style="max-height:200px" >
@@ -414,25 +430,17 @@
                                             </td>
                                             <td width="30%" align="left" class="aa">Nguồn từ
                                             </td>
-                                            <td width="40%" align="left" ><a href="<%="http://"+r_source%>"><%=r_id_service.toLowerCase()%></a>
+                                            <td width="40%" align="left" ><a href="<%="http://" + r_source%>"><%=r_id_service.toLowerCase()%></a>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td align="left" class="aa">Ca sí/Tác giả: </td>
-                                            <td><label id="rs_src" style="font-size:14px;color:#0000FF" >
-                                                    <%=r_singer%>
-                                            </label></td>
-                                        </tr>
+
                                         <tr>
                                             <td align="left" class="aa">Album</td>
                                             <td> <%=r_album%></td>
                                         </tr>
                                         <tr>
                                             <td align="left" class="aa">Mã nhúng</td>
-                                            <td>
-                                                <textarea name="embed" rows="1" cols="30" >
-                                                       <%=r_object%>
-                                                </textarea>
+                                            <td><input type="text" name="embebd" value='<%=r_object%>' />
                                             </td>
                                         </tr>
                                         <tr>
@@ -499,7 +507,6 @@
             response.sendRedirect("error.jsp?error=" + e.getMessage());
         } finally {
             //out.close();
-
         }
             %>
 

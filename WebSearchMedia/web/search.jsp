@@ -22,7 +22,7 @@
     <script type="text/javascript" src="javascripts/acc/jquery-1.3.2.js"></script>
     <script type="text/javascript" src="javascripts/acc/ui.core.js"></script>
     <script type="text/javascript" src="javascripts/acc/ui.accordion.js"></script>
-
+    <script type="text/javascript" src="javascripts/clipboard.js"></script>
     <link type="text/css" rel="stylesheet"  href="css/acc/ui.all.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- END INCLUDE JAVASCRIPT AND CSS -->
@@ -51,6 +51,7 @@
     <title>Search Media</title>
     <body>
         <%
+        System.gc();
         String Str_paging = "";
         String query = "";
         StringBuffer sb = new StringBuffer();
@@ -195,9 +196,10 @@
                 if (pageNum == 0) {
                     begin = String.valueOf(pageNum + 1);
                 } else {
-                    begin = String.valueOf(pageNum * max_page);
+                    begin = String.valueOf(pageNum * max_page + 1);
                 }
-                String end = String.valueOf(pageNum * max_page + max_page);
+
+                String end = String.valueOf((pageNum * max_page + max_page) > h.getTotaldocs() ? (pageNum * max_page + h.getTotaldocs() % pageNum) : (pageNum * max_page + max_page));
 
                 sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
 
@@ -207,7 +209,7 @@
                 Str_paging = paging.make_paging(rowsPerPage, pageNum + 1, total, max_page, self);
             }
         %>
-        <form  action="" method="post">
+        <form  action="search.jsp" method="post">
             <!--ADVANCE SEARCH
         <input type="hidden" id="song" name="song" value="" style="display:none"/>
         <input type="hidden" id="singer" name="singer" value="" style="display:none"/>
@@ -261,7 +263,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td colspan= "2">
-                                                            <input id="textbox_search" name="query" type="text" size="40"></input>
+                                                            <input id="textbox_search" name="query" type="text" size="40" value="<%=query%>"></input>
                                                         </td>
                                                         <td>
                                                             <!--	<input type="image" src="images/search.jpg" align="right" id="search" onClick="search()">
@@ -402,24 +404,20 @@
                 } else if (doc.getField("albumen") != null) {
                     r_album = doc.getField("albumen").stringValue();
                 }
-                String r_lyric = "";
-                if (doc.getField("lyric") != null) {
+                String r_lyric = "Lyric:đang cập nhật";
+                if (doc.getField("lyric").stringValue().replaceAll(" ", "") != "") {
                     r_lyric = doc.getField("lyric").stringValue();
                 }
                                 %>
                                 <h3 style="max-height:50px">
                                     <a href="#"  onClick="play_acc(this);return false;" title='
                                        <%
-                                    if (r_lyric.equals("")) {
-                                        out.print("Lyric: đang cập nhật ...");
-                                    } else {
-                                        out.print(r_lyric.substring(0, r_lyric.length() > 200 ? 200 : r_lyric.length()) + " ...");
-                                    }
+                                    out.print(r_lyric.substring(0, r_lyric.length() > 200 ? 200 : r_lyric.length()) + " ...");
                                        %>
                                        '>
                                         <img src="images/pause.jpg" height="40" width="40" name="imgacc" border="0" >
                                         <label id ="rs_song"  style="font-size:10px" > <b   style="color:#FF0000;font-size:15px">   <%=r_song%> </b> </label>
-                                        <label id="rs_src" style="font-size:14px;color:#0000FF" ><%=r_singer%></label>
+                                        <label id="rs_src" style="font-size:14px;color:#0000FF" >-<%=r_singer%></label>
                                     </a>
                                 </h3>
                                 <div style="max-height:200px" >
@@ -440,7 +438,7 @@
                                         </tr>
                                         <tr>
                                             <td align="left" class="aa">Mã nhúng</td>
-                                            <td><input type="text" name="embebd" value='<%=r_object%>' />
+                                            <td><input type="text" name="embed" id="embed" readonly="readonly" style="background: rgb(227, 227, 227);font-size: 12px;" value='<%=r_object.replaceAll("'", "\"")%>' onclick="select(this.id);copyToClipboard(this.value);" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -481,8 +479,6 @@
                     </tr>
                 </table>
             </div>
-
-
             <script language="JavaScript">
                 function doAction ( b){
                     if (b.value=="Order now"){

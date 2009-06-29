@@ -14,7 +14,7 @@
         <script type="text/javascript" src="javascripts/acc/jquery-1.3.2.js"></script>
         <script type="text/javascript" src="javascripts/acc/ui.core.js"></script>
         <script type="text/javascript" src="javascripts/acc/ui.accordion.js"></script>
-
+        <script type="text/javascript" src="javascripts/clipboard.js"></script>
         <link type="text/css" rel="stylesheet"  href="css/acc/ui.all.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <!-- END INCLUDE JAVASCRIPT AND CSS -->

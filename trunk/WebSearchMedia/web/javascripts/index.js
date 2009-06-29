@@ -335,3 +335,9 @@ function play_acc(obj)
 	//ssreturn ;
 		
 }
+function onload_acc()
+{
+    var ControlList = document.getElementsByName("imgacc");
+    ControlList[0].src = "images/pause.jpg";
+
+}

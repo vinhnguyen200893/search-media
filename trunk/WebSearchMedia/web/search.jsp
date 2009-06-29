@@ -50,7 +50,7 @@
 
     <script type="text/javascript" src="javascripts/sclqcn6.js"></script>
     <title>Search Media</title>
-    <body>
+    <body onload="onload_acc();" >
         <%
         System.gc();
         String Str_paging = "";
@@ -210,7 +210,7 @@
                 Str_paging = paging.make_paging(rowsPerPage, pageNum + 1, total, max_page, self);
             }
         %>
-        <form  action="search.jsp" method="post">
+        <form  action="search.jsp" method="post" >
             <!--ADVANCE SEARCH
         <input type="hidden" id="song" name="song" value="" style="display:none"/>
         <input type="hidden" id="singer" name="singer" value="" style="display:none"/>
@@ -424,7 +424,7 @@
                                     out.print(r_lyric.substring(0, r_lyric.length() > 200 ? 200 : r_lyric.length()) + " ...");
                                        %>
                                        '>
-                                        <img src="images/pause.jpg" height="40" width="40" name="imgacc" border="0" >
+                                        <img  src="images/play.jpg" height="40" width="40" name="imgacc" border="0" >
                                         <label id ="rs_song"  style="font-size:10px" > <b   style="color:#FF0000;font-size:15px">   <%=r_song%> </b> </label>
                                         <label id="rs_src" style="font-size:14px;color:#0000FF" > - <%=r_singer%> </label>
                                     </a>
@@ -467,7 +467,7 @@
                                                             <td><a href="javascript:;" onClick="show_lightbox('<%=r_song%>','<%=host%>/download.jsp?media=<%=r_media%>&id_service=<%=r_id_service%>&service=<%=r_service%>','','300');"><img src="images/down.gif" title="Download" width="29" height="25" align="middle"></a></td>
                                                         </tr>
                                                         <tr>
-                                                            <td height="30px" colspan="3">
+                                                            <td height="30px" colspan="3" style="max-width:250px">
                                                                 <h5 style="max-height:10px" class="aa">Lyric  <img name="imgLyric" src="images/move-down.png" onClick="divLyric()"  title="Click để mở rộng vùng xem lời bài hát"></h5>
                                                                 <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 40px;"  title="Double Click để mở rộng vùng xem lời bài hát" onDblClick="divLyric()" >
                                                                     <%=r_lyric%>

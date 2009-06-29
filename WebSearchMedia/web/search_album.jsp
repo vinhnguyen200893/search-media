@@ -254,9 +254,9 @@
                                             <td  valign="top">
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
-                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_mp3_o.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
+                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_mp3.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
                                                         <td width="71"><a><input type="image" name="objSearch" src="images/t_video.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
-                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_album.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
+                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_album_o.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
                                                         <td width="71"><a><input type="image" name="objSearch" src="images/t_lyric.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
                                                     </tr>
                                                     <tr>

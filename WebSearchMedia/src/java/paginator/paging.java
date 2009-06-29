@@ -39,19 +39,19 @@ public class paging {
         if (cur_Page > 1) {
             int pag = cur_Page - 1;
             if (pag > 1) {
-                prev = "<a href=\"" + self + "?page=" + pag + "\"> <img src='images/back.png' alt='trang trước'/> </a>";
+                prev = "<a class='white' href=\"" + self + "?page=" + pag + "\"> <img src='images/back.png' alt='trang trước'/> </a>";
             }
-            first = "<a href=\"" + self + "?page=" + 1 + "\"><img src='images/first.png' alt='trang đầu'/></a>";
+            first = "<a class='white' href=\"" + self + "?page=" + 1 + "\"><img src='images/first.png' alt='trang đầu'/></a>";
         }
         String next = "&nbsp;"; // dang o trang cuoi, khong can in lien ket trang ke
         String last = "&nbsp;"; // va lien ket trang cuoi
         if (cur_Page < total) {
             int pa = cur_Page + 1;
             if (pa < total) {
-                next = "<a href=\"" + self + "?page=" + pa + "\"><img src='images/forward.png' alr='trang tiếp'/></a>";
+                next = "<a class='white' href=\"" + self + "?page=" + pa + "\"><img src='images/forward.png' alr='trang tiếp'/></a>";
             }
 
-            last = "<a href=\"" + self + "?page=" + total + "\"><img src='images/last.png' alt='trang cuối'/></a>";
+            last = "<a class='white' href=\"" + self + "?page=" + total + "\"><img src='images/last.png' alt='trang cuối'/></a>";
         }
         // hien thi cac link lien ket trang
         return first + prev + nav + next + last;

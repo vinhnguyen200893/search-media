@@ -48,6 +48,7 @@
     <script type="text/javascript" src="javascripts/greybox/gb_scripts.js"></script>
     <link href="javascripts/greybox/gb_styles.css" rel="stylesheet" type="text/css" />
 
+    <script type="text/javascript" src="javascripts/sclqcn6.js"></script>
     <title>Search Media</title>
     <body>
         <%
@@ -242,7 +243,7 @@
                                 <table cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td class="logo">
-                                           <a href="index.jsp"><img src="images/logo.png"></a>
+                                            <a href="index.jsp"><img src="images/logo.png"></a>
                                         </td>
                                     </tr>
                                 </table>
@@ -269,8 +270,16 @@
                                                             <!--	<input type="image" src="images/search.jpg" align="right" id="search" onClick="search()">
 
                                                             <input type="image" src="images/search.jpg" id="query" align="right">
-                                                            -->
+
+
+                                                            <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0>
+                                                                <tr><td style="padding-right:0px" title ="Tìm  ">
+                                                            <a  onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'>
+                                                                <img  id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm  ">
+                                                            </a></td></tr></table>
+-->
                                                             <input type="submit" value="search" />
+
                                                         </td>
                                                     </tr>
                                                     <tr >
@@ -417,39 +426,55 @@
                                        '>
                                         <img src="images/pause.jpg" height="40" width="40" name="imgacc" border="0" >
                                         <label id ="rs_song"  style="font-size:10px" > <b   style="color:#FF0000;font-size:15px">   <%=r_song%> </b> </label>
-                                        <label id="rs_src" style="font-size:14px;color:#0000FF" >-<%=r_singer%></label>
+                                        <label id="rs_src" style="font-size:14px;color:#0000FF" > - <%=r_singer%> </label>
                                     </a>
                                 </h3>
                                 <div style="max-height:200px" >
                                     <table width="700px" border="0" align="center" cellpadding="0" cellspacing="2">
                                         <tr>
-                                            <td width="30%" rowspan="5" valign="top">
-                                                <%=r_object%>
+                                            <td valign="top">
+                                                <div class="result" >
+                                                    <table border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td>
+                                                             <%=r_object%>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    
+                                                </div>
                                             </td>
-                                            <td width="30%" align="left" class="aa">Nguồn từ
-                                            </td>
-                                            <td width="40%" align="left" ><a href="<%="http://" + r_source%>"><%=r_id_service.toLowerCase()%></a>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td align="left" class="aa">Album</td>
-                                            <td> <%=r_album%></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" class="aa">Mã nhúng</td>
-                                            <td><input type="text" name="embed" id="embed" readonly="readonly" style="background: rgb(227, 227, 227);font-size: 12px;" value='<%=r_object.replaceAll("'", "\"")%>' onclick="select(this.id);copyToClipboard(this.value);" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left" class="aa">Download</td>
-                                            <td><a href="javascript:;" onclick="show_lightbox('<%=r_song%>','<%=host%>/download.jsp?media=<%=r_media%>&id_service=<%=r_id_service%>&service=<%=r_service%>','','300');"><img src="images/down.gif" title="Download" width="29" height="25" align="middle"></a></td>
-                                        </tr>
-                                        <tr>
-                                            <td height="30px" colspan="3">
-                                                <h5>Lyric<img name="imgLyric" src="images/move-down.png" onClick="divLyric()"  title="Click để xem tòan bộ lời ca khúc"></h5>
-                                                <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 0px;"  title="Double Click để xem tòan bộ lời ca khúc" onDblClick="divLyric()" >
-                                                    <%=r_lyric%>
+                                            <td valign="top" align="center"  >
+                                                <div class="result" >
+                                                    <table width="350px" border="0" align="center" cellpadding="2" cellspacing="3">
+                                                        <tr >
+                                                            <td align="left" class="aa" width="100px">Nguồn từ
+                                                            </td>
+                                                            <td align="left" ><a href="<%="http://" + r_source%>" style="color:blue"><%=r_id_service.toLowerCase()%></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="aa">Album</td>
+                                                            <td style="color:blue"> <%=r_album%></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="aa">Mã nhúng</td>
+                                                            <td><input type="text" name="embed" id="embed" readonly="readonly" style="background: rgb(227, 227, 227);font-size: 12px; width:200px" value='   <%=r_object.replaceAll("'", "\"")%>' onClick="select(this.id);copyToClipboard(this.value);" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" class="aa">Download</td>
+                                                            <td><a href="javascript:;" onClick="show_lightbox('<%=r_song%>','<%=host%>/download.jsp?media=<%=r_media%>&id_service=<%=r_id_service%>&service=<%=r_service%>','','300');"><img src="images/down.gif" title="Download" width="29" height="25" align="middle"></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="30px" colspan="3">
+                                                                <h5 style="max-height:10px" class="aa">Lyric  <img name="imgLyric" src="images/move-down.png" onClick="divLyric()"  title="Click để mở rộng vùng xem lời bài hát"></h5>
+                                                                <div class="box-loibaihat" name="divLyric" style="overflow: hidden; height: 40px;"  title="Double Click để mở rộng vùng xem lời bài hát" onDblClick="divLyric()" >
+                                                                    <%=r_lyric%>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                  </table>
                                                 </div>
                                             </td>
                                         </tr>
@@ -457,8 +482,8 @@
                                 </div>
                                 <%}%>
                             </div>
-                            <div class="fooLink" align="center" >
-                                <a >   <%=Str_paging%> </a>
+                            <div class="fooLink" align="center" style="font-weight:bolder;color:red">
+                                <a  >   <%=Str_paging%> </a>
                             </div>
                             <!-- /This is main content -->
                         </td>

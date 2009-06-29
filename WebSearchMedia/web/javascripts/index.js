@@ -200,31 +200,13 @@ function query()
 }
 
 //lyric
-function NgheCaKhuc_divLyric_DblClick(){
-//alert("ascss");
-var t = document.getElementById("divLyric").style.height ;			
-//alert(t);	
-if(t !='50px')
-{
-	document.getElementById("divLyric").style.height = '50px';
-	document.getElementById("parLyric").style.cursor = 'n-resize';
-	document.getElementById("imgLyricSwitch").src  = 'images/move-down.png';
-	
-}
-else
-{
-	document.getElementById("divLyric").style.height = 'auto';
-	document.getElementById("parLyric").style.cursor = 'default';
-	document.getElementById("imgLyricSwitch").src  = 'images/move-top.png';
-	
-}
-}
 
 function divLyric(){
 	var il = document.getElementsByName("imgLyric") ;	
 	var dl = document.getElementsByName("divLyric") ;	
-	
-	if(dl[0].style.height != '0px')
+
+    //alert(dl[0].style.height);
+	if(dl[0].style.height != '40px')
 	{
 		for( j = 0; j < il.length; j++)
 		{
@@ -232,7 +214,7 @@ function divLyric(){
 		}
 		for( j = 0; j < dl.length; j++)
 		{
-			dl[j].style.height = "0px";
+			dl[j].style.height = "40px";
 		}
 			
 	}
@@ -329,7 +311,7 @@ function play_acc(obj)
 	var dl = document.getElementsByName("divLyric") ;	
 	for( j = 0; j < dl.length; j++)
 	{
-		dl[j].style.height = "50px";
+		dl[j].style.height = "40px";
 	}
 	
 	//alert(obj.style.height);

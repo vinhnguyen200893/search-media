@@ -32,16 +32,20 @@ public class service_link extends HttpServlet {
 
             media_link media = new media_link();
             request.setCharacterEncoding("utf-8");
-            String Id = request.getParameter("id_service");
-            String xml = request.getParameter("service");
+//            String Id = request.getParameter("id");
+//            String xml = request.getParameter("service");
 
+            String Id = "MUSICTAMTAY.VN";
+            String xml = "http://music2.tamtay.vn/main/playasx/sid/335564";
             media.setFile_xml(xml);
             if (Id.equals("NHACCUATUI.COM")) {
                 media.getLinkNhacCuaTui(1, "LOCATION");
             } else if (Id.equals("CHACHA.VN")) {
                 media.getLinkNhacCuaTui(0, "LOCATION");
-            } else if (Id.equals("AMNHACTIMNHANH.VN") || Id.equals("MUZIC9.COM")) {
-                media.getLinkNhacCuaTui(0, "ENTRY");
+            } else if (Id.equals("MUZIC9.COM")) {
+                media.getLinkMuzic9("ENTRY");
+            } else if (Id.equals("MUSICTAMTAY.VN")) {
+                media.getLinkMusicTamTay("REPEAT", "ENTRY");
             }
 
             out.print(media.getLink());

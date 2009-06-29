@@ -54,7 +54,7 @@ public class media_link {
         try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(_file_xml);
+            Document doc = builder.parse(this._file_xml);
             root = doc.getDocumentElement(); // "people" node          
 
 
@@ -72,45 +72,71 @@ public class media_link {
     //get link nhaccuatui and chacha.vn
     public void getLinkNhacCuaTui(int node_pos, String node_name) {
         Node root = init();
-        if(root!=null)
-        {
-        Node track_list = root.getFirstChild();     // <tracklist>
-        Node node_link = track_list.getChildNodes().item(node_pos);//<track>
-        NodeList list = node_link.getChildNodes();
-        for (int i = 0; i < list.getLength(); i++) {
-            Node current = list.item(i);
-            if (current.getNodeName().toUpperCase().equals(node_name.toUpperCase())) {
-                this._link = current.getNodeValue();
-                break;
-            }
-
-        }
-        }
-        
-    }
-
-    //get link for musictamtay.vn +muzic9.vn
-    public void getLinkMusicTamTay(String node_name) {
-        Node root = init();
-        if(root!=null)
-        {
-        NodeList list = root.getChildNodes();
-        for (int i = 0; i < list.getLength(); i++) {
-            Node current = list.item(i);
-            if (current.getNodeName().toUpperCase().equals(node_name.toUpperCase())) {
-                NodeList n=current.getChildNodes();
-                for (int j = 0; j < current.getChildNodes().getLength(); j++) {
-                     Node node=n.item(j);
-                    if (node.getNodeName().toUpperCase().equals("REF"))                        
-                    {
-                        this._link = node.getAttributes().item(0).getNodeValue();
-                        return;
-                    }
+        if (root != null) {
+            Node track_list = root.getFirstChild();     // <tracklist>
+            Node node_link = track_list.getChildNodes().item(node_pos);//<track>
+            NodeList list = node_link.getChildNodes();
+            for (int i = 0; i < list.getLength(); i++) {
+                Node current = list.item(i);
+                if (current.getNodeName().toUpperCase().equals(node_name.toUpperCase())) {
+                    this._link = current.getFirstChild().getNodeValue();
+                    break;
                 }
 
             }
-
         }
+
+    }
+
+    //get link for +muzic9.vn
+    public void getLinkMuzic9(String node_name) {
+        Node root = init();
+        if (root != null) {
+            NodeList list = root.getChildNodes();
+            for (int i = 0; i < list.getLength(); i++) {
+                Node current = list.item(i);
+                if (current.getNodeName().toUpperCase().equals(node_name.toUpperCase())) {
+                    NodeList n = current.getChildNodes();
+                    for (int j = 0; j < current.getChildNodes().getLength(); j++) {
+                        Node node = n.item(j);
+                        if (node.getNodeName().toUpperCase().equals("REF")) {
+                            this._link = node.getAttributes().item(0).getNodeValue();
+                            return;
+                        }
+                    }
+
+                }
+
+            }
         }
     }
-}
+    //get link for musictamtay.vn 
+
+    public void getLinkMusicTamTay(String node_parent, String node_name) {
+        Node root = init();
+        if (root != null) {
+            NodeList list = root.getChildNodes();
+            for (int i = 0; i < list.getLength(); i++) {
+                Node current = list.item(i);
+                if (current.getNodeName().toUpperCase().equals(node_parent.toUpperCase())) {
+                    NodeList n = current.getChildNodes();
+                    for (int j = 0; j < current.getChildNodes().getLength(); j++) {
+                        Node node = n.item(j);
+                        if (node.getNodeName().toUpperCase().equals(node_name.toUpperCase())) {
+                            NodeList nl = node.getChildNodes();
+                            for (int k = 0; k < node.getChildNodes().getLength(); k++) {
+                                Node nod = nl.item(k);
+
+                                if (nod.getNodeName().toUpperCase().equals("REF")) {
+                                    this._link = nod.getAttributes().item(0).getNodeValue();
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                        }
+
+                    }
+                }
+            }
+        }

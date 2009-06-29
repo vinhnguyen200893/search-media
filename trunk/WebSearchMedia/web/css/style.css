@@ -1,6 +1,7 @@
 .aa{   
     font-size:12px;
-    color:red;
+    color:navy;
+    font-weight:bold;
 }
 body {
 	font: 12px Arial, Helvetica, sans-serif;
@@ -9,15 +10,15 @@ body {
 	background:url(../images/bgBack.jpg) center repeat-y;
 }
 body a:link {
-	color: #FFFFFF;
+	color: blue;
 	text-decoration: none;
 }
 body a:visited {
-	color: #FFFFFF;
+	color: blue;
 	text-decoration: none;
 }
 body a:hover {
-	color: #FFFFFF;
+	color: red;
 	text-decoration: underline;
 }
 body a.white:link {
@@ -129,6 +130,8 @@ body a.light:hover {
 .result img{
 	border:0px;
 }
+
+
 /***Footer***/
 .foo{
 	background:url(../images/FooterBg.jpg) center top no-repeat #8FC5CC;
@@ -452,5 +455,5 @@ white-space:nowrap;
 }
 
 /**Lyric**/
-.box-loibaihat { height:1%;color:#333333;text-decoration:none;background-color:#ebf3f5;margin-top:3px;padding-top:3px;padding-right:5px;padding-bottom:3px;padding-left:5px; }
+.box-loibaihat { height:1%;color:#333333;text-decoration:none;background-color:#ebf3f5;margin-top:3px;padding-top:3px;padding-right:5px;padding-bottom:3px;padding-left:5px;font-size:12px; }
 .box-loibaihat span { color:#727272;text-decoration:none;padding-bottom:4px;display:block; }

@@ -12,6 +12,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            <!--
+            .link {
+                font-size: 12px;
+                color: #06F;
+            }
+            -->
+        </style>
         <title></title>
     </head>
     <body>
@@ -65,12 +73,13 @@
             result = "Có lỗi xảy ra tại server,Xin vui lòng thử lại sau!";
 
         } else if (!link.equals("")) {
-            result = "Bạn hãy copy link bên dưới và paste vào trình duyệt đê download!";
-            result += "<br>Hoặc dùng chương trình hỗ trờ download!<br>";
-            result += link;
+            result = "Bạn hãy nhấp chuột phải vào link bên dưới  và chọn save as  để download!";
+            result += "<br>Hoặc dùng chương trình hỗ trợ download khác!<br>";
+        //result += link;
         }
         out.print(result);
         %>
+        <div><a href="<%=link%>"><%=link%></a></div>
 
     </body>
 </html>

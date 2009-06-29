@@ -52,7 +52,7 @@
                                 <table cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td class="logo">
-                                            <img src="images/logo.png">
+                                        <a href="index.jsp"><img src="images/logo.png" /></a>
                                         </td>
                                     </tr>
                                 </table>

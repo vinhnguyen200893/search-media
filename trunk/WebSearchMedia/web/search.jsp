@@ -237,7 +237,7 @@
                                             <td width="70" align="center" >
 												<a class="awhite" href="top_music.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
 											<td width="70" align="center" >
-												<a class="awhite" href="top_film.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
+												<a class="awhite" href="top_video.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
 												<td width="70" align="center" >
 												<a class="awhite" href="top_singer.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
                                         </tr>

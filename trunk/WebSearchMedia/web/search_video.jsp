@@ -210,17 +210,8 @@
                 Str_paging = paging.make_paging(rowsPerPage, pageNum + 1, total, max_page, self);
             }
         %>
-        <form  action="search.jsp" method="post" >
-            <!--ADVANCE SEARCH
-        <input type="hidden" id="song" name="song" value="" style="display:none"/>
-        <input type="hidden" id="singer" name="singer" value="" style="display:none"/>
-        <input type="hidden" id="album" name="album" value="" style="display:none"/>
-        <input type="hidden" id="lyric" name="lyric" value="" style="display:none"/>
-        <input type="hidden" id="site" name="site" value="" style="display:none"/>
-            <!--END ADVANCE SEARCH -->
-            <input type="hidden" id="search_again" name="search_again" value="" style="display:none"/>
-            <input type="hidden" id="type" name="type" value="mp3" style="display:none"/>
-            <input type="hidden" id="field" name="field" value="song" style="display:none"/>
+        <form  action="search_video.jsp" method="post" >
+      		<input type="hidden" id="type" name="type" value="video" style="display:none"/>          
             <input type="hidden" id="type_search" name="type_search" value="normal" style="display:none"/>
 
             <!--END SEARCH -->
@@ -254,75 +245,32 @@
                                             <td  valign="top">
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
-                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_mp3.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
-                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_video_o.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
-                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_album.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
-                                                        <td width="71"><a><input type="image" name="objSearch" src="images/t_lyric.jpg" width="71" height="26" onClick="chooseObj(this);return false;" /></a></td>
+                                                         <td>
+                                                            <a href="index.jsp"><input type="image" id="music" src="images/music.jpg" align="right" onClick="chooseMusic();"></a>
+                                                        
+														<a onClick="return false;">
+                                                            <input type="image" id="film" src="images/film_on.jpg" align="left" onClick="chooseFilm();"></a>
+                                                        </td>
+														                                                        <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td colspan= "4">
-                                                            <input id="textbox_search" name="query" type="text" size="40" value="<%=query%>"></input>                                                        </td>
+                                                        <td colspan= "2">
+                                                            <input id="query" name="query" type="text" size="40" value="<%=query%>"></input>
+                                                        </td>
                                                         <td>
-                                                            <!--	<input type="image" src="images/search.jpg" align="right" id="search" onClick="search()">
+															<select id="field" name="field" >
+															<option value="song">Tên video</option>
+															<option value="singer">Tên tác giả</option>																													
+															</select> 
 
-                                                            <input type="image" src="images/search.jpg" id="query" align="right">
-
-
-                                                            <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0>
-                                                                <tr><td style="padding-right:0px" title ="Tìm  ">
-                                                            <a  onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'>
-                                                                <img  id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm  ">
-                                                            </a></td></tr></table>
--->
-                                                            <input type="submit" value="search" />                                                        </td>
-                                                    </tr>
-                                                    <tr >
-                                                        <td colspan="4"  align="center" >
-                                                            <input type="image" id="search_adv"  src="images/search_adv_o.jpg"  onclick="search_adv() ;return false;"  >                                                        </td>
-                                                    </tr>
+                                                        </td>
+                                                    </tr>                                                   
                                                 </table>
                                             </td>
                                         </tr>
                                     </table>
-                                </div>
-                                <div class="search_adv" id= "adv" name="adv" style="visibility: hidden ; height:0px"  >
-                                    <table border="0"  cellpadding="2" cellspacing="0"  align="right" style="font-size:10px">
-                                        <tr>
-                                            <td align="left">
-                                            Tên ca sĩ/ diễn viên									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="singer" name="song"  />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Tên album / tên bộ phim									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="album" name="song"  />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Lời bài hát/ phụ đề phim									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="lyric" name="song"  />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Nguồn									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="site_music" name="song"  />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">&nbsp;</td>
-                                            <td  align="left">
-                                                <input name="button" type="button" id="bt_search_avd" value="Tìm kiếm" align="left" >
-                                            </td>
-                                            <td align="left">
-                                                <input type="button" value="Đóng lại" id="bt_close" onClick=" return btclose();" align="left"/>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                                                <div id="ssb">
+                                </div>                                
+                                <div id="ssb">
                                     <p><%=sb.toString()%> </p>
                                 </div>
                                 <div class="result">

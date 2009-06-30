@@ -65,6 +65,8 @@
         Hit h = new Hit();
         h.setTotaldocs(0);
         int unicode = 0;//unicode or no
+        String mp3_selected = "";
+        String video_selected = "";
         try {
             request.setCharacterEncoding("utf-8");
             String host = request.getRequestURL().toString();
@@ -92,6 +94,11 @@
                     type = session.getAttribute("type").toString();
                 }
 
+                if (type.equals("mp3")) {
+                    mp3_selected = "selected='selected'";
+                } else {
+                    video_selected = "selected='selected'";
+                }
                 //get typesearch= normail/advance
                 String type_search = "";
                 if (request.getParameter("type_search") != null) {
@@ -202,7 +209,7 @@
 
                 String end = String.valueOf((pageNum * max_page + max_page) > h.getTotaldocs() ? (pageNum * max_page + h.getTotaldocs() % pageNum) : (pageNum * max_page + max_page));
 
-                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
+                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
 
                 total = h.getTotaldocs();
                 //int offset = (pageNum - 1) * rowsPerPage;
@@ -211,8 +218,7 @@
             }
         %>
         <form  action="search.jsp" method="post" >
-           <input type="hidden" id="type" name="type" value="mp3" style="display:none"/>      
-            <input type="hidden" id="type_search" name="type_search" value="normal" style="display:none"/>
+            <input type="hidden" id="type_search" name="type_search" value="advance" style="display:none"/>
 
             <!--END SEARCH -->
 
@@ -240,41 +246,53 @@
                                 </table>
 
                                 <div class="frame_search">
-                                    <table cellspacing="0" cellpadding="0" border="0">
+                                    <table border="0"  cellpadding="2" cellspacing="0"  align="center" style="font-size:10px">
                                         <tr>
-                                            <td  valign="top">
-                                                <table cellspacing="0" cellpadding="2">
-                                                    <tr>
-                                                         <td align="center">
-                                                          <a href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" ></a>
-                                                            <a href="index_video.jsp">
-                                                            <input name="image" type="image" id="film" src="images/film.jpg" align="left">
-                                                            </a></td>
-														                <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <input id="query" name="query" type="text" size="40" value="<%=query%>"></input>
-                                                        </td>
-                                                        <td>
-                                         <select id="field" name="field" >
-															<option value="song">Tên bài hát</option>
-															<option value="singer">Tên nghệ sĩ</option>
-															<option value="album">Tên album</option>
-															<option value="lyric">Lời bát hát</option>
-															</select> 
-															</td>
-															<td>
-                                                            <input class="btnSearch" type="submit" value="" src="images/btlqcn6_0.gif" />
-
-                                                        </td>
-                                                    </tr>
-                                                </table>
+                                            <td align="left">
+                                            mp3/video									</td>
+                                            <td width="50%" colspan="2">
+                                                <select name="type" id="type">
+                                                    <option value="mp3" <%=mp3_selected%>>mp3</option>
+                                                    <option value="video" <%=video_selected%>>video</option>
+                                                </select>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                            Tên ca sĩ/ diễn viên									</td>
+                                            <td width="50%" colspan="2">
+                                            <input type="text" align="right" id="singer" name="singer" value="<%=s_singer%>" />									</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                            Tên album / tên bộ phim									</td>
+                                            <td width="50%" colspan="2">
+                                            <input type="text" align="right" id="song" name="song" value="<%=s_song%>" />									</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                            Lời bài hát/ phụ đề phim									</td>
+                                            <td width="50%" >
+                                            <input type="text" align="right" id="lyric" name="lyric" value="<%=s_lyric%>" />									</td>
+                                            <td align="left">
+                                                <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
+                                                <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">
+                                            Nguồn									</td>
+                                            <td width="50%" colspan="2">
+                                            <input type="text" align="right" id="site" name="site" value="<%=s_site%>" />									</td>
+                                        </tr>
+                                        <tr>
+                                            <td align="left">&nbsp;</td>
+
+
                                         </tr>
                                     </table>
                                 </div>
-                                
+
                                 <div id="ssb">
                                     <p><%=sb.toString()%> </p>
                                 </div>
@@ -340,7 +358,7 @@
                 } else if (doc.getField("albumen") != null) {
                     r_album = doc.getField("albumen").stringValue();
                 }
-                String r_lyric = "Lyric:đang cập nhật";
+                String r_lyric = "Lyric:đang cập nhật";
                 if (doc.getField("lyric").stringValue().replaceAll(" ", "") != "") {
                     r_lyric = doc.getField("lyric").stringValue();
                 }
@@ -364,11 +382,11 @@
                                                     <table border="0" align="center" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td>
-                                                             <%=r_object%>
+                                                                <%=r_object%>
                                                             </td>
                                                         </tr>
                                                     </table>
-                                                    
+
                                                 </div>
                                             </td>
                                             <td valign="top" align="center"  >
@@ -401,7 +419,7 @@
                                                                 </div>
                                                             </td>
                                                         </tr>
-                                                  </table>
+                                                    </table>
                                                 </div>
                                             </td>
                                         </tr>

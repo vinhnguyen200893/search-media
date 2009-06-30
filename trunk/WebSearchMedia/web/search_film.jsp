@@ -202,7 +202,7 @@
 
                 String end = String.valueOf((pageNum * max_page + max_page) > h.getTotaldocs() ? (pageNum * max_page + h.getTotaldocs() % pageNum) : (pageNum * max_page + max_page));
 
-                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
+                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
 
                 total = h.getTotaldocs();
                 //int offset = (pageNum - 1) * rowsPerPage;
@@ -210,8 +210,8 @@
                 Str_paging = paging.make_paging(rowsPerPage, pageNum + 1, total, max_page, self);
             }
         %>
-        <form  action="search.jsp" method="post" >
-           <input type="hidden" id="type" name="type" value="mp3" style="display:none"/>      
+        <form  action="search_video.jsp" method="post" >
+      		<input type="hidden" id="type" name="type" value="video" style="display:none"/>          
             <input type="hidden" id="type_search" name="type_search" value="normal" style="display:none"/>
 
             <!--END SEARCH -->
@@ -254,7 +254,7 @@
                                             <a href="index.jsp"><img src="images/logo.png"></a>
                                         </td>
                                     </tr>
-																	                                </table>
+                                </table>
 
                                 <div class="frame_search">
                                     <table cellspacing="0" cellpadding="0" border="0">
@@ -262,36 +262,31 @@
                                             <td  valign="top">
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
-                                                         <td align="center">
-                                                          <a href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" ></a>
-                                                            <a href="index_film.jsp">
-                                                            <input name="image" type="image" id="film" src="images/film.jpg" align="left">
-                                                            </a></td>
-														                <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>
+                                                         <td>
+                                                            <a href="index.jsp"><input type="image" id="music" src="images/music.jpg" align="right" onClick="chooseMusic();"></a>
+                                                        
+														<a onClick="return false;">
+                                                            <input type="image" id="film" src="images/film_on.jpg" align="left" onClick="chooseFilm();"></a>
+                                                        </td>
+														                                                        <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>
+                                                        <td colspan= "2">
                                                             <input id="query" name="query" type="text" size="40" value="<%=query%>"></input>
                                                         </td>
                                                         <td>
-                                         <select id="field" name="field" >
-															<option value="song">Tên bài hát</option>
-															<option value="singer">Tên nghệ sĩ</option>
-															<option value="album">Tên album</option>
-															<option value="lyric">Lời bát hát</option>
+															<select id="field" name="field" >
+															<option value="song">Tên video</option>
+															<option value="singer">Tên tác giả</option>																													
 															</select> 
-															</td>
-															<td>
-                                                            <input class="btnSearch" type="submit" value="" src="images/btlqcn6_0.gif" />
 
                                                         </td>
-                                                    </tr>
+                                                    </tr>                                                   
                                                 </table>
                                             </td>
                                         </tr>
                                     </table>
-                                </div>
-                                
+                                </div>                                
                                 <div id="ssb">
                                     <p><%=sb.toString()%> </p>
                                 </div>
@@ -357,7 +352,7 @@
                 } else if (doc.getField("albumen") != null) {
                     r_album = doc.getField("albumen").stringValue();
                 }
-                String r_lyric = "Lyric:đang cập nhật";
+                String r_lyric = "Lyric:đang cập nhật";
                 if (doc.getField("lyric").stringValue().replaceAll(" ", "") != "") {
                     r_lyric = doc.getField("lyric").stringValue();
                 }

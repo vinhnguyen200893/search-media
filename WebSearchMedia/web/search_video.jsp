@@ -225,11 +225,28 @@
                                 <div class= "login">
                                     <table cellpadding="0" cellspacing="0" border="0">
                                         <tr>
-                                            <td align="right">
+                                            <td align="right" style="font-size:12px">
+												<a href="index.jsp">Trang chủ</a> | <a href="contact.jsp">Liên hệ</a>
                                             </td>
-                                        </tr>
+                                        </tr>										
                                     </table>
-
+                                </div>
+								<div class= "topdiv">
+                                    <table cellpadding="0" cellspacing="5" border="0">
+                                        <tr >
+                                            <td width="70" align="center" >
+												<a class="awhite" href="topmusic.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
+											<td width="70" align="center" >
+												<a class="awhite" href="topfilm.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
+												<td width="70" align="center" >
+												<a class="awhite" href="topsinger.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
+                                        </tr>
+                                        <tr style="font-size:12px;font-weight:bold" >
+                                          <td align="center" ><a href="topmusic.jsp">Top nhạc</a></td>
+                                          <td align="center" ><a href="topfilm.jsp">Top phim</a></td>
+										  <td align="center" ><a href="topsinger.jsp">Top nghệ sỹ</a></td>
+                                        </tr>										
+                                    </table>
                                 </div>
                                 <table cellspacing="0" cellpadding="0">
                                     <tr>

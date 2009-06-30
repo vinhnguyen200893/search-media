@@ -210,7 +210,7 @@
                 Str_paging = paging.make_paging(rowsPerPage, pageNum + 1, total, max_page, self);
             }
         %>
-        <form  action="search.jsp" method="post" >
+        <form  action="" method="post" >
             <input type="hidden" id="type" name="type" value="video" style="display:none"/>
             <input type="hidden" id="type_search" name="type_search" value="advance" style="display:none"/>
 
@@ -235,11 +235,11 @@
                                     <table cellpadding="0" cellspacing="5" border="0">
                                         <tr >
                                             <td width="70" align="center" >
-                                            <a class="awhite" href="topmusic.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
+                                            <a class="awhite" href="top_music.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
                                             <td width="70" align="center" >
-                                            <a class="awhite" href="topfilm.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
+                                            <a class="awhite" href="top_video.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
                                             <td width="70" align="center" >
-                                            <a class="awhite" href="topsinger.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
+                                            <a class="awhite" href="top_singer.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
                                         </tr>
                                         <tr style="font-size:12px;font-weight:bold" >
                                             <td align="center" ><a href="topmusic.jsp">Top nhạc</a></td>
@@ -271,9 +271,7 @@
                                                                 </select>
                                                         </label></td>
                                                         <td width="25%" rowspan="5">
-                                                            <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
-                                                            <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>
-                                                        </td>
+                                                            <input class="btnSearch" type="submit" value="" src="images/btlqcn6_0.gif" />
                                                     </tr>
                                                     <tr>
                                                         <td align="left">

@@ -79,8 +79,9 @@
                                                                 <option value="lyric">Lời bát hát</option>
                                                         </select>														</td>
                                                         <td>
-                                                            <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
-                                                        <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>                                                        </td>
+														<input class="btnSearch" type="submit" value="" src="images/btlqcn6_0.gif" />
+
+                                                         </td>   
                                                     </tr>
                                                 </table>
                                             </td>
@@ -98,7 +99,7 @@
                                 <div class="dock-container2">
                                     <a class="dock-item2" href="contact.jsp"><span style="color:#FF0000">Liên hệ</span><img src="images/mac/email.png" alt="contact" /></a>
                                     <a class="dock-item2" href="top_music.jsp"><span style="color:#FF0000">Top nhạc</span><img src="images/mac/music.png" alt="music" /></a>
-                                    <a class="dock-item2" href="top_film.jsp"><span style="color:#FF0000">Top phim</span><img src="images/mac/video.png" alt="video" /></a>
+                                    <a class="dock-item2" href="top_video.jsp"><span style="color:#FF0000">Top phim</span><img src="images/mac/video.png" alt="video" /></a>
                                     <a class="dock-item2" href="top_singer.jsp"><span style="color:#FF0000">Top nghệ sỹ</span><img src="images/mac/rss.png" alt="rss" /></a>
                                 </div>
                             </div>

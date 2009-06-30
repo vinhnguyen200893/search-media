@@ -97,9 +97,9 @@
                             <div class="dock" id="dock2" style="padding-top:10px;" >
                                 <div class="dock-container2">
                                     <a class="dock-item2" href="contact.jsp"><span style="color:#FF0000">Liên hệ</span><img src="images/mac/email.png" alt="contact" /></a>
-                                    <a class="dock-item2" href="topmusic.jsp"><span style="color:#FF0000">Top nhạc</span><img src="images/mac/music.png" alt="music" /></a>
-                                    <a class="dock-item2" href="topfilm.jsp"><span style="color:#FF0000">Top phim</span><img src="images/mac/video.png" alt="video" /></a>
-                                    <a class="dock-item2" href="topsinger.jsp"><span style="color:#FF0000">Top nghệ sỹ</span><img src="images/mac/rss.png" alt="rss" /></a>
+                                    <a class="dock-item2" href="top_music.jsp"><span style="color:#FF0000">Top nhạc</span><img src="images/mac/music.png" alt="music" /></a>
+                                    <a class="dock-item2" href="top_film.jsp"><span style="color:#FF0000">Top phim</span><img src="images/mac/video.png" alt="video" /></a>
+                                    <a class="dock-item2" href="top_singer.jsp"><span style="color:#FF0000">Top nghệ sỹ</span><img src="images/mac/rss.png" alt="rss" /></a>
                                 </div>
                             </div>
                             <!-- /This is main content -->

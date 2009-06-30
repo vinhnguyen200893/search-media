@@ -65,8 +65,6 @@
         Hit h = new Hit();
         h.setTotaldocs(0);
         int unicode = 0;//unicode or no
-        String mp3_selected = "";
-        String video_selected = "";
         try {
             request.setCharacterEncoding("utf-8");
             String host = request.getRequestURL().toString();
@@ -94,11 +92,6 @@
                     type = session.getAttribute("type").toString();
                 }
 
-                if (type.equals("mp3")) {
-                    mp3_selected = "selected='selected'";
-                } else {
-                    video_selected = "selected='selected'";
-                }
                 //get typesearch= normail/advance
                 String type_search = "";
                 if (request.getParameter("type_search") != null) {
@@ -209,7 +202,7 @@
 
                 String end = String.valueOf((pageNum * max_page + max_page) > h.getTotaldocs() ? (pageNum * max_page + h.getTotaldocs() % pageNum) : (pageNum * max_page + max_page));
 
-                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
+                sb.append("Kết quả <b>" + begin + " - " + end + "</b>, Tổng <b>" + h.getTotaldocs() + "</b> tài liệu cho <b>" + query + "</b> - (" + (float) h.getTime() / 1000 + " giây)");
 
                 total = h.getTotaldocs();
                 //int offset = (pageNum - 1) * rowsPerPage;
@@ -218,7 +211,8 @@
             }
         %>
         <form  action="search.jsp" method="post" >
-            <input type="hidden" id="type_search" name="type_search" value="advance" style="display:none"/>
+           <input type="hidden" id="type" name="type" value="mp3" style="display:none"/>      
+            <input type="hidden" id="type_search" name="type_search" value="normal" style="display:none"/>
 
             <!--END SEARCH -->
 
@@ -231,11 +225,28 @@
                                 <div class= "login">
                                     <table cellpadding="0" cellspacing="0" border="0">
                                         <tr>
-                                            <td align="right">
+                                            <td align="right" style="font-size:12px">
+												<a href="index.jsp">Trang chủ</a> | <a href="contact.jsp">Liên hệ</a>
                                             </td>
-                                        </tr>
+                                        </tr>										
                                     </table>
-
+                                </div>
+								<div class= "topdiv">
+                                    <table cellpadding="0" cellspacing="5" border="0">
+                                        <tr >
+                                            <td width="70" align="center" >
+												<a class="awhite" href="topmusic.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
+											<td width="70" align="center" >
+												<a class="awhite" href="topfilm.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
+												<td width="70" align="center" >
+												<a class="awhite" href="topsinger.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
+                                        </tr>
+                                        <tr style="font-size:12px;font-weight:bold" >
+                                          <td align="center" ><a href="topmusic.jsp">Top nhạc</a></td>
+                                          <td align="center" ><a href="topfilm.jsp">Top phim</a></td>
+										  <td align="center" ><a href="topsinger.jsp">Top nghệ sỹ</a></td>
+                                        </tr>										
+                                    </table>
                                 </div>
                                 <table cellspacing="0" cellpadding="0">
                                     <tr>
@@ -243,56 +254,57 @@
                                             <a href="index.jsp"><img src="images/logo.png"></a>
                                         </td>
                                     </tr>
-                                </table>
+																	                                </table>
 
                                 <div class="frame_search">
-                                    <table border="0"  cellpadding="2" cellspacing="0"  align="center" style="font-size:10px">
+                                    <table cellspacing="0" cellpadding="0" border="0">                                        
+										<tr>												
+                                            <td  valign="top">
+                                                <table border="0"  cellpadding="2" cellspacing="0"  align="right" style="font-size:12px;color:#006699">
+<tr>
+                                            <td align="left">
+                                                Nhạc / Phim                                        </td>
+                                            <td width="25%"><label>
+                                              <select name="select" style="width:145px"  >
+											  	<option value="mp3">Nhạc</option>
+												<option value="video">Phim</option>												
+                                              </select>
+                                            </label></td>
+                                            <td width="25%" rowspan="5">
+											 <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
+                                                        <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>
+														</td>
+</tr>
                                         <tr>
                                             <td align="left">
-                                            mp3/video									</td>
-                                            <td width="50%" colspan="2">
-                                                <select name="type" id="type">
-                                                    <option value="mp3" <%=mp3_selected%>>mp3</option>
-                                                    <option value="video" <%=video_selected%>>video</option>
-                                                </select>
+                                                Tên ca sĩ/ diễn viên                                            </td>
+                                            <td width="25%">
+                                                <input type="text" align="right" id="singer" name="singer"  />                                            </td>
+                                            </tr>
+                                        <tr>
+                                            <td align="left">
+                                                Tên bài  hát / tên bộ phim                                            </td>
+                                            <td width="25%">
+                                                <input type="text" align="right" id="song" name="song"  />                                            </td>
+                                            </tr>
+                                        <tr>
+                                            <td align="left">
+                                                Lời bài hát/ phụ đề phim                                            </td>
+                                            <td width="25%">
+                                                <input type="text" align="right" id="lyric" name="lyric"  />                                            </td>
+                                            </tr>
+                                        <tr>
+                                            <td align="left">
+                                                Nguồn                                            </td>
+                                            <td width="25%">
+                                                <input type="text" align="right" id="site" name="site"  />                                            </td>
+                                            </tr>
+                                    </table>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Tên ca sĩ/ diễn viên									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="singer" name="singer" value="<%=s_singer%>" />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Tên album / tên bộ phim									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="song" name="song" value="<%=s_song%>" />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Lời bài hát/ phụ đề phim									</td>
-                                            <td width="50%" >
-                                            <input type="text" align="right" id="lyric" name="lyric" value="<%=s_lyric%>" />									</td>
-                                            <td align="left">
-                                                <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
-                                                <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">
-                                            Nguồn									</td>
-                                            <td width="50%" colspan="2">
-                                            <input type="text" align="right" id="site" name="site" value="<%=s_site%>" />									</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="left">&nbsp;</td>
-
-
                                         </tr>
                                     </table>
                                 </div>
-
+                                
                                 <div id="ssb">
                                     <p><%=sb.toString()%> </p>
                                 </div>
@@ -358,7 +370,7 @@
                 } else if (doc.getField("albumen") != null) {
                     r_album = doc.getField("albumen").stringValue();
                 }
-                String r_lyric = "Lyric:đang cập nhật";
+                String r_lyric = "Lyric:đang cập nhật";
                 if (doc.getField("lyric").stringValue().replaceAll(" ", "") != "") {
                     r_lyric = doc.getField("lyric").stringValue();
                 }
@@ -382,11 +394,11 @@
                                                     <table border="0" align="center" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td>
-                                                                <%=r_object%>
+                                                             <%=r_object%>
                                                             </td>
                                                         </tr>
                                                     </table>
-
+                                                    
                                                 </div>
                                             </td>
                                             <td valign="top" align="center"  >
@@ -419,7 +431,7 @@
                                                                 </div>
                                                             </td>
                                                         </tr>
-                                                    </table>
+                                                  </table>
                                                 </div>
                                             </td>
                                         </tr>

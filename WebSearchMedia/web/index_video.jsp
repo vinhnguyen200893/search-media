@@ -27,8 +27,8 @@
     </head>
     <body >
 
-        <form action="search.jsp" method="post">
-            <input type="hidden" id="type" name="type" value="mp3" style="display:none"/>
+        <form action="search_video.jsp" method="post">
+            <input type="hidden" id="type" name="type" value="video" style="display:none"/>
             <input type="hidden" id="type_search" name="type_search" value="normal" style="display:none"/>
 
             <div class="bg">
@@ -50,7 +50,7 @@
                                 <table cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td class="logo">
-                                            <a href="index.jsp" onClick="return false;"><img src="images/logo.png"/> </a>
+                                            <a href="index.jsp"><img src="images/logo.png"/> </a>
                                         </td>
                                     </tr>
                                 </table>
@@ -62,8 +62,8 @@
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
                                                         <td align="center">
-                                                        <a href="#"><input type="image" id="music" src="images/music.jpg" align="left" style="width:134px;height:26px"></a></td>
-                                                        <td align="center"><a href="index_video.jsp">
+                                                        <a href="index.jsp"><input type="image" id="music" src="images/music.jpg" align="left" style="width:134px;height:26px"></a></td>
+                                                        <td align="center"><a href="#">
                                                                 <input name="image" type="image" id="film" src="images/film_on.jpg" align="left" style="width:134px;height:26px">
                                                         </a></td>
                                                         <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>
@@ -80,7 +80,7 @@
                                                         </select>														</td>
                                                         <td>
                                                             <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
-                                                        <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>                                                        </td>
+                                                        <a href="search_video.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>                                                        </td>
                                                     </tr>
                                                 </table>
                                             </td>

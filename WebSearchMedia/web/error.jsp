@@ -17,6 +17,8 @@
 
         <link type="text/css" rel="stylesheet"  href="css/acc/ui.all.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+		
+		<script type="text/javascript" src="javascripts/sclqcn6.js"></script>
         <!-- END INCLUDE JAVASCRIPT AND CSS -->
 
         <title>Search Media</title>
@@ -63,11 +65,12 @@
                                             <td  valign="top">
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
-                                                        <td>
-                                                            <input type="image" id="music" src="images/music_on.jpg" align="right" onClick="return chooseMusic();">
+                                                         <td>
+                                                            <a onClick="return false;"><input type="image" id="music" src="images/music_on.jpg" align="right" onClick="chooseMusic();"></a>
                                                         </td>
                                                         <td>
-                                                            <input type="image" id="film" src="images/film.jpg" align="left" onClick="return chooseFilm();">
+														<a href="index_video.jsp">
+                                                            <input type="image" id="film" src="images/film.jpg" align="left" onClick="chooseFilm();"></a>
                                                         </td>
 
                                                     </tr>
@@ -78,7 +81,9 @@
                                                         <td>
                                                             <!--	<input type="image" src="images/search.jpg" align="right" id="search" onClick="search()">
                                                 -->
-                                                            <input type="image" src="images/search.jpg"  align="right" onclick="search('normal')">
+                                                             <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
+                                                            <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm  "></a></td></tr></table>
+
                                                         </td>
                                                     </tr>
 
@@ -132,7 +137,7 @@
                                         </tr>
                                         <tr>
                                             <td align="left">
-                                                <input type="button" value="Tìm kiếm" id="bt_search_avd" onclick="search('advance')" >
+                                                <input type="button" value="Tìm kiếm" id="bt_search_avd" onClick="search('advance')" >
                                             </td>
                                             <td width="50%">
                                                 <input type="button" value="Đóng lại" id="bt_close" onClick="bt_close()" />
@@ -180,10 +185,20 @@
                     </tr>
                     <tr width="100%" >
                         <td class="foo" align="center" valign="bottom" colspan="3">
+						<p>
+								<div class="fooCopyright" style=" padding:30px ; width: 600px; height: 50px;">
+
+                                    Chương trình Search Media phát triển bởi 0512230 - 0512286 <br/>
+                                    dựa trên thư viện Lucene 					<br/>
+                                    © Copyright 2009 <br/>
+
+                                </div>
+								</p>
                         </td>
                     </tr>
                 </table>
             </div>
+			
         </form>
     </body>
 </html>

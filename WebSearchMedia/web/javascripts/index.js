@@ -23,19 +23,24 @@ function right(current_str,find_str){
 	return current_str;
 	else
 	return current_str.substring(pos+fL,cL);
-	
 }
 
 //ham tim kim nang cao
 function search_adv()
 {	
-	//flag_search_tc=0;
+	//var s = document.getElementById("search_adv").style.visibility;
+	//alert(s);
+	//if(flag_musicOrFilm==0)
+	//{
+		
+	//tat flag search nang cao
+	flag_search_tc=0;
 	flag_search_adv=1;//bat co search nang cao
 	
-	//document.getElementById("tc").style.visibility = "hidden";
-	//document.getElementById("tc").style.height = "0px";
+	document.getElementById("tc").style.visibility = "hidden";
+	document.getElementById("tc").style.height = "0px";
 
-	//document.getElementById("search_tc").src = "images/search_tc_o.jpg";
+	document.getElementById("search_tc").src = "images/search_tc_o.jpg";
 	
 	if(document.getElementById("adv").style.visibility == "hidden")
 	{
@@ -54,6 +59,29 @@ function search_adv()
 	
 		document.getElementById("search_adv").src = "images/search_adv_o.jpg";
 	}
+	//}
+	/*
+	else
+	{
+		if(document.getElementById("adv_film").style.visibility == "hidden")
+		{
+			flag_search_adv = 1;
+			document.getElementById("adv_film").style.visibility = "visible";
+			document.getElementById("adv_film").style.height = "auto";			
+			
+			document.getElementById("search_adv").src = "images/search_adv_close.jpg";
+			
+		}
+		else
+		{
+			flag_search_adv = 0;
+			document.getElementById("adv_film").style.visibility = "hidden";
+			document.getElementById("adv_film").style.height = "0px";	
+		
+			document.getElementById("search_adv").src = "images/search_adv_open.jpg";
+		}
+	}
+	*/
 }
 
 //ham tim kiem ttheo tieu chi
@@ -155,13 +183,13 @@ function chooseFilm()
 function btclose()
 {
 	document.getElementById("search_adv").src = "images/search_adv_o.jpg";
-	//document.getElementById("search_tc").src = "images/search_tc_o.jpg";
+	document.getElementById("search_tc").src = "images/search_tc_o.jpg";
 	
 	document.getElementById("adv").style.visibility = "hidden";
 	document.getElementById("adv").style.height = "0px";	
 	
-	//document.getElementById("tc").style.visibility = "hidden";
-	//document.getElementById("tc").style.height = "0px";	
+	document.getElementById("tc").style.visibility = "hidden";
+	document.getElementById("tc").style.height = "0px";	
 	 flag_search_adv=0;
 }
 
@@ -313,23 +341,14 @@ function onload_acc()
     ControlList[0].src = "images/pause.jpg";
 
 }
-function chooseObj(obj)
+function setField(value)
 {
-	var src = obj.src;
-	src = right(src,"/");	
-	
-	var pos = src.lastIndexOf(".");		
-	src = src.substring(0,pos);
-	//alert(src);
-	
-	var ControlList = document.getElementsByName("objSearch");  
-	ControlList[0].src = "images/t_mp3.jpg";
-	ControlList[1].src = "images/t_video.jpg";
-	ControlList[2].src = "images/t_album.jpg";
-	ControlList[3].src = "images/t_lyric.jpg";
-	
-	
-	obj.src = "images/" + src + "_o.jpg";
-	//alert();
-	
+    $F('field')=value;
+	$F('type_search')='normal';
+
+}
+function saveAdvance()
+{
+   	$F('type_search')='advance';
+
 }

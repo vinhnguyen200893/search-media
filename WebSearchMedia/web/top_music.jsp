@@ -264,7 +264,7 @@
                                                     <tr>
                                                          <td align="center">
                                                           <a href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" ></a>
-                                                            <a href="index_film.jsp">
+                                                            <a href="index_video.jsp">
                                                             <input name="image" type="image" id="film" src="images/film.jpg" align="left">
                                                             </a></td>
 														                <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>

@@ -62,7 +62,7 @@
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
                                                         <td align="center">
-                                                        <a href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" style="width:134px;height:26px"></a></td>
+                                                        <a onClick="return false;" href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" style="width:134px;height:26px"></a></td>
                                                         <td align="center"><a href="index_video.jsp">
                                                                 <input name="image" type="image" id="film" src="images/film.jpg" align="left" style="width:134px;height:26px">
                                                         </a></td>

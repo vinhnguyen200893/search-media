@@ -235,16 +235,16 @@
                                     <table cellpadding="0" cellspacing="5" border="0">
                                         <tr >
                                             <td width="70" align="center" >
-												<a class="awhite" href="top_music.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
+												<a class="awhite" href="topmusic.jsp"><img class="topimg" src="images/mac/music.png"></a>                                            </td>
 											<td width="70" align="center" >
-												<a class="awhite" href="top_film.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
+												<a class="awhite" href="topfilm.jsp"><img class="topimg" src="images/mac/video.png"></a>                                            </td>
 												<td width="70" align="center" >
-												<a class="awhite" href="top_singer.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
+												<a class="awhite" href="topsinger.jsp"><img class="topimg" src="images/singer.jpg"></a>                                            </td>
                                         </tr>
                                         <tr style="font-size:12px;font-weight:bold" >
-                                          <td align="center" ><a href="top_music.jsp">Top nhạc</a></td>
-                                          <td align="center" ><a href="top_film.jsp">Top phim</a></td>
-										  <td align="center" ><a href="top_singer.jsp">Top nghệ sỹ</a></td>
+                                          <td align="center" ><a href="topmusic.jsp">Top nhạc</a></td>
+                                          <td align="center" ><a href="topfilm.jsp">Top phim</a></td>
+										  <td align="center" ><a href="topsinger.jsp">Top nghệ sỹ</a></td>
                                         </tr>										
                                     </table>
                                 </div>
@@ -264,7 +264,7 @@
                                                     <tr>
                                                          <td align="center">
                                                           <a href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" ></a>
-                                                            <a href="index_film.jsp">
+                                                            <a href="index_video.jsp">
                                                             <input name="image" type="image" id="film" src="images/film.jpg" align="left">
                                                             </a></td>
 														                <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>

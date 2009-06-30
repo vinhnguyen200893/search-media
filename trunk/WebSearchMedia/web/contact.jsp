@@ -1,4 +1,4 @@
-<%--
+<%-- 
     Document   : index
     Created on : Jun 10, 2009, 11:33:01 AM
     Author     : Thanh Nga
@@ -27,8 +27,8 @@
     </head>
     <body >
 
-        <form action="search_video.jsp" method="post">
-            <input type="hidden" id="type" name="type" value="video" style="display:none"/>
+        <form action="search.jsp" method="post">
+            <input type="hidden" id="type" name="type" value="mp3" style="display:none"/>
             <input type="hidden" id="type_search" name="type_search" value="normal" style="display:none"/>
 
             <div class="bg">
@@ -50,7 +50,7 @@
                                 <table cellspacing="0" cellpadding="0">
                                     <tr>
                                         <td class="logo">
-                                            <a href="index.jsp"><img src="images/logo.png"/> </a>
+                                            <a href="index.jsp" onClick="return false;"><img src="images/logo.png"/> </a>
                                         </td>
                                     </tr>
                                 </table>
@@ -62,9 +62,9 @@
                                                 <table cellspacing="0" cellpadding="2">
                                                     <tr>
                                                         <td align="center">
-                                                        <a href="index.jsp"><input type="image" id="music" src="images/music.jpg" align="left" style="width:134px;height:26px"></a></td>
-                                                        <td align="center"><a href="#">
-                                                                <input name="image" type="image" id="film" src="images/film_on.jpg" align="left" style="width:134px;height:26px">
+                                                        <a href="#"><input type="image" id="music" src="images/music_on.jpg" align="left" style="width:134px;height:26px"></a></td>
+                                                        <td align="center"><a href="index_video.jsp">
+                                                                <input name="image" type="image" id="film" src="images/film.jpg" align="left" style="width:134px;height:26px">
                                                         </a></td>
                                                         <td><a href="search_advance.jsp" style="font-size:10px">Tìm kiếm nâng cao</a></td>
                                                     </tr>
@@ -80,7 +80,7 @@
                                                         </select>														</td>
                                                         <td>
                                                             <table id="vista-buttons.com:idlqcn6" width=0 cellpadding=0 cellspacing=0 border=0><tr><td style="padding-right:0px" title ="Tìm  ">
-                                                        <a href="search_video.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>                                                        </td>
+                                                        <a href="search.jsp" onMouseOver='xpe("lqcn6o");' onMouseOut='xpe("lqcn6n");' onMouseDown='xpe("lqcn6c");'><img id="xpi_lqcn6" src="images/btlqcn6_0.gif" name=vblqcn6 width="82" height="30" border=0 alt="Tìm"></a></td></tr></table>                                                        </td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -96,10 +96,10 @@
                             <!-- This is main content -->
                             <div class="dock" id="dock2" style="padding-top:10px;" >
                                 <div class="dock-container2">
-                                     <a class="dock-item2" href="contact.jsp"><span style="color:#FF0000">Liên hệ</span><img src="images/mac/email.png" alt="contact" /></a>
-                                    <a class="dock-item2" href="top_music.jsp"><span style="color:#FF0000">Top nhạc</span><img src="images/mac/music.png" alt="music" /></a>
-                                    <a class="dock-item2" href="top_film.jsp"><span style="color:#FF0000">Top phim</span><img src="images/mac/video.png" alt="video" /></a>
-                                    <a class="dock-item2" href="top_singer.jsp"><span style="color:#FF0000">Top nghệ sỹ</span><img src="images/mac/rss.png" alt="rss" /></a>
+                                    <a class="dock-item2" href="contact.jsp"><span style="color:#FF0000">Liên hệ</span><img src="images/mac/email.png" alt="contact" /></a>
+                                    <a class="dock-item2" href="topmusic.jsp"><span style="color:#FF0000">Top nhạc</span><img src="images/mac/music.png" alt="music" /></a>
+                                    <a class="dock-item2" href="topfilm.jsp"><span style="color:#FF0000">Top phim</span><img src="images/mac/video.png" alt="video" /></a>
+                                    <a class="dock-item2" href="topsinger.jsp"><span style="color:#FF0000">Top nghệ sỹ</span><img src="images/mac/rss.png" alt="rss" /></a>
                                 </div>
                             </div>
                             <!-- /This is main content -->
